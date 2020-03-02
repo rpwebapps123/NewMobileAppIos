@@ -1,0 +1,54 @@
+page-header {
+    ion-header {height: 44px !important;  position: relative; background-color:#57A9D8 !important;
+        .toolbar-content{display: flex; align-items: center;}
+        ion-icon{color:$white;}
+
+        ion-navbar{
+            .toolbar-title-md{font-family:$provigilrRegular;  font-size:18px; padding-top: 1px;
+                padding-left: 0px;
+                padding-right: 12px;}
+        }
+
+        .button-md{box-shadow: none;margin: 0;padding:0 0 0 9px;}
+
+        .gobackarrow-icon{width:10px !important; margin-right: 12px;
+            svg{ margin: auto; display: block; margin-top:0px; fill:#fff; }
+         }
+
+         .menusvg-icon{width:23px !important;
+            svg{ margin: auto; display: block; margin-top:0px; fill:#fff; }
+         }
+    }
+}
+
+
+
+
+
+
+/*---raj style--*/
+.not-home{top:0px; padding-left: 10px;
+    ion-title{padding: 0 10px 0 0px !important;}
+    .toolbar-background {background-color: #57A9D8 !important;}
+    .backarrowIcon{float:left; padding:0px; margin:1px 0px 0px 0px; background-color: transparent; box-shadow: none;}
+    ion-title .toolbar-title{line-height: 38px; padding: 0px;}
+} 
+
+page-header {
+    .footer-md .toolbar-md .toolbar-background-md{background-color: #57A9D8 !important;}
+    .toolbar-md{min-height: 38px;}
+    ion-toolbar {
+    .toolbar-background{background-color: #57A9D8 !important;
+         ion-title .toolbar-title{font-size:18px !important;}
+        }
+    }
+}
+
+//ios start
+.header-ios{
+    .toolbar-title-ios{padding-left:0px;}
+    ion-title .toolbar-title{font-size: 18px;}
+}
+
+
+//ios End

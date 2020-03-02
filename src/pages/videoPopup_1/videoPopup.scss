@@ -1,0 +1,29 @@
+.popover-md .popover-content{border-radius:10px;}
+.scroll-content{padding-bottom:0px !important;}
+.videoPopup{
+.cuspopup{margin:0px auto;    margin-top:50%;  position:relative;  max-width: 100% !important;
+  background-color: transparent; box-shadow: 0 16px 20px rgba(0, 0, 0, 0.5); border-radius: 10px !important;
+    text-align: center; font-family: "ProximaNova-Regular";
+    .toolbar-background{background-color: $white !important;}
+   .titleNotes .toolbar-title{font-size: 22px  !important;   color:$liveButton;  padding-top:15px  !important; text-align: center  !important;}
+    ion-item{padding:15px 10px;}  
+  .item-inner{padding-right:0px !important;}
+.text-input-md{margin:20px 0px 0px 0px !important; }
+textarea.text-input{color:#333; font-size: 15px; margin-top: 0px !important;}
+.text-input {color:$textblack;}
+
+        .cusButton-group{
+            .cusButton{font-weight: 500 !important;  text-transform: uppercase; padding: 10px; display: block; font-size: 14px; line-height: 20px;
+                border-radius: 0px;  width: 100% !important; margin: 0px;}
+                .cus-yes-button{color: #ffffff;  background-color: $liveButton !important ; }
+                .cus-no-button{background-color: #3a4048 !important; color: rgba(255, 255, 255, 0.5); }             
+        }
+
+.error-msg { color:#ff0000; float: left;  margin: 5px; }
+video{border: solid 2px #6d6d6d;}
+
+}
+}
+
+
+.ion-page.show-page{background-color: rgba(0, 0, 0, 0.5);}

@@ -1,0 +1,34 @@
+page-notifications {
+    .scroll-content{    margin-top:12px; padding:12px;
+       
+    }
+    .no-tickets{
+        color: #F37738 !important;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        font-family: "ProximaNova-Bold";
+        background: #EEEEEE;
+       }
+    .p-lr-15-tb-10 {
+        padding: 10px 15px 10px 15px;
+        height: 100%;
+        text-align: center;
+        margin: 0 auto;
+        color:$cameraGreen;
+        font-size:20px;
+    }
+    .notification{
+        padding: 10px;
+        text-align: left;
+        h6 {font-family:$provigilSemibold;          
+            color:$darkBlue;}
+        p{font-family:$provigilrRegular; color:$textColor; font-size:13px; } 
+    }
+    p.date-time{
+        font-size: 12px;
+        text-align:left;
+        color:$labelheading;
+        font-family:$provigilrRegular;
+    }
+}

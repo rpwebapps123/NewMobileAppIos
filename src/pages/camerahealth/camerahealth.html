@@ -1,0 +1,40 @@
+<ion-content class="camerahealthListpage bggray innerbody-Marginbottom">
+    <!-- <ion-searchbar [(ngModel)]="searchString" (ionInput)="getItems($event)"></ion-searchbar> -->
+    <div class="searchbar-background">
+            <div class="aciveindication">
+                    <ul>
+                        <li>Connected <span class="green-dot"></span></li>
+                        <li>Disconnected <span class="red-dot"></span></li>
+                    </ul>
+               </div>
+
+        <ion-list>
+            <div *ngIf="cameraList && cameraList.length > 0 ; else noSerachResult">
+              <ion-item *ngFor="let camera of cameraList">
+                    <div>
+                     <span >{{ camera.name }}</span>
+                    <span class="green-dot" *ngIf="camera.status === true"></span> 
+                    <span class="red-dot" *ngIf="camera.status === false"></span>
+                    </div>
+            </ion-item>
+            
+                <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+                    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+                </ion-infinite-scroll> -->
+
+            </div>
+        </ion-list>
+        <ng-template #noSerachResult>
+            <div class="parent">
+                <div class="child">
+                    <span *ngIf = "item === 'errorMessage'">
+                        {{errorMessage}}
+                    </span>
+                    <h4 class="noDataMessage" text-center *ngIf = "item != 'errorMessage'">
+                        No Results Found
+                    </h4>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</ion-content>

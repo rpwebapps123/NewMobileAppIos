@@ -1,0 +1,26 @@
+<ion-content class="potentialListpage bggray innerbody-Marginbottom">
+    <ion-searchbar [(ngModel)]="searchString" (ionInput)="getItems($event)"></ion-searchbar>
+    <div class="searchbar-background">
+        
+        <ion-list>
+            <div *ngIf="list && list.length > 0 ; else noSerachResult">
+                <ion-item *ngFor="let site of list;let i = index;" (click)="itemSelected(i)">
+                    {{ site.siteName }}
+                </ion-item>
+                <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+                    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+                </ion-infinite-scroll>
+
+            </div>
+        </ion-list>
+        <ng-template #noSerachResult>
+            <div class="parent">
+                <div class="child no-tickets">
+                    <span>
+                        {{errorMessage}}
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</ion-content>

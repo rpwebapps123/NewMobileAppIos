@@ -1,0 +1,109 @@
+<ion-content class="SitesList innerbody-Marginbottom">
+        <div class="tutorial-container innerbody-Marginbottom" *ngIf="showTutorial">
+            <!-- <ion-slides > -->
+                    <ion-slides pager="true" *ngIf="!isDesktop && isIos">
+                         <ion-slide>
+                                    <img src='assets/images/mobileTutorials/ios/tutorial8.png' class="tutorial-image" />
+                                    <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                                </ion-slide>
+                            <ion-slide>
+                                    <img src='assets/images/mobileTutorials/ios/tutorial.png' class="tutorial-image" />
+                                    <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                                </ion-slide>
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/ios/tutorial1.png' class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button> 
+                            </ion-slide>
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/ios/tutorial2.png' class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src="assets/images/mobileTutorials/ios/tutorial3.png"   class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src="assets/images/mobileTutorials/ios/tutorial4.png"  class="tutorial-image"  />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/ios/tutorial5.png' class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                    <img src='assets/images/mobileTutorials/ios/tutorial6.png' class="tutorial-image" />
+                                    <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/ios/tutorial7.png' class="tutorial-image" (click)="dismissTutorial($e)"/>
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                        </ion-slide>
+                        </ion-slides>
+                        <ion-slides pager="true" *ngIf="!isIos">
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/android/tutorial8.png' class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                                <ion-slide>
+                                        <img src='assets/images/mobileTutorials/android/tutorial.png' class="tutorial-image" />
+                                        <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                                    </ion-slide>
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/android/tutorial1.png' class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/android/tutorial2.png' class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src="assets/images/mobileTutorials/android/tutorial3.png"   class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src="assets/images/mobileTutorials/android/tutorial4.png"  class="tutorial-image"  />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/android/tutorial5.png' class="tutorial-image" />
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                            <ion-slide>
+                                    <img src='assets/images/mobileTutorials/android/tutorial6.png' class="tutorial-image" />
+                                    <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                            </ion-slide>
+                
+                            <ion-slide>
+                                <img src='assets/images/mobileTutorials/android/tutorial7.png' class="tutorial-image" (click)="dismissTutorial($e)"/>
+                                <button class="skipbutton" (click)="dismissTutorial($e)">EXIT >|</button>
+                        </ion-slide>
+                        </ion-slides>
+        </div>
+        <div *ngIf="!showTutorial">
+            <div class="ionlistPaddingPage">
+            <ion-list>
+                <div *ngIf="list && list.length > 0 ; else noResult">
+                    <ion-card *ngFor="let site of list;let i = index;">
+                        <div class="card-left" (click)="itemSelected(i)">
+                            <ion-row>
+                                <ion-label>
+                                    <span class="subtitle">{{ site.siteName }}</span>
+                                </ion-label>
+                            </ion-row>  
+                       </div>
+                        <span class="icon-left" end></span>
+                    </ion-card>
+                </div>
+              </ion-list>
+              </div>
+              <ng-template #noResult>
+                <div class="parent">
+                    <div class="child no-sites">
+                        <span>
+                            {{errorMessage}}
+                        </span>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+</ion-content>

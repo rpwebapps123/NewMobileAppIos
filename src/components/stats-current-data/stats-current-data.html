@@ -1,0 +1,43 @@
+<!-- Generated template for the StatsCurrentDataComponent component -->
+<ion-row class="calender-items">
+  <div>
+    <ion-col>
+      <ion-label class="text-dimm">start Date</ion-label>
+      <br/>
+      <ion-datetime displayFormat="MMM DD, h:mm A" [(ngModel)]="fromDate" (ionChange)="getDate()"></ion-datetime>
+    </ion-col>
+  </div>
+  <div>
+    <ion-col>
+      <ion-icon class="icon-calender"></ion-icon>
+    </ion-col>
+  </div>
+  <div>
+    <ion-col>
+      <ion-label class="text-dimm end-text">end Date</ion-label>
+      <br/>
+      <ion-datetime displayFormat="MMM DD, h:mm A" [(ngModel)]="toDate" (ionChange)="getDate()"></ion-datetime>
+    </ion-col>
+  </div>
+</ion-row>
+<ion-row class="custom-card">
+  <ion-card class="align-items">
+    <h2>{{this.eventsReviewed}}</h2>
+    <p> Events Reviewed</p>
+  </ion-card>
+  <ion-card class="align-items">
+    <h2>0</h2>
+    <p> Alarms Activated</p>
+  </ion-card>
+  <ion-card class="align-items">
+    <h2>{{this.theftsAverted}}</h2>
+    <p> Thefts Averted</p>
+  </ion-card>
+  <ion-card class="align-items more-click" (click)="showEventList()">
+    <h2>
+      {{this.moreEventsCount}}
+    </h2>
+    <p>More</p>
+    <ion-icon class="icon-left"></ion-icon>
+  </ion-card>
+</ion-row>

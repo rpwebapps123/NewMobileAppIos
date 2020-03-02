@@ -1,0 +1,148 @@
+page-event-list {
+.eventList{
+  top:75px;
+}
+.scroll-content{
+  height:90vh;
+}
+.icon-calender{
+  color:$iconBackground;
+  font-size:35px;
+  padding: 0;
+}
+
+.child{
+  color:$arm;
+  text-align: center;
+  font-size: $font18;
+  font-family: $provigilBold;
+  margin: 0 auto;
+  display: block;
+  padding-top: 20px;
+}
+.mainplayer{
+position: relative;
+height: 255px!important;
+}
+.vedio-play-button{
+  position:relative;
+  margin: 0 auto;
+    display: table;
+    height: 235px;
+    width: 402px;
+}
+.icon-play {
+  font-size: 40px;
+  position: absolute;
+  right: 10px;
+  top: 190px;
+}
+.icon-play .path2:before{
+  margin-left: -1.5em!important;
+}
+.icon-down,.icon-up{
+  color:$iconBackground;
+  font-size:18px;
+  padding: 0;
+}
+ion-icon{
+  padding: 0px;
+}
+
+  .flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    p{
+        margin: 0px;
+
+    }
+    .status{
+        font-weight: bold;
+        margin: 5px 0px;
+    }
+  }
+  .text-right{
+      text-align: right;
+  }
+  .event-name {
+    font-size: $font18;
+    font-family: $provigilBold;
+    color:$iconBackground;
+}
+.event-time {
+  font-size: $font14;
+  font-family: $provigilBold;
+  color:$iconBackground;
+}
+  .custom-card {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+    transition: 1s ease;
+    margin: 15px auto;
+    border-radius: 4px;
+    background: #f1f1f1;
+    padding:$padd-10;
+    font-size: $font12;
+    margin:15px;
+    position: relative;
+    cursor: pointer;
+    
+    .collapse-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .collapse-summary-box {
+        display: flex;
+        flex-direction: column;
+      }
+      .event-summary-block {
+        padding:$paddLR-10;
+        .event-name-box,
+        .event-time-box,
+        .expanded-event-name-box {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+
+          .event-name,
+          .event-time,
+          .expanded-event-name {
+            display: table-cell;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .exapnded-section {
+      .image-section {
+        margin: $marginTB-10;
+      }
+      app_desktop{
+        .image-section {
+          margin: $marginTB-10;
+          overflow: hidden;
+          margin: 0 auto;
+          text-align: center;
+          height: 235px;
+          width: 402px;
+        }
+      }
+    
+      .parol-box{
+          text-align: center;
+      }
+      img,video,source{
+        height: 235px!important;
+        width: 402px!important;
+      }
+    }
+  }
+  .show-video{
+    display: none;
+  }
+}

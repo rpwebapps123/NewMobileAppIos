@@ -1,0 +1,31 @@
+<ion-content padding class="SetupPin loginBlock">
+  <div class="align-items">
+  <button class="backButton" (click)="navigateToCameraPage(event)">
+    <ion-icon>
+      <span class="icon-right"></span>
+    </ion-icon>
+  </button>
+  <ion-img src="assets/images/logo.png"></ion-img>
+</div>
+  <p>Please set a PIN to Arm/disarm site.</p>
+  <ion-list>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="pinData.pin" name="pin" placeholder="Enter Pin" show-hide-input></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-input type="password" placeholder="Re-Enter Pin" [(ngModel)]="pinData.verifyPin" name="reenterPin" show-hide-input></ion-input>
+    </ion-item>
+    <p>Please enter your Email ID, it will be used to send a Reset Link incase you forget/reset your password.</p>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Enter Mail ID" name="email" [(ngModel)]="pinData.email"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button class="savepin" ion-button full (click)="setPin()">Save</button>
+
+
+</ion-content>

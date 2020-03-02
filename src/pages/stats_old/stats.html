@@ -1,0 +1,19 @@
+<ion-content class="stats">
+    <ion-row class="content-row">
+            <ion-row class="p-b-15 full-width ">
+            <ion-row start class="content-center" [ngClass]="isDesktopEnabled ? 'content-center double_buttons' : 'content-center mobile_double' ">
+                <button ion-button (click)="getComponent(true)" [ngClass]="service? 'active' : ''">Current</button>
+                <button ion-button (click)="getComponent(false)" [ngClass]="!service? 'active' : ''">Videos</button>
+            </ion-row>
+        </ion-row>
+        <div *ngIf='service' class="full-width">
+            <stats-current-data class="full-width" fromDate={{fromDate}} toDate={{toDate}}></stats-current-data>
+        </div>
+        <div *ngIf='!service'>
+            <stats-video-data></stats-video-data>
+        </div>
+
+    </ion-row>
+</ion-content>
+
+<!-- //display-buttons removed for ion-row -->

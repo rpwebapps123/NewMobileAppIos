@@ -1,0 +1,19 @@
+<ion-content class="notifcontent bggray innerbody-Marginbottom">
+    <ion-row>
+        <div *ngIf="(notificationList && notificationList.length > 0); else noNotifications" class="full-width">
+                <!-- (click)="navigateToBilling()" -->
+            <ion-card class="notification" *ngFor="let item of notificationList; let j=index" >
+                <p class="date-time">{{convertToDateFormat(item.createdOn)}}</p>
+                <h6>{{ item.title }}</h6>
+                <p>{{ item.message }}</p>
+            </ion-card>
+        </div>
+        <ng-template #noNotifications class="full-width full-height">
+            <div class="parent">
+                <div class="child no-tickets">
+                    {{errorMessage}}
+                </div>
+            </div>
+        </ng-template>
+    </ion-row>
+</ion-content>

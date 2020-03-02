@@ -1,0 +1,254 @@
+<ion-content class="alarms innerbody-Marginbottom" [ngClass]="(armData === 'DisArmSite') ?'bggray':''">
+    <ion-toolbar no-border-top class="tabsList">
+        <ion-segment (click)="checkPSA()" [(ngModel)]="armData" class="align-items main-alarmbuttons">
+            <ion-segment-button value="DisArmSite" (ionSelect)="seeSchedule(true)">
+              Scheduled PSA
+            </ion-segment-button>
+            <ion-segment-button  value="Armsite">
+               New PSA
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+
+    <div *ngIf="(armData === 'Armsite')">
+        <ion-list>
+            <!-- <ion-item>
+                <ion-label stacked class="text-label">Name
+                    <span>*</span>
+                </ion-label>
+                <ion-input type="text" maxlength=15 [(ngModel)]="name" placeholder="Enter name"></ion-input>
+            </ion-item> -->
+            <ion-item no-border-bottom>
+                
+                <ion-textarea maxlength="230" type="text" (keyup)="countCharacters()" placeholder="Enter Description*" [(ngModel)]="msgTxt" rows="3"></ion-textarea>
+            </ion-item>
+            <span>Remaining Character {{ remainingCharacters }}</span>
+            <!-- <ion-label>Repeat</ion-label>
+            <ion-row>
+                <ion-segment class="plan-buttons">
+                    <ion-segment-button [ngClass]="noneActive ? 'active-day' : ''" (click)="updateItem('none')">None</ion-segment-button>
+                    <ion-segment-button [ngClass]="dailyActive ? 'active-day' : ''" (click)="updateItem('daily')">Daily</ion-segment-button>
+                    <ion-segment-button [ngClass]="weeklyActive ? 'active-day' : ''" (click)="updateItem('weekly')">Weekly</ion-segment-button>
+                </ion-segment>
+            </ion-row> -->
+
+            <div class="weekly-list" *ngIf="weeklyActive">
+                <div>
+                    <ion-checkbox [(ngModel)]="sunday"></ion-checkbox>
+                    <ion-label>Sun</ion-label>
+
+                </div>
+                <div>
+                    <ion-checkbox [(ngModel)]="monday"></ion-checkbox>
+                    <ion-label>Mon</ion-label>
+
+                </div>
+                <div>
+                    <ion-checkbox [(ngModel)]="tuesday"></ion-checkbox>
+                    <ion-label>Tue</ion-label>
+
+                </div>
+                <div>
+                    <ion-checkbox [(ngModel)]="wednesday"></ion-checkbox>
+                    <ion-label>Wed</ion-label>
+
+                </div>
+                <div>
+                    <ion-checkbox [(ngModel)]="thursday"></ion-checkbox>
+                    <ion-label>Thr</ion-label>
+
+                </div>
+                <div>
+                    <ion-checkbox [(ngModel)]="friday"></ion-checkbox>
+                    <ion-label>Fri</ion-label>
+
+                </div>
+                <div>
+                    <ion-checkbox [(ngModel)]="saturday"></ion-checkbox>
+                    <ion-label>Sat</ion-label>
+
+                </div>
+            </div>
+
+            <ion-row class="calender-items align-items-center" >
+              
+                    <br /> <br />
+                    <ion-row class="fullwidth m-b-10 m-t-35">
+                        <ion-label class="text-dimm" (click)="startDatePicker.open()">Add start Date & Time ({{timeZone}})</ion-label>
+                    </ion-row>
+                    <br />
+
+                 
+                    <ion-row class="fullwidth">
+                        <ion-col>
+                            <ion-datetime #startDatePicker placeholder="select start date" class="font-style btdate"
+                                displayFormat="MMM DD" pickerFormat="MMM DD YYYY" min={{pastDate}}
+                                [(ngModel)]="fromDate" [max]="minYears" (ionChange)="getFromDate()"></ion-datetime>
+                        </ion-col>
+                        <ion-col>
+                            <ion-datetime #startTimePicker class="font-style btdate" displayFormat="HH:mm" min={{minStartTime}}
+                                [(ngModel)]="fromDisplaytime" (ionChange)="getFromTime()"></ion-datetime>
+                        </ion-col>
+                    </ion-row>
+                    <br /> <br />
+                    <ion-row class="fullwidth m-b-10 m-t-35">
+                        <ion-label class="text-dimm" (click)="endDatePicker.open()">Add end Date & Time ({{timeZone}})</ion-label>
+                    </ion-row>
+                    <br />
+                    <ion-row class="fullwidth">
+                        <ion-col>
+                            <ion-datetime #endDatePicker placeholder="select end date" class="font-style btdate"
+                                displayFormat="MMM DD" pickerFormat="MMM DD YYYY" min={{minDate}} [max]="createEndMaxDate"
+                                [(ngModel)]="toDate" (ngModelChange)="getToDate($event)"></ion-datetime>
+                              
+                        </ion-col>
+                        <ion-col>
+                            <ion-datetime #endTimePicker class="font-style btdate" displayFormat="HH:mm" min={{minimumTime}}
+                                [(ngModel)]="toDisplaytime" (ionChange)="getToTime()"></ion-datetime>
+                               
+                        </ion-col>
+                    </ion-row>
+                    <br /> <br />
+                
+                <!-- <div>
+                    <ion-col>
+                        <ion-icon class="icon-calender"></ion-icon>
+                    </ion-col>
+                </div> -->
+                <!-- <div>
+                    <ion-col>
+                        <ion-col>
+                            <ion-label class="text-dimm" (click)="startTimePicker.open()"> &nbsp; </ion-label>
+                            <br/>
+                            <ion-datetime #startTimePicker class="font-style" displayFormat="HH:mm" min={{minStartTime}} [(ngModel)]="fromDisplaytime" (ionChange)="getFromTime()"></ion-datetime>                          
+
+                        </ion-col>
+                        <ion-col>
+                            <ion-label (click)="endTimePicker.open()" class="text-dimm"> &nbsp; </ion-label>
+                            <br/>
+                            <ion-datetime #endTimePicker class="font-style" displayFormat="HH:mm" min={{minimumTime}} [(ngModel)]="toDisplaytime" (ionChange)="getToTime()"></ion-datetime>
+
+                        </ion-col>
+                    </ion-col>
+                </div> -->
+            </ion-row>
+            <div>
+
+            </div>
+
+
+        </ion-list>
+        <!--<ion-footer><button ion-button full (click)="disarmSite()">ADD TO SCHEDULE</button></ion-footer>-->
+    </div>
+
+    <div *ngIf="(armData === 'DisArmSite')">
+            <ion-grid class="scheduledPsaDate" >  
+                    <ion-row>   
+                        <ion-col class="scheduledPsaDateStart">
+                            <ion-item>
+                                <ion-label floating>Start Date</ion-label>
+                               <!-- <ion-datetime displayFormat="DD MMM YYYY" [min]="minDateForFilter" [max]="minYears" [(ngModel)]="filterFromDate" (ngModelChange)="filterStartDateChanged()"></ion-datetime>-->
+                               <ion-datetime displayFormat="DD MMM YYYY" [max]="minYears" [(ngModel)]="filterFromDate" (ngModelChange)="filterStartDateChanged()"></ion-datetime>
+                            </ion-item>
+                        </ion-col>
+    
+                                <ion-col class="scheduledPsaDateEnd">
+                                        <ion-item>
+                                            <ion-label floating>End Date</ion-label>
+                                            <ion-datetime displayFormat="DD MMM YYYY" [max]="minYears" [min]="filterFromDate" [(ngModel)]="filterEndDate" (ngModelChange)="filterEndDateChanged()"></ion-datetime>
+                                        </ion-item>
+                                    </ion-col>
+                    </ion-row>
+                </ion-grid>     
+                
+        <ion-list>
+            <div *ngIf="alarmsList && alarmsList.length; else noData">
+                <ion-card *ngFor="let list of alarmsList">
+                    <div class="card-left">
+                        <ion-row>
+                            <ion-label>
+                                <span class="alarmscard">Requested By</span>
+                                <span class="subtitle">{{list.PSA_Requested_by__c}}</span>
+                                <ion-icon class="icon-repeat" name="refresh" *ngIf="list.IsRecurrence"></ion-icon>
+                            </ion-label>
+
+                            <ion-label>
+                                    <span class="disarmico" *ngIf="list.Disable_Alarm__c === true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9.233" height="13.801" viewBox="0 0 9.233 13.801">
+                                                <g id="Group_477" data-name="Group 477" transform="translate(0)">
+                                                  <g id="Group_30" data-name="Group 30" transform="translate(2.408 6.131)">
+                                                    <path id="Path_33" data-name="Path 33" d="M-17.394-11.356a1.169,1.169,0,0,1-1.169,1.168,1.169,1.169,0,0,1-1.168-1.169,1.169,1.169,0,0,1,1.169-1.168,1.17,1.17,0,0,1,1.169,1.169m-3.363,0a2.195,2.195,0,0,0,2.2,2.194,2.194,2.194,0,0,0,2.194-2.194,2.195,2.195,0,0,0-2.194-2.195,2.2,2.2,0,0,0-2.195,2.2" transform="translate(20.757 13.551)" fill="#fff"/>
+                                                  </g>
+                                                  <g id="Group_31" data-name="Group 31" transform="translate(6.571 5.387)">
+                                                    <path id="Path_34" data-name="Path 34" d="M-2.238-4.465A.431.431,0,0,0-1.809-4.9a.431.431,0,0,0-.432-.43.431.431,0,0,0-.43.432.431.431,0,0,0,.127.305.431.431,0,0,0,.306.125" transform="translate(2.671 5.327)" fill="#fff"/>
+                                                  </g>
+                                                  <g id="Group_32" data-name="Group 32">
+                                                    <path id="Path_35" data-name="Path 35" d="M-42.453-47.527c0,1.487-2.42,2.969-3.59,3.537-1.171-.567-3.591-2.05-3.591-3.537V-51.68a10.247,10.247,0,0,1,3.654-.592,9.449,9.449,0,0,1,3.527.585Zm-5.063-5.758v-.951a1.45,1.45,0,0,1,1.45-1.45,1.45,1.45,0,0,1,1.45,1.45v.98a.179.179,0,0,0,0,.028,13.133,13.133,0,0,0-1.365-.069,13.772,13.772,0,0,0-1.544.087.58.58,0,0,0,.007-.075m5.831.826a6.818,6.818,0,0,0-1.939-.625.5.5,0,0,0,.032-.172v-.98a2.475,2.475,0,0,0-2.475-2.475,2.475,2.475,0,0,0-2.475,2.475v.951a.507.507,0,0,0,.054.224,7.591,7.591,0,0,0-1.895.593.509.509,0,0,0-.276.454v4.488c0,2.526,3.956,4.37,4.406,4.572a.514.514,0,0,0,.42,0c.451-.2,4.407-2.046,4.407-4.572v-4.488a.513.513,0,0,0-.258-.444" transform="translate(50.659 56.712)" fill="#fff"/>
+                                                  </g>
+                                                </g>
+                                               </svg> <span>Disarm</span>
+                                          </span>
+                                          <span class="armico" *ngIf="list.Disable_Alarm__c === false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="9.233" height="13.801" viewBox="0 0 9.233 13.801">
+                                                    <g id="Group_477" data-name="Group 477" transform="translate(0)">
+                                                      <g id="Group_30" data-name="Group 30" transform="translate(2.408 6.131)">
+                                                        <path id="Path_33" data-name="Path 33" d="M-17.394-11.356a1.169,1.169,0,0,1-1.169,1.168,1.169,1.169,0,0,1-1.168-1.169,1.169,1.169,0,0,1,1.169-1.168,1.17,1.17,0,0,1,1.169,1.169m-3.363,0a2.195,2.195,0,0,0,2.2,2.194,2.194,2.194,0,0,0,2.194-2.194,2.195,2.195,0,0,0-2.194-2.195,2.2,2.2,0,0,0-2.195,2.2" transform="translate(20.757 13.551)" fill="#fff"/>
+                                                      </g>
+                                                      <g id="Group_31" data-name="Group 31" transform="translate(6.571 5.387)">
+                                                        <path id="Path_34" data-name="Path 34" d="M-2.238-4.465A.431.431,0,0,0-1.809-4.9a.431.431,0,0,0-.432-.43.431.431,0,0,0-.43.432.431.431,0,0,0,.127.305.431.431,0,0,0,.306.125" transform="translate(2.671 5.327)" fill="#fff"/>
+                                                      </g>
+                                                      <g id="Group_32" data-name="Group 32">
+                                                        <path id="Path_35" data-name="Path 35" d="M-42.453-47.527c0,1.487-2.42,2.969-3.59,3.537-1.171-.567-3.591-2.05-3.591-3.537V-51.68a10.247,10.247,0,0,1,3.654-.592,9.449,9.449,0,0,1,3.527.585Zm-5.063-5.758v-.951a1.45,1.45,0,0,1,1.45-1.45,1.45,1.45,0,0,1,1.45,1.45v.98a.179.179,0,0,0,0,.028,13.133,13.133,0,0,0-1.365-.069,13.772,13.772,0,0,0-1.544.087.58.58,0,0,0,.007-.075m5.831.826a6.818,6.818,0,0,0-1.939-.625.5.5,0,0,0,.032-.172v-.98a2.475,2.475,0,0,0-2.475-2.475,2.475,2.475,0,0,0-2.475,2.475v.951a.507.507,0,0,0,.054.224,7.591,7.591,0,0,0-1.895.593.509.509,0,0,0-.276.454v4.488c0,2.526,3.956,4.37,4.406,4.572a.514.514,0,0,0,.42,0c.451-.2,4.407-2.046,4.407-4.572v-4.488a.513.513,0,0,0-.258-.444" transform="translate(50.659 56.712)" fill="#fff"/>
+                                                      </g>
+                                                    </g>
+                                                   </svg> <span>Arm</span>
+                                              </span>
+                            </ion-label>
+                        </ion-row>
+                        <ion-row>
+                            <ion-label>
+                                <span class="alarmscard">Start Date</span>                                
+                                <span class="subtitle">{{convertToDateFormat(list.StartDateTime)}}</span>
+                            </ion-label>
+
+                            <ion-label>
+                                    <span class="alarmscard">End Date</span>                               
+                                    <span class="subtitle">{{convertToDateFormat(list.EndDateTime)}}</span>
+                                </ion-label>
+                        </ion-row>
+                        <ion-row>
+                            <span class="subtitle desc" [ngClass]="list.isviewmore ? 'viewmore' : ''"  >
+                            {{!list.isviewmore ? (list.Subject | slice : 0 : 150): list.Subject}}
+                            </span>
+                        </ion-row>
+                        <ion-row *ngIf="list.Subject && list.Subject.length>150 && list.Subject.length!=150">
+                            <button  class="readmore" (click)="setViewMoreStatus(list)">...{{!list.isviewmore ? 'Read':'Hide'}} More</button>
+                        </ion-row>
+                    </div>
+                    <div class="card-right align-items" (click)="deleteAlarm(list.Id)">
+                        <button>
+                            <span class="icon-delete"></span>
+                        </button>
+                    </div>
+                </ion-card>
+            </div>
+        </ion-list>
+        <!-- <ion-list>
+            <span class="ion-delete"></span>
+        </ion-list> -->
+    </div>
+
+    <ng-template #noData>
+        <div class="commentText">
+            <!--<span> No scheduled PSA. </span>-->
+            <span>{{ errorMessage }}</span>
+        </div>
+    </ng-template>
+
+
+
+</ion-content>
+
+<ion-footer *ngIf="(armData === 'Armsite')">
+    <button class="footerBt" ion-button full (click)="disarmSite()">Add to Schedule</button>
+</ion-footer>

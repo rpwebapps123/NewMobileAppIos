@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "733357177429",
+    "firebase_url": "https://provigil-3a0d3.firebaseio.com",
+    "project_id": "provigil-3a0d3",
+    "storage_bucket": "provigil-3a0d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733357177429:android:10114e2f4d3854a9",
+        "android_client_info": {
+          "package_name": "com.provigilindia.ivigil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733357177429-dm2q0ou5inu1ojmah99lihhfeal0ou0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzbWuCQMfKfPLihC-_OEG4hj98EUN1LE0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

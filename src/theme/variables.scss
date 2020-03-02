@@ -1,0 +1,116 @@
+// importing ionic default icons we will use these
+
+@import "ionicons-icons";
+///font-size scss 
+//------------------
+    $font12:12px;
+    $font13:13px;
+    $font14:14px;
+    $font15:15px;
+    $font16:16px;
+    $font18:18px;
+    $font19:19px;
+    $font20:20px;
+    $font22:22px;
+    $font24:24px;
+    $font26:26px;
+    $font28:28px;
+    $font30:30px;
+// ------------------
+
+///font-family scss 
+//------------------
+  $provigilLight:'ProximaNova-Light';
+  $provigilSemibold:'ProximaNova-Semibold';
+  $provigilBold:'ProximaNova-Bold';
+  $provigilRegular:'ProximaNovaCond-Regular';
+  $provigilrRegular:'ProximaNova-Regular';
+  $provigilBlack:'ProximaNova-Black';
+// ------------------
+
+///padding scss 
+//------------------
+    $padd-10:10px 10px 10px 10px;
+    $padd-12:12px 12px 12px 12px;
+    $padd-15:15px 15px 15px 15px;
+    $padd-10-15:10px 15px 10px 15px;
+    $padd-10-20:10px 20px 10px 20px;
+    $padd-0:0px 0px 0px 0px;
+    $padd-20:20px 20px 20px 20px;
+    $paddTB-10:10px 0;
+    $paddLR-10:0 10px;
+    $paddL-10:0 0 0 10px;
+    $paddR-10:0 10px 0 0 ;
+
+// ------------------
+
+///margin scss 
+//------------------
+    $margin-10:10px 10px 10px 10px;
+    $margin-15:15px 15px 15px 15px;
+    $margin-10-15:10px 15px 10px 15px;
+    $margin-0:0px 0px 0px 0px;
+    $marginTB-10:10px 0;
+    $marginLR-10:0 10px;
+    $marginL-10:0 0 0 10px;
+    $marginR-10:0 10px 0 0 ;    
+// ------------------
+
+///color scss 
+//------------------
+    
+    
+   $arm:#ff590c;
+   $disarm:#b6b9bd;
+    $iconBackground:#012939;
+    $textColor:#4e4e4e; 
+   $cameraGreen:#7ed321;
+   $subHeader:#3a4048;
+   $header:#444d57;
+   $searchlistBackground: #3a4048;
+  $liveButton:#ff590c; 
+  $liveButton:#F37738;    
+   $alarmbutton:#848484;
+   
+    $buttongreen:#4caf50;
+    $white: #ffffff;
+    $closeiconBt:#959595;
+   
+    $darkBlue:#0C5B80;
+    $lightBlue:#0C5B80;
+    $inactiveLight:#de5258;
+    $textblack:#606060;
+
+    $tabbuttonInactive:#959595;
+    $tabbuttonActive:#0C5B80;
+    $datealarmColor:#EBEBEB;
+
+    $labelheading:#959595;
+  
+// ------------------
+
+///radius scss 
+//------------------
+    $radius4:4px;
+    $radius8:8px;
+    $radius50:50%;
+// ------------------
+
+///background Color scss 
+//------------------
+$bggray:#EEEEEE;
+$backgroundTrans:transparent;
+$lightbluebg:#57A9D8;
+
+
+///body inner top margin
+//------------------
+$innerbody-Marginbottom:38px;
+
+//box shadow
+$cardshadow:0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+$topinnerHeader:0px 0px 7px -2px rgba(0, 0, 0, 0.2);
+$cardboxshadow:0px 0px 9px -3px rgba(0, 0, 0, 0.3);
+
+//border
+$bordernone:none;

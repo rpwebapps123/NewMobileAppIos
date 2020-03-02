@@ -1,0 +1,117 @@
+.stats{
+    .scroll-content {
+    top:75px;
+        overflow: auto!important;
+        height:87vh;
+    }
+    .text-dimm{
+        text-align: left;
+    }
+    @media only screen and (max-device-width: 320px) {
+        .calender-items{
+            display: flex;
+            width: max-content !important;
+            padding:0px 0px;
+        }
+        ion-datetime{
+            font-size: $font14 !important;
+        }
+    }
+    .calender-items{
+        display: flex;
+        padding:0px 0px;
+    }
+    ion-datetime{
+        padding:0!important;
+        font-size: $font16;
+        color:$white;
+    }
+    ion-header{
+        position: relative;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        button{
+            background: transparent;
+            .icon-home{
+                font-size: 27px;
+            }
+            ion-icon{
+                font-size: $font20;
+            }
+        } 
+    }
+    .icon-left {
+        font-size: 25px;
+        position: absolute;
+        right: 30px;
+    }
+
+    ion-toolbar.sub-title{
+        min-height:30px;
+        padding: 0;
+        .toolbar-title-ios{
+            font-size: $font14;
+        }
+        ion-title{
+            padding: 0 10px 1px;  
+        }
+        .toolbar-title{
+            white-space:normal;
+    }
+       
+    .toolbar-background{
+        background-color:  $subHeader;
+        border-top: none;
+ }
+}
+
+.content-row{
+    padding: 15px;
+    display: flex;
+    justify-content:space-between;
+    .button {
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.08);
+        // width: 178px;
+        height: 46px;
+        margin: 0px 6px;
+    }
+
+    .active {   
+        background-color:  $white;
+        color: #000;
+        border-bottom: 2px solid #fff;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+    .custom-card{
+        padding-top: 15px;
+        position: relative;
+        ion-card{
+            height:80px;
+            padding: 20px 20px 20px 0;
+          border-radius: 4px;
+          background-color: #66c5e0;
+          margin:10px 0;
+          position: relative;
+          p{
+            font-size: $font22;
+            color: $white;
+            padding-left: 20px;
+          }
+          h2{
+            font-size: 38px;
+            color: #ffffff;
+            width: 75px;
+            border-right: 2px solid white;
+            line-height: 80px;
+            text-align: center;
+            width:110px;
+          }
+        }
+      }
+}
+}

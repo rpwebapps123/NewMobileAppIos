@@ -1,0 +1,124 @@
+<ion-content class="vediopage innerbody-Marginbottom " [ngClass]="service? 'bggray' : ''">
+  <ion-row padding class="content-center" [ngClass]=" 'service_buttons'">
+    <button ion-button (click)="sevice(true)" [ngClass]="service? 'active' : ''">Tickets</button>
+    <button ion-button (click)="sevice(false)" [ngClass]="!service? 'active' : ''">New Ticket</button>
+  </ion-row>
+ 
+
+  <ion-row radio-group class="reportProblem-radio" [(ngModel)]="statusSelection" *ngIf='service'>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Open</ion-label>
+          <ion-radio value="open"  (click)="displayOpenTickets(true)"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+         <ion-label>Closed</ion-label>
+          <ion-radio value="close"  (click)="displayOpenTickets(false)"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+      <ion-col></ion-col>
+    </ion-row>
+
+
+
+  <div class="margin-r-l" *ngIf='!service'>
+  
+    <ion-item no-border-bottom>
+     <!-- <ion-label stacked class="text-label">Description<span>*</span></ion-label>-->
+      <ion-textarea type="text" placeholder="Enter  description" [(ngModel)]="msgTxt" rows="4" *ngIf='isDesktop'>
+      </ion-textarea>
+      <ion-textarea type="text" placeholder="Enter description" [(ngModel)]="msgTxt" rows="4" *ngIf='!isDesktop'>
+      </ion-textarea>
+    </ion-item>
+
+  <!--  <button class="btn" ion-button type="submit" (click)="submit()">Submit</button>-->
+  </div>
+
+  <div class="margin-r-l reportmB" *ngIf='service'>
+   
+
+
+    <ion-list>
+        
+      <div *ngIf="filteredTicketList && filteredTicketList.length > 0 ">
+        <ion-card *ngFor="let ticket of filteredTicketList">
+          <div class="card-left">
+
+            <ion-row>
+
+              <ion-label>
+                <span class="alarmscard">Ticket Number</span>
+                <span class="subtitle">{{ticket.ticket_number}}</span>
+
+              </ion-label>
+
+
+
+              <ion-label>
+                <div class="floatright">
+                  <!-- <span class="alarmscard">Status</span> -->
+                  <span class="alarmscard">{{ticket.created_on | slice :0:19}}</span>
+                  <span class="subtitle unassigned-color">{{ticket.status}}</span>
+                </div>
+              </ion-label>
+
+            </ion-row>
+
+            <ion-row>
+
+              <span class="subtitle desc" [ngClass]="ticket.isviewmore ? 'viewmore' : ''"  >
+               
+                {{!ticket.isviewmore ? (ticket.description | slice : 0 : 150): ticket.description}}
+               
+              </span>
+ 
+            </ion-row>
+ 
+            <ion-row *ngIf="ticket.description && ticket.description.length>150 && ticket.description.length!=150">
+           
+              <button  class="readmore" (click)="setViewMoreStatus(ticket)">...{{!ticket.isviewmore ? 'Read':'Hide'}} More</button>
+           
+          </ion-row>
+          </div>
+         
+        </ion-card>
+      </div>
+
+      
+    </ion-list >
+   <!--  <ng-template #noSerachResult>
+      <div class="parent">
+        <div class="child no-tickets">
+          <span >
+             {{errorMessage }}
+          </span>
+        </div>
+      </div>
+    </ng-template> -->
+
+    <div class="parent" *ngIf="!closedTickets && !isOpenTickets">
+      <div class="child no-tickets">
+        <span class="noDataMessage">
+          There are no  tickets for this  site.
+        </span>
+      </div>
+    </div>
+
+      <div class="parent" *ngIf="!openedTickets && isOpenTickets">
+        <div class="child no-tickets">
+          <span class="noDataMessage">
+            There are no  tickets for this  site.
+          </span>
+        </div>
+      </div>
+
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="!service">
+    <button class="footerBt" ion-button type="submit" (click)="submit()">Submit</button>
+</ion-footer>

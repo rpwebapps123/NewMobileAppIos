@@ -1,0 +1,122 @@
+
+
+.statisticSvg{ border-radius:50%; width:50px; height:50px; margin:auto; display: block;  margin-bottom:10px;
+    svg{width:60%; margin: auto;  display: block; padding-top:12px; margin-bottom:10px;}
+    path, rect{fill:#fff;}
+}
+
+
+
+.statisticWrap{ 
+    .scroll-content{padding: 12px 6px;
+        ion-toolbar{padding: 0;}
+        .card{padding: 5px 2px 15px 2px;}
+        ion-grid{padding:0px !important;}
+        .item-inner{padding-right:0px !important;}
+        .item-md{padding-left:0px !important;} 
+        ion-label{margin:0px !important;}
+        ion-list .item-inner{border-bottom:none !important; margin-top:10px;}
+
+    .tabsList{margin-top:8px; margin-bottom:8px;}
+    ion-segment{
+        .segment-button{background-color: $tabbuttonInactive; border:none; border-radius:2px !important; color:$white; box-shadow:$cardboxshadow;
+             font-family:$provigilSemibold;
+            text-transform: capitalize; font-size: 1.5rem; line-height:41px; height:40px !important; margin: 0px 5px;}
+        .segment-button.segment-activated{background-color:$tabbuttonActive; }
+    }
+
+   
+    .noDataMessage{ font-size:19px; text-align:center; padding-left:2px; padding-right:2px; font-family: "ProximaNova-Semibold"; color:#888888; margin-top:4rem;}
+    p{font-size:12px; color:$textblack;}
+
+        .activitesBlock{
+            .statisticSvg{background-color:#1DB472; }
+            h3{color:#1DB472;}
+        }
+
+        .statisticAlarmsBlock{
+            .statisticSvg{background-color:#4292C1;} 
+            h3{color:#4292C1;}
+        }
+
+        .theftsBlock{
+            .statisticSvg{background-color:#E89824; }
+            svg{padding-top: 6px;}
+            h3{color:#E89824;}
+        }
+
+        .arrestsBlock{
+                .statisticSvg{background-color:#E23F3F; }
+                svg{width: 63%;}
+                h3{color:#E23F3F;}
+        }
+
+        .missedBlock{
+                .statisticSvg{background-color:#1495A4;}
+                svg{width: 44%; padding-top: 9px;}
+                h3{color:#1495A4;}
+        }
+
+    .clipsStatisticCont{
+        .card{padding:0px; margin-bottom:15px; display: flex; margin-top: 10px;
+            ion-thumbnail[item-start]{margin:0px; margin-right: 10px;}
+            .item-md ion-thumbnail{min-width:70px; min-height:60px; }
+            .item-md ion-thumbnail img{width:70px; height:60px;}
+            .item-inner{margin:0px;}
+            h6 {font-family:$provigilSemibold; color:$darkBlue; display: block; padding-bottom: 4px;
+                overflow: hidden;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                font-size: inherit;
+                text-overflow: ellipsis;
+                white-space: nowrap;}
+            p{font-family:$provigilrRegular; color:$textColor; font-size:13px; } 
+            .card-left{width:97%; position: relative;}
+            .icon-left{font-size: 16px;  padding: 0px;  margin: 0px 0px 0px -7px; display: flex !important;
+             align-items: center !important; padding-right:9px;}
+            .icon-left:before{color: #9F9F9F !important;}
+        } 
+    }      
+}
+}
+
+//IOS Start
+.statisticWrap{ 
+    .item-ios{padding-left:0px !important;}
+    .segment-ios{ 
+        .segment-button:first-of-type {border-radius:2px;}
+        .segment-ios .segment-button:last-of-type{border-radius:2px;}
+    }
+}
+
+
+
+.custum_video_alert{
+    .alert-wrapper{max-width: 96% !important;  transform: inherit !important; contain: initial; position: relative;}
+    .alert-head{padding: 4px 10px;}
+    .alert-title{font-size: 14px;     padding: 4px; color:#666;} 
+   // .alert-button-group{display:none;}  
+   
+    .alert-message{padding:0px; max-height:100% !important; }
+   
+   .icon-cross{float: right;}
+   .icon-cross:before{ color:#ff590c !important; font-size:16px;}
+
+   .alert-button{padding:0px; color: #F44336 !important; font-size: 19px;}
+    .alert-button-group{position: absolute; padding:0px; right:0px; top:7px; cursor: pointer;}
+    .alert-button.activated{background-color:transparent !important;}
+}
+
+//ios start
+.alert-ios.custum_video_alert{
+    .alert-wrapper{border-radius: 2px;     max-width: 97% !important;}
+    .alert-message{padding:0px;}
+    .alert-head{text-align:left;}
+    .alert-title{font-size: 13px; padding:4px 0px 0px 0px; margin-top:0px;}
+    .alert-button-group{right: 10px;  top:0px;}
+    .alert-button{height: auto;}
+    .alert-button.activated{background-color:transparent !important;}
+}
+//ios End

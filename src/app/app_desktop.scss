@@ -1,0 +1,1093 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+app_desktop {
+    display: flex !important;
+    .desktop-main {
+        //background-image: url(./../assets/images/app-dashboard.jpg) !important;
+        background-color:#fff;
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat !important;
+        height: 100% !important;
+        login-page{
+            ion-content{
+                background-image:none!important;
+            }
+        }
+        .cameraListBoxView{
+            top:70px;
+            width: 98%;
+        }
+        .tutorial-container{
+            position:absolute!important;
+        }
+        .potentialListpage{
+            top:70px!important;
+        }
+        ion-content{
+            background-image: none;
+        }
+        .balance-due {
+            top: 40px;
+        }
+        .vediopage {.button{
+            width:auto!important;
+            }
+            .btn.button{
+                width:100%!important;
+            }
+        }
+        .hideDiv{
+            display:none!important;
+          }
+          .not-home {
+            position: inherit;
+          }
+          
+.cameraview .scroll-content,
+.stats .scroll-content,
+.monitoring-page .scroll-content,
+.alarms .scroll-content,
+page-manage-alarms .vediopage,
+.setting,
+.Arm_disarm_info .scroll-content,
+page-notifications .scroll-content,
+page-event-list .eventList{
+  top:44px!important;
+}
+.picker-md .picker-wrapper, .picker-wrapper {
+    max-width: 60% !important;
+}
+    }
+
+    // .offline-div{
+    //     height: 300px;
+    //     width:100%;
+    //   }
+    //   .offline-img{
+    //     background-image: url(../assets/images/offline.png) !important;
+    //   }
+    @font-face {
+        font-family: 'PRO-VIGIL';
+        src: url('./../assets/fonts/PRO-VIGIL.eot?xl1bkf');
+        src: url('./../assets/fonts/PRO-VIGIL.eot?xl1bkf#iefix') format('embedded-opentype'), url('./../assets/fonts/PRO-VIGIL.ttf?xl1bkf') format('truetype'), url('./../assets/fonts/PRO-VIGIL.woff?xl1bkf') format('woff'), url('./../assets/fonts/PRO-VIGIL.svg?xl1bkf#PRO-VIGIL') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    .icon-delete:before {
+        content: "\e927";
+        color: #fff;
+      }
+      .icon-repeat:before {
+        content: "\e928";
+      }
+      
+      .icon-download:before {
+        content: "\e926";
+      }
+      .icon-screenshot:before {
+        content: "\e924";
+      }
+      .icon-help:before {
+        content: "\e925";
+        color: #fff;
+      }
+    .ion-md-add-circle:before {
+        content: "\e906" !important;
+    }
+    .ion-md-remove-circle:before {
+        content: "\e923" !important;
+    }
+    .ion-md-contract:before {
+        content: "\e922" !important;
+    }
+    .icon-add-circle:before {
+        content: "\e906";
+    }
+    .icon-contract:before {
+        content: "\e922";
+    }
+    .icon-remove-circle:before {
+        content: "\e923";
+    }
+    .icon-left:before {
+        content: "\e92d";
+        color: #fff;
+    }
+    .icon-bell:before {
+        content: "\e900";
+        color: #fff;
+    }
+    .icon-bellcross:before {
+        content: "\e901";
+        color: #fff;
+    }
+    .icon-binoculars .path1:before {
+        content: "\e902";
+        color: rgb(76, 175, 80);
+    }
+    .icon-binoculars .path2:before {
+        content: "\e903";
+        margin-left: -1em;
+        color: rgb(246, 50, 62);
+    }
+    .icon-calender:before {
+        content: "\e907";
+    }
+    .icon-camera:before {
+        content: "\e908";
+    }
+    .icon-clock:before {
+        content: "\e909";
+    }
+    .icon-cross:before {
+        content: "\e90a";
+        color: #fff;
+    }
+    .icon-down:before {
+        content: "\e90b";
+    }
+    .icon-home:before {
+        content: "\e90c";
+        color: #fff;
+    }
+    .icon-information:before {
+        content: "\e90d";
+    }
+    .icon-lock:before {
+        content: "\e90e";
+    }
+    .icon-lockopen:before {
+        content: "\e90f";
+    }
+    .icon-menu-unequal:before {
+        content: "\e910";
+        color: #fff;
+    }
+    .icon-menu:before {
+        content: "\e911";
+        color: #fff;
+    }
+    .icon-menubox:before {
+        content: "\e912";
+        color: #fff;
+    }
+    .icon-menudots:before {
+        content: "\e913";
+        color: #fff;
+    }
+    .icon-message:before {
+        content: "\e914";
+        color: #fff;
+    }
+    .icon-monitor:before {
+        content: "\e915";
+    }
+    .icon-play .path1:before {
+        content: "\e916";
+        color: rgb(76, 175, 80);
+    }
+    .icon-play .path2:before {
+        content: "\e917";
+        color: rgb(255, 255, 255);
+    }
+    .icon-pro-logo:before {
+        content: "\e918";
+        color: #fff;
+    }
+    .icon-right:before {
+        content: "\e919";
+        color: #fff;
+    }
+    .icon-rightdots .path1:before {
+        content: "\e91a";
+        color: rgb(246, 50, 62);
+    }
+    .icon-rightdots .path2:before {
+        content: "\e91b";
+        margin-left: -1em;
+        color: rgb(246, 50, 62);
+        opacity: 0.5;
+    }
+    .icon-rightdots .path3:before {
+        content: "\e91c";
+        margin-left: -1em;
+        color: rgb(246, 50, 62);
+        opacity: 0.1;
+    }
+    .icon-settings:before {
+        content: "\e91d";
+        color: #fff;
+    }
+    .icon-telephone:before {
+        content: "\e91e";
+        color: #fff;
+    }
+    .icon-tick:before {
+        content: "\e91f";
+        color: #fff;
+    }
+    .icon-tickcircle:before {
+        content: "\e920";
+        color: #4caf50;
+    }
+    .icon-up:before {
+        content: "\e921";
+    }
+    .icon-wall-clock .path1:before {
+        content: "\e904";
+        color: rgb(76, 175, 80);
+    }
+    .icon-wall-clock .path2:before {
+        content: "\e905";
+        margin-left: -1em;
+        color: rgb(246, 50, 62);
+    } //text fonts
+    @font-face {
+        font-family: 'ProximaNova-Bold';
+        src: url('./../assets/fonts/ProximaNova-Bold.woff2') format('woff2'), url('./../assets/fonts/ProximaNova-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'ProximaNova-Black';
+        src: url('./../assets/fonts/ProximaNova-Black.woff2') format('woff2'), url('./../assets/fonts/ProximaNova-Black.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'ProximaNovaCond-Regular';
+        src: url('./../assets/fonts/ProximaNovaCond-Regular.woff2') format('woff2'), url('./../assets/fonts/ProximaNovaCond-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'ProximaNova-Semibold';
+        src: url('./../assets/fonts/ProximaNova-Semibold.woff2') format('woff2'), url('./../assets/fonts/ProximaNova-Semibold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'ProximaNova-Light';
+        src: url('./../assets/fonts/ProximaNova-Light.woff2') format('woff2'), url('./../assets/fonts/ProximaNova-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+    } //comon css start
+    body {
+        font-family: $provigilLight;
+    }
+    .scroll-content {
+        overflow: auto !important;
+    }
+    .header-md::after {
+        background-image: none;
+    }
+    ion-header {
+        height: 44px !important;
+    }
+    .p-b-15 {
+        padding-bottom: 15px;
+    }
+    .panels {
+        margin-top: 0;
+    }
+    .full-width {
+        width: 100%;
+    }
+    .nextbutton {
+        position: absolute;
+        bottom: 69px;
+        right: 40px;
+        color: #fff;
+        font-family: $provigilBold;
+        padding: 30px;
+        background-color: transparent !important;
+        font-size: 18px;
+    }
+    .black_text{
+        color: #012939;
+        font-family: $provigilBold;
+        font-size: 14px;
+        }
+      
+     .align-items {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+    .cameraview .sureview-camera_list {
+        height: 92vh;
+        ion-card {
+            margin: $marginTB-10;
+        }
+    }
+    ion-navbar {
+        ion-title {
+            padding-left: 15px;
+            color: $white;
+        }
+    }
+    .alert-md .alert-message {
+    overflow: hidden!important;
+    }
+    .datetime-text {
+        font-size: $font20!important;
+        cursor: pointer;
+    }
+    .calender-items{
+        border-radius: 4px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+        border: solid 2px #9fa3a7;
+        padding: 5px;
+        display: flex;
+        justify-content:space-between;
+        margin: 10px 0;
+        .col{
+          padding:5px 2px!important;
+          align-items: center;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content:space-between;
+        }
+        ion-icon.icon-clock{
+            font-size: 64px;
+        }
+      }
+    .custum_alert {
+        .alert-wrapper {
+            border-radius: 10px !important;
+            text-align: center;
+            .alert-head {
+                text-align: center;
+            }
+            .alert-button-group {
+                width: 100%;
+                padding: 0px;
+            }
+     
+         
+            .alert-button {
+                color: $white;
+                background-color: green;
+                margin: 0px;
+                width: 100%;
+                border-radius: 0!important;
+                .button-inner {
+                    justify-content: center;
+                }
+            }
+           
+        }
+    }
+    .custum_alert.two-btn-alert{
+        .alert-wrapper{
+              .alert-button {
+                color:$white;
+                background-color: green;
+                margin: 0px;
+                border-radius: 0!important;
+                .button-inner {
+                    justify-content: center;
+                }
+            }
+            .cancel-button{
+              background-color:#3a4048!important;
+              color:rgba(255,255,255,0.5);
+            }
+        }
+    
+    }
+    .toast-wrapper{
+        background: #4caf50!important;
+        color:$white!important;
+        font-family: $provigilSemibold!important;
+        font-size: $font16;
+      }
+      .swiper-container-horizontal > .swiper-pagination-bullets{
+        top:30px!important;
+      }
+      .afterLogin-page{
+      display:none!important
+      }
+    // dashbord css start
+    .information-tag {
+        .align-items {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+      }
+    }
+    .searchbar-background {
+        ion-list {
+            height: 84vh;
+            overflow: auto;
+        }
+    }
+    .Login-dashboard-view {
+        .content-md {
+            background-color: transparent !important;
+        }
+        .login-page .scroll-content {
+            overflow: hidden !important;
+            .login-container {
+                width: 335px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .not-home {
+        min-height: 40px !important;
+        .bar-button-default-md {
+            font-size: $font28 !important;
+            width: 50px;
+            background-color: transparent !important;
+            .icon-cross {
+                font-size: 26px !important;
+            }
+        }
+        .toolbar-background {
+            background-color: transparent !important;
+        }
+    }
+    page-header ion-header {
+        height: 60px !important;
+        background: transparent !important;
+        .toolbar-md {
+            height: 60px !important;
+        }
+        .toolbar-content {
+            display: flex;
+        }
+        .button-md {
+            box-shadow: none;
+        }
+        .toolbar-background-md {
+            background: transparent !important;
+            background-color: transparent !important;
+        }
+        .header-logo {
+            height: 36px;
+            width: 161px;
+            padding: 0 20px 0 20px;
+        }
+        .toolbar-title-md {
+            font-size: $font16;
+        }
+    }
+    .dashboard-view {
+        height: 90vh;
+        overflow: auto !important;
+        width: 100%;
+        flex-direction: row-reverse;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        .scroll-content {
+            background-image: none !important;
+            top: 0;
+        }
+        .mainpage .right-40 .icon-menu_background,
+        .mainpage .left-40 .icon-menu_background {
+            margin: 4vw 0;
+        }
+        ion-navbar {
+            ion-img {
+                background: transparent;
+                contain: content;
+                padding-bottom: 40px;
+            }
+        }
+        ion-content {
+            top: 0;
+        }
+        .content-md {
+            background-color: transparent !important;
+        }
+        .dashboard-child-left {
+            width: 40%;
+            height: 100%;
+            position: relative;
+            .icon-calender{
+                cursor: pointer!important;
+            }
+
+            .armCameragreen{
+                background-color: $white;
+                // box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3), 0 0 37px 0 rgba(0, 0, 0, 0.3), inset 0 0 25px 2px rgba(1, 41, 57, 0.8);
+                border: solid 8px $disarm;            
+                .align-items {
+                    flex-direction: column!important;
+                }
+                ion-label{
+                    margin: 0!important;
+                    font-display:$provigilSemibold;
+                }
+            }
+            .arm_disarmText{
+                font-family: $provigilBold;
+                font-size: 1.1em;
+            }
+            .arm_disarmsubText{
+                font-family: $provigilSemibold;
+                font-size: 12px;
+            }
+            .armCamerared{
+                background-color: $white;
+                // box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3), 0 0 37px 0 rgba(0, 0, 0, 0.3), inset 0 0 25px 2px rgba(1, 41, 57, 0.8);
+                border: solid 8px $arm;            
+                .align-items {
+                    flex-direction: column!important;
+                }  
+                ion-label{
+                    margin: 0!important;
+                    font-display:$provigilSemibold;
+                }
+            }
+            .arm_disarmText{
+                font-family: $provigilBold;
+                font-size: 1.1em;
+            }
+            .arm_disarmsubText{
+                font-family: $provigilSemibold;
+                font-size: 12px;
+            }
+        }
+        .dashboard-child-right {
+            width: calc(100% - 40%);
+            height: 100%;
+            position: relative;
+            .login-page{
+                display:none;
+            }
+            
+        }
+        ion-searchbar {
+            background: transparent !important;
+            padding: 20px 10px 20px 0 !important;
+        } //media quiries start 
+        $tablet-width: 1023px;
+        $desktop-width: 1024px;
+        $largedesktop-width:1600px;
+        $abovedesktop-width:2600px;
+        $belowtab-width:1440px;
+        $abovemobile-width: 768px;
+        @media screen and (min-width: $desktop-width) and (max-width:$largedesktop-width) {
+            .camera-mainDiv{
+            .child-card {
+                height: 130px;
+            }
+        }
+        .mainpage{
+            .scroll-content{
+             overflow: hidden!important;
+            }
+        }
+            .middle-20 {
+                padding: 4vw !important;
+            }
+            ion-icon.icon-lockopen,
+            ion-icon.icon-lock {
+                font-size: 7em !important;
+            }
+            .icon-menu_background {
+                padding: 1vw !important;
+                ion-icon {
+                    font-size: 1.8em !important;
+                }
+            } // ---text area oplaceholder-----
+            textarea.text-input::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                margin-top: 5px !important;
+            }
+            textarea.text-input::-moz-placeholder {
+                /* Firefox 19+ */
+                margin-top: 5px !important;
+            }
+            textarea.text-input::-moz-placeholder {
+                /* Firefox 18- */
+                margin-top: 5px !important;
+            } //----text area placeholeder---
+            .scrolling-wrapper {
+                .card {
+                    img {
+                        height: 120px !important;
+                        width: 200px !important;
+                    }
+                }
+            }
+            .camera-display {
+                height: 400px !important;
+                img {
+                    height: 400px !important;
+                }
+            }
+            .monitoring-page .align-items {
+                padding: 2vw 2vw;
+            }
+            .monitoring-page .align-items .unit-text {
+                font-size: 24px !important;
+            }
+            .monitoring-page .align-items .unit-status-text {
+                font-size: 30px !important;
+            }
+            .monitoring-page .align-items .icon-calender {
+                font-size: 100px !important;
+            }
+            .monitoring-page .align-items ion-icon {
+                font-size: 150px;
+            }
+            .monitoring-page .calender-view .monitoring-hrs {
+                font-size: 28px !important;
+            }
+            .monitoring-page .calender-view .weeks {
+                font-size: 22px !important;
+            }
+            .alarms .scroll-content ion-segment-button.segment-button {
+                max-width: 25vw;
+            }
+            .alarms .scroll-content {
+                height: 90vh !important;
+            }
+            .picker-md .picker-wrapper {
+                right: -250px !important;
+            }
+        }
+        @media screen and (min-width: 1280px) and (max-width:1400px) {
+            .middle-20{
+                width: 175px !important;
+                height: 175px !important;
+              
+               }
+        }
+        @media screen and (min-width: $largedesktop-width+1px) and (max-width:$abovedesktop-width) {
+            .camera-mainDiv{
+                .child-card {
+                    height: 140px;
+                }
+            }
+            .middle-20{
+                width: 250px!important;
+                height: 250px!important;
+               }
+            .mainpage{
+                .scroll-content{
+                 overflow: hidden!important;
+                }
+            }
+            .middle-20 {
+                padding: 4vw !important;
+            }
+         
+            ion-icon.icon-lockopen,
+            ion-icon.icon-lock {
+                font-size: 8em !important;
+            }
+            .icon-menu_background {
+                ion-icon {
+                    font-size: 2.4em !important;
+                }
+                padding: 2vw !important;
+            }
+            .camera-display {
+                height: 400px !important;
+                img {
+                    height: 400px !important;
+                }
+            }
+            .scrolling-wrapper {
+                .card {
+                    img {
+                        height: 130px !important;
+                        width: 210px !important;
+                    }
+                }
+            }
+            .monitoring-page .align-items {
+                padding: 2vw 2vw;
+            }
+            .monitoring-page .align-items .unit-text {
+                font-size: 24px !important;
+            }
+            .monitoring-page .align-items .unit-status-text {
+                font-size: 30px !important;
+            }
+            .monitoring-page .align-items .icon-calender {
+                font-size: 100px !important;
+            }
+            .monitoring-page .align-items ion-icon {
+                font-size: 150px;
+            }
+            .monitoring-page .calender-view .monitoring-hrs {
+                font-size: 20px !important;
+            }
+            .monitoring-page .calender-view .weeks {
+                font-size: 15px !important;
+            }
+            .alarms .scroll-content ion-segment-button.segment-button {
+                max-width: 25vw;
+            }
+            .alarms .scroll-content {
+                height: 90vh !important;
+            }
+            .picker-md .picker-wrapper {
+                right: -250px !important;
+            }
+        }
+        @media screen and (min-width: 0) and (max-width:$tablet-width - 1px) {
+            .middle-20 {
+                padding: 6vw !important;
+            }
+            .icon-menu_background {
+                ion-icon {
+                    font-size: 4em !important;
+                }
+                padding: 2vw !important;
+            }
+        } //----------portright css start ------//
+        // @media screen and (min-width: $abovemobile-width) and (max-width:$belowtab-width)  and (orientation : portrait) {
+        //   .dashboard-view{
+        //     flex-direction:column!important;
+        //   }
+        //   .dashboard-child-right{
+        //     width:100%;
+        //     position: initial;
+        //   }
+        //   .dashboard-child-left {
+        //     width: 100%;
+        //   }
+        // }
+        //-----portright css end -------//
+        //media quiries end 
+        // camera css satrt
+        .cameraview {
+            top: 0 !important;
+        }
+        .scrolling-wrapper {
+            overflow: auto;
+            display: flex;
+            // height: 30vh;
+            width: 95%;
+        } // camera css end
+    }
+    .icon-menu_background.active {
+        background-color: $white !important;
+        opacity: 1;
+    }
+    .icon-menu_background {
+        background-color: $white;
+        opacity: 0.6;
+    } // main page css start
+    .mainpage .left-40 .icon-menu_background {
+        padding: 2vw !important;
+    }
+    .mainpage .right-40 .icon-menu_background {
+        padding: 2vw !important;
+    } // main page css end
+}
+
+//----------IOS css start
+.platform-ios,
+.platform-ipad {
+    .login-page.content-ios {
+       // background-image: url(./../assets/images/app-dashboard.jpg) !important;
+       background-color:#fff;
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat !important;
+        height: 100% !important;
+    }
+    .content-ios {
+        background-color: transparent;
+    }
+    .ion-page.show-page~.nav-decor {
+        background-color: transparent !important;
+    }
+    .menu-content {
+        box-shadow: none !important;
+    }
+    .ion-page {
+        background: transparent !important;
+    }
+    .scroll-content {
+        background-image: transparent !important;
+        top: 0;
+    }
+    app_desktop .dashboard-view .dashboard-child-right .scroll-content {
+        background-image: transparent !important;
+    }
+    .toolbar-ios ion-title {
+        position: inherit !important;
+    }
+    app_desktop page-header ion-header .header-logo {
+        padding: 4px 20px 0 20px !important;
+    }
+    .cameraview {
+        background-color: transparent !important;
+    }
+}
+
+//----------IOS css end
+//ipad potrait mode css
+@media  screen and (min-width: 768px) and (max-width: 1024px){
+    .Arm_disarm_info .scroll-content .p-lr-15-tb-10{
+        padding: 4px!important;
+}
+  app_desktop {
+    .middle-20 ion-icon {
+        font-size: 6.5em !important;
+    }
+      .dashboard-view {
+          // .dashboard-child-right {
+          //     width: calc(100% - 44%);
+          // }
+          .dashboard-child-left {
+             width: 50%;
+             .mainpage .middle-20 {
+                width: 200px!important;
+                height: 200px!important;
+        }
+        
+              .icon-menu_background ion-icon {
+                  font-size: 2em !important;
+              }
+          }
+      }
+  }
+}  
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    app_desktop {
+        .dashboard-view {
+            height: calc(100vh - 60px);
+            display: block;
+            padding: 0px 20px;
+            overflow: hidden;
+            .dashboard-child-right {
+                width: 100%;
+                height: 46vh;
+                padding-bottom: 20px;
+                .scroll-content {
+                    height: auto !important;
+                }
+                .scrolling-wrapper {
+                    height: auto;
+                } //alarms page css
+                .alarms {
+                    // .text-dimm {
+                    //     text-align: left;
+                    // }
+                    ion-footer {
+                        margin-top: 0px;
+                    }
+                }
+            }
+            .dashboard-child-left {
+                width: 100%;
+                height: 50vh;
+                .mainpage {
+                    .scroll-content {
+                        overflow: hidden !important;
+                    }
+                    ion-row {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0px;
+                }
+                .mainpage .middle-20 {
+                    width: 200px!important;
+                    height: 200px!important;
+            }
+                .icon-menu_background ion-icon {
+                    font-size: 2em !important;
+                }
+            }
+       
+        }
+    }
+}
+}
+
+@media screen and (min-width: 0px) and (max-width:767px) {
+    .desktop-main{
+        overflow:scroll!important;
+        width:767px!important;  
+    }
+    app_desktop {
+        overflow:scroll!important;
+        width:767px!important;
+        .dashboard-view .dashboard-child-left .mainpage .middle-20 {
+            width: 80px !important;
+            height: 80px !important;
+        }
+
+      .mainpage .right-40 .icon-menu_background {
+       font-size: 1em!important;
+    }
+    .mainpage .left-40 .icon-menu_background {
+        font-size: 1em!important;
+     }
+     .mainpage .middle-20 ion-icon {
+        font-size: 3.5em!important;
+     }
+    }
+.not-home .bar-button-default-md {
+        width: auto;
+    }
+    .cameraview .scrolling-wrapper .card img {
+        height: 60px!important;
+        width: 80px!important;
+    }
+}
+// stats.css
+
+.display-buttons{
+    button{
+       background-color: transparent!important;
+       box-shadow:none!important;
+       font-family: $provigilBold;
+       color: rgba(255,255,255,0.5);
+       border-radius: 0!important;
+       font-size:18px;
+       padding: 0 52px;
+width: 140px;
+height: 46px;
+margin: 0px 6px;
+    }
+}
+page-event-list {.custom-card {
+    .exapnded-section {
+        .image-section{
+            margin: 0 auto!important;
+         }
+    } 
+    .mainplayer{
+        text-align: center;
+    }
+}}
+
+.icon-play {
+    top: 0px;
+}
+//loader css 
+// .custom-loader{
+//     display: none;    
+// }
+// .loader-overlay {
+//     position: fixed;
+//     left: 0px;
+//     top: 0px;
+//     height: 100vh;
+//     width: 100vw;
+//     background: #000000;
+//     z-index: 999999999999;
+//     opacity: 0.6;   
+// }
+
+// .loader-main {
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     margin-right: -50%;
+//     transform: translate(-50%, -50%);
+//     z-index: 99999999999999;
+//     color: white;
+//     font-size: 30px;
+//     .loader {
+//         border: 10px solid #f3f3f3; /* Light grey */
+//         border-top: 10px solid #4caf50; /* Blue */
+//         border-radius: 50%;
+//         width: 100px;
+//         height: 100px;
+//         animation: spin 2s linear infinite;
+//       }
+      
+//       @keyframes spin {
+//         0% { transform: rotate(0deg); }
+//         100% { transform: rotate(360deg); }
+//       }
+// }
+body>.custom-loader.shown{
+    display: block !important;
+  }
+  //loader css 
+  // alarms css 
+  .alarms{
+    .scroll-content{
+    .see_list{
+     margin-top:20px;
+    }
+  
+    .main-alarmbuttons{
+        ion-segment-button.segment-button{
+            height:45px;
+            display: block;
+        }
+    }
+    
+}
+}
+//vedio page
+
+//stats page 
+.content-row{
+.double_buttons{
+    button{
+        box-shadow: none !important;
+        font-family: "ProximaNova-Bold";
+        background: transparent!important;
+        color:#fff;
+        font-size:16px;
+        text-transform: uppercase;
+        padding: 10px 40px;
+    }
+    .active {
+        background: transparent!important;
+        color: #fff !important;
+        border-bottom: 2px solid #fff;
+        font-weight: bold;
+        border-radius: 0 !important;
+    }
+}
+}
+.plan-desktop-buttons{
+    ion-col.col{
+        font-family: $provigilBold;
+        text-transform: uppercase;
+        cursor: pointer;
+        color:rgba(255,255,255,0.5)!important;
+    }
+ion-col.col.active-day {
+    color: #fff!important;
+    background: transparent!important;
+}
+.left_side{
+    text-align: left;
+}
+.center_block{
+    text-align: center;
+}
+.right_side{
+    text-align: right;
+}
+}
+.weekly-list{
+    margin-top:0!important;
+  }

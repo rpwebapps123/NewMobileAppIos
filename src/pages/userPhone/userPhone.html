@@ -1,0 +1,14 @@
+<ion-header color="green">  
+  <ion-navbar>
+      <ion-icon name="close" (click)="dismiss()"></ion-icon>
+      <ion-title>Log in or Create Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="details">
+    <div>Enter your Mobile Number to get started. If you have an account, you'll be asked for your password.</div>
+    <ion-item>
+      <ion-input clearInput="true" type="number" min="10" max="10" [value]="mobile" [(ngModel)]="mobile" placeholder="Mobile"></ion-input>
+    </ion-item>
+  <button ion-button block (click)="continue()">Continue</button>
+</ion-content>

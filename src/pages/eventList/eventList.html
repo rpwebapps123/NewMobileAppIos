@@ -1,0 +1,91 @@
+<ion-content class="eventList">
+    <div *ngIf="this.statsEvents.length > 0; else other_content">
+        <div *ngFor="let event of this.statsEvents; let i = index">
+            <div class="custom-card">
+                <div class="collapse-section" (click)="hideme[i] = !hideme[i]">
+                    <div class="icon-section">
+                        <button ion-button clear icon-only>
+                            <ion-icon class="icon-calender"></ion-icon>
+                        </button>
+                    </div>
+                    <div class="event-summary-block">
+                        <div class="collapse-summary-box">
+                            <div class="event-name-box">
+                                <div class="event-name">{{event.title}}</div>
+                            </div>
+                            <div class="event-time-box">
+                                <div class="event-time">{{event.eventTime}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-btn-block">
+                        <button ion-button clear icon-only>
+                            <ion-icon *ngIf="hideme[i]" class="icon-down" name="icon-down"></ion-icon>
+                            <ion-icon *ngIf="!hideme[i]" class="icon-up" name="icon-down"></ion-icon>
+                            
+                        </button>
+                    </div>
+                </div>
+
+                <div class="exapnded-section" *ngIf="hideme[i]">
+                    <div (click)="playPauseClickedVideo(i, event.clipUrl)" class="mainplayer">
+                        <div id="more-image-{{i}}" [ngClass]="!showBtn ? 'image-section' : 'show-video image-section'">
+                            <img width="100%" src={{event.thumbnailUrl}} />
+                        </div>
+                        <div class="vedio-play-button" >
+                            <video id="more-video-{{i}}" [ngClass]="showBtn ? '' : 'show-video'"  poster="{{event.thumbnailUrl}}" >
+                                <source src="{{event.clipUrl}}" type="video/mp4"> Platform does not support playing videos.
+                            </video>
+                            <!-- <ion-label class="has-header" padding="true">
+                                <span class="icon-play" (click)="playPauseClickedVideo(j)" id="morePlayBtn-{{j}}">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </span>
+                            </ion-label> -->
+                        </div>
+                    </div>
+                    <!--replace event time with response key-->
+                    <div class="flex-box alert-state-block">
+                        <div class="alarm-box">
+                            <p>alarm</p>
+                            <p class="status">{{(event.eventTime != 'null') ? event.eventTime : '-' }}</p>
+                        </div>
+                        <div class="parol-box">
+                            <p>parol</p>
+                            <p class="status">{{(event.eventTime != 'null') ? event.eventTime : '-' }}</p>
+                        </div>
+                        <div class="incident-box text-right">
+                            <p>incident</p>
+                            <p class="status">{{(event.eventTime != 'null') ? event.eventTime : '-' }}</p>
+                        </div>
+                    </div>
+                    <div class="flex-box dispatch-state-block">
+                        <div class="raise-dispatch-box">
+                            <p>raise dispatch</p>
+                            <p class="status">{{(event.eventTime != 'null') ? event.eventTime : '-' }}</p>
+                        </div>
+                        <div class="raise-incident-box text-right">
+                            <p>incident dispatch</p>
+                            <p class="status">{{(event.eventTime != 'null') ? event.eventTime : '-' }}</p>
+                        </div>
+                    </div>
+                    <div class="flex-box location-state">
+                        <div class="location-dispatch-box">
+                            <p>location dispatch from </p>
+                            <p class="status">{{(event.eventTime != 'null') ? event.eventTime : '-' }}</p>
+                        </div>
+                        <div class="location-time-box text-right">
+                            <p>incident dispatch time</p>
+                            <p class="status">{{(event.eventTime != 'null') ? event.eventTime : '-' }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #other_content>
+            <div class="child">
+        There are no events available.
+            </div>
+    </ng-template>
+</ion-content>

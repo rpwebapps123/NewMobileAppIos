@@ -1,0 +1,107 @@
+<ion-menu [enabled]="enableMenu" [content]="content">
+  
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+ 
+</ion-menu>
+<loading-indicator></loading-indicator> 
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-content class="desktop-main">
+
+<ion-content class="tutorial-container" *ngIf="showTutorial">
+        <!-- <div class="tutorial-container" > -->
+        <!-- <ion-slides > -->
+        <ion-slides  pager="true">
+                <ion-slide>
+                        <img src='assets/images/desktopTutorials/tutorial1.png' class="tutorial-image" />
+                        <button class="skipbutton" (click)="dismissTutorial($e)">Skip >>></button>
+                        <button class="nextbutton" (click)="goToSlide()">Next >>></button>
+                    </ion-slide>
+                    <ion-slide>
+                        <img src='assets/images/desktopTutorials/tutorial2.png' class="tutorial-image" />
+                        <button class="skipbutton"  (click)="dismissTutorial($e)">Skip >>></button>
+                        <button class="nextbutton" (click)="goToSlide()">Next >>></button>
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="assets/images/desktopTutorials/tutorial3.png"   class="tutorial-image" />
+                        <button class="skipbutton" (click)="dismissTutorial($e)">Skip >>></button>
+                        <button class="nextbutton" (click)="dismissTutorial($e)">Done >>></button>
+                    </ion-slide>
+            <!-- <ion-slide>
+                <div class="tutorial-btns">
+                    <button (click)="dismissTutorial($e)">Dismiss Tutorial</button>
+                </div>
+            </ion-slide> -->
+        </ion-slides>
+    </ion-content>
+<page-header></page-header> 
+<div  [ngClass]="!isLoggedIn? 'Login-dashboard-view' : 'dashboard-view'">
+<div class="dashboard-child-right">
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false">
+</ion-nav>
+
+</div>
+<div id="side-bar" class="dashboard-child-left" *ngIf="isLoggedIn" (click)="raiseCloseEvent($Event)">
+  <ion-content class="mainpage">
+    <div class="parent">
+        <div class="child">
+            <ion-row>
+                <div class="left-40">
+                    <div class="icon-menu_background {{camActiveClass}}" (click)="navigateToCameraPage()">
+                        <ion-icon class="icon-camera"></ion-icon>
+                    </div>
+                    <div class="icon-menu_background {{monitorActiveClass}}" (click)="navigateToMonitorPage()">
+                        <ion-icon class="icon-clock"></ion-icon>
+                    </div>
+                </div>
+                <div class="middle-20 {{armCameraColor}}" (click)="armCameraNow()">
+                    <div class="align-items">
+                        <div>
+                            <ion-icon class="{{armCameraClass}}">
+                            </ion-icon>
+                        </div>
+                        <div>
+                            <ion-label>
+                               <span class="arm_disarmText">{{armCameraText}}</span>
+                            </ion-label>
+                        </div>
+                        <div>
+                            <ion-label>
+                                    <span class="arm_disarmsubText">{{armCameraReverseText}}</span>
+                            </ion-label>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-40">
+                    <div class="icon-menu_background {{videoActiveClass}}" (click)="navigateToStatsAndEventsPage()">
+                        <!-- <ion-icon (click)="gotostats()" class="icon-monitor"></ion-icon> -->
+                        <ion-icon class="icon-monitor"></ion-icon>
+                    </div>
+                    <div class="icon-menu_background {{eventActiveClass}}" (click)= "navigateToShedulingPage()">
+                        <ion-icon class="icon-calender" ></ion-icon>
+                    </div>
+                </div>
+            </ion-row>
+        </div>
+    </div>
+    <div class="information-tag" (click)="lastArmedList()">
+        <ion-icon class="icon-information">
+        </ion-icon>
+        <br/>
+        <div class="align-items">
+            <span class="info-name">{{this.armData ? (this.armData.eventType === 'DEACTIVATE'? 'Last Disarmed by':'Last Armed by') : 'No History'}}</span>
+            <span class="info-candidate_name">{{this.armData ? (getUserName(this.armData)) : 'Found' }}</span>
+            
+         </div>        
+
+        <!-- {{this.userName}} -->
+    </div>
+</ion-content>
+</div>
+</div>
+</ion-content>

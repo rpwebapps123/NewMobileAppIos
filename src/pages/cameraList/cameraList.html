@@ -1,0 +1,26 @@
+<ion-content class="cameraListBoxView">
+    <ion-row class="p-lr-15-tb-10">
+        <div *ngIf="(cameraListExists === true || cameraListExists === undefined ); else noCameras" class="full-width">
+                <!-- (click)="itemSelected(camera.Name)" -->
+              
+            <ion-card  *ngFor="let camera of cameraList" (click)="navigateToCameraHdViewPage(camera)">
+                   
+                <span *ngIf="camera.CameraId === (activeCamera && activeCamera.CameraId); else Inactive" class="active">
+                    {{ camera.Name }}
+                </span>
+                <ng-template #Inactive>
+                    <span>
+                        {{ camera.Name }}
+                    </span>
+                </ng-template>
+            </ion-card>     
+        </div> 
+        <ng-template #noCameras>
+            <div class="parent">
+                <div class="child">
+                    No Results
+                </div>
+            </div>
+        </ng-template>
+    </ion-row>
+</ion-content>

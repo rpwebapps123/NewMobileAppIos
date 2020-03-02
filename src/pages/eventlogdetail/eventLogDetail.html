@@ -1,0 +1,73 @@
+<ion-content class="event-log-detail bggray innerbody-Marginbottom">
+ 
+  <div *ngIf="eventlogDetail">
+    <ion-card>
+        <div class="card-left">
+        <ion-row>
+            <ion-label>
+              <span class="alarmscard">Action</span>
+              <span class="subtitle">{{(pvmUser === 'true')?eventlogDetail.tagname ? eventlogDetail.tagname : '-': eventlogDetail.finalActionType ? eventlogDetail.finalActionType : '-'}}</span>
+            </ion-label>
+        </ion-row>
+ 
+        <ion-row>
+            <ion-label>
+              <span class="alarmscard">Event Time</span>
+              <span class="subtitle">{{ (pvmUser === 'true')? eventlogDetail.starttime ? eventlogDetail.starttime  : '-': eventlogDetail.eventTimeStr ? eventlogDetail.eventTimeStr  : '-'}}</span>
+            </ion-label>
+        </ion-row>
+
+        <ion-row>
+            <ion-label>
+              <span class="alarmscard">Camera</span>
+              <span class="subtitle">{{ (pvmUser === 'true')? eventlogDetail.cameraname ? eventlogDetail.cameraname : '-' : eventlogDetail.cameraName ? eventlogDetail.cameraName : '-'}}</span>
+            </ion-label>
+        </ion-row>
+        
+        <ion-row>
+              <div><span class="alarmscard">Notes</span> </div>
+              <span class="subtitle">{{ (pvmUser === 'true')?  eventlogDetail.notes ? eventlogDetail.notes : '-' :  eventlogDetail.actionNotes ? eventlogDetail.actionNotes : '-'}}</span>
+        </ion-row>
+      </div>
+    </ion-card>
+
+    <div class="eventLogImg">
+              <div  *ngIf="eventarray && eventarray.length > 0 && (pvmUser=='true')">
+                  <ion-list>
+                    <div *ngFor="let recentEscVideo of eventarray" class="child-card">                
+                        <div class="card">
+                                <img  [src]="(recentEscVideo.imageurl[0]) ? recentEscVideo.imageurl[0]  : 'assets/images/15copy@3x.png'" (click)="playVideoModal(recentEscVideo)"/>
+                                <img class="playicon" src="assets/images/playiconoverlay.png" (click)="playVideoModal(recentEscVideo)"/>
+                                <ion-label class="label label-md"><span class="camName">{{recentEscVideo.camname }} {{recentEscVideo.strttime}}</span></ion-label>
+                        </div>
+                    </div>
+                  </ion-list>
+
+                  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+                      <ion-infinite-scroll-content
+                      *ngIf="isAllItemsLoaded == false"
+                      loadingSpinner="bubbles"
+                      loadingText="Loading more data..."
+                      ></ion-infinite-scroll-content>
+                  </ion-infinite-scroll> 
+
+               </div>
+               <div  *ngIf="pvmUser=='false'">
+                <ion-list>
+                  <div class="child-card">                
+                      <div class="card">
+                              <img  [src]="(eventlogDetail.imageurl) ? eventlogDetail.imageurl  : 'assets/images/15copy@3x.png'"  (click)="playVideoModal(eventlogDetail)"/>
+                              <img class="playicon" src="assets/images/playiconoverlay.png"  (click)="playVideoModal(eventlogDetail)" />
+                              <ion-label class="label label-md"><span class="camName">{{eventlogDetail.cameraName }} {{eventlogDetail.eventTimeStr}}</span></ion-label>
+                      </div>
+                  </div>
+                </ion-list>
+             </div>
+               <div class="no-tickets"  *ngIf="errorMessage && errorMessage.length > 0">
+                <span>
+                   {{errorMessage}}
+                </span>
+              </div>
+    </div>
+  </div>
+</ion-content>

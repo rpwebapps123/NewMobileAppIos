@@ -1,0 +1,328 @@
+.searchbarPage{margin-bottom: 60px;}
+.cameraview{
+    .scrolling-wrapper .card img.playicon{width:100px !important; height:100px !important; min-height:auto  !important;  padding: 7px 2px 7px 10px;  position: absolute; 
+        top: calc(50% - 66px) !important;  left: calc(50% - 53px) !important;}
+    ion-fab{
+        display: block !important;
+        position: absolute;
+        bottom: 130px;
+        right: 30px;
+        .icon-screenshot{
+            font-size: 60px;
+        }
+      }
+      .no-tickets{
+        color: #4caf50 !important;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        font-family: "ProximaNova-Bold";
+        background: #EEEEEE;
+       }
+    .offline-msg {
+        padding: 13px;
+        text-align: center;
+        background: grey;
+        margin: $margin-10;
+        border-radius: 5px;
+        color: white;
+    }
+    .scroll-content{
+        //top: 70px;
+        overflow:auto;
+       }
+        ion-item{
+            background-color: transparent;
+        }
+        .parent{
+        height: 70%;
+        text-align: center;
+        color:  $cameraGreen;
+        font-size: $font20;
+        }
+        .image-border{
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8);
+            border: 2px solid #ffffff;
+        }
+
+    ion-header{
+        position: relative;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:$paddLR-10;
+        align-content: center;
+        button{
+            background: transparent;
+        }
+        .toolbar-background{
+            background: transparent;
+            border-top: none;
+        }
+        .icon-right{
+            font-size: $font20;
+            position: relative;
+            top: -2px;
+        }
+        .bar-buttons[end]{
+            ion-icon{
+                font-size:$font30;
+            }
+        }
+        ion-img{
+            contain: content;
+            width: 100px;
+            padding-top:5px;
+            background: transparent;
+        }
+    }
+
+    ion-toolbar.sub-title{
+        min-height:30px;
+        padding: 0;
+        .toolbar-title-ios{
+            font-size: $font14;
+        }
+        ion-title{
+            padding: 0 10px 1px;
+        }
+       
+    .toolbar-background{
+        background-color:  $subHeader;
+        border-top: none;
+ }
+ ion-icon{
+    float: right;
+    position: relative;
+    padding-right: $paddR-10;
+    font-size: 25px;
+ }
+
+}
+.backgrondBlur{
+background-color: rgba(0,0,0,0.8);
+width:99%;
+}
+ion-row{
+    .camera-display {
+    padding-top: 10px;
+   position: relative;
+    margin: 0 auto; 
+    width: 65%;
+    height:256px;
+    ion-fab{
+        display:none!important;
+    }
+   
+    .scroll-view{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      zoom-area-custom{
+        ion-content{
+            z-index:0;
+        }
+        .btn-zoom {
+            width: 25px!important;
+            height: 25px !important;
+            background-color: rgba($color: #FF7777, $alpha: 0.8)
+          }
+      }
+     .zoom {
+        position: relative!important;
+      }
+      .fab ion-icon{
+       font-size: 14px!important;
+      }
+    
+    .button-live {
+        background-color:  $liveButton;
+        color:  $white;
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        font-size:  $font12;
+        font-family:$provigilSemibold;
+        padding: 3px 8px;
+    }
+    .offline-backimage{
+        background-image: url('../assets/images/offline.png')!important; 
+        height: 250px!important;
+        width:95%!important;
+        margin:0 auto;
+    }
+    .vedio-hover{
+       background-color: #000000 ;
+       color: $white;
+       text-align: center;
+       position: absolute;
+       bottom: 0;
+       opacity: 0.7;
+       height:60px;
+       width:100%;
+       ion-label{
+        display: flex;
+        align-items: center;
+       line-height:40px;
+        font-size: $font16;
+        font-family:$provigilSemibold;
+        text-transform: capitalize;
+        margin: 0px;
+        .green-dot{
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: block;
+           // margin:0 15px;
+            background-color:  $cameraGreen;
+            box-shadow:none;
+        }
+        .red-dot{
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: block;
+            //margin:0 15px;
+            background-color:  $liveButton;
+            box-shadow:none;
+        }
+       }
+    }   
+    }
+}
+//------camera
+.camera-mainDiv{
+    margin: 0 auto;
+    display: inline-block;    
+    height: auto;
+}
+.child-card {
+    // flex-grow: 1;
+    height: auto;
+    // width: 49%;
+    width: 100%;
+    color: white;
+}
+
+
+.offline-backimage{
+    background-image: url('../../assets/images/offline.png')!important; 
+    height: 250px!important;
+    width:95%!important;
+    margin:0 auto;
+}
+
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+     .card {
+        position: relative;
+      
+        cursor: pointer;
+      
+      .image_border{
+        border:2px solid  $white;
+      }
+      
+      .sdhdbt {
+          position: absolute;
+          bottom:13px;
+          right:10px;
+
+
+        button{
+            background-color:#535c65; padding:4px 6px; font-size:10px; color:#fff; border-radius:2px;
+             }
+      }
+      
+      
+
+    }
+  }
+  .sureview-camera_list{
+    overflow: auto;
+    padding:$padd-10;
+    height:100%;
+      ion-card{
+        height: 50px;
+        padding-left: 8px;
+        font-family:$provigilSemibold;
+      }
+  }
+  .screenshot-btn{
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      box-shadow: 0px 3px 5px black;
+  }
+}
+#playerhdw_sharecont, #playerhdwlogocont, .hdwcplaycont, #playerhdwcontextMenu, #playerhdwinvolslide, #playershare, #playerfullbtncanvas{
+    display: none !important;
+}
+#playerhdwnvolslide{
+    border: none !important;
+}
+.hdwhtml5player{
+    height: 390px !important;
+    // width: 65% !important;
+}
+#playerswfobjcont{
+    height: 80% !important;;
+}
+
+#playerhdwpause{
+    width: 8px !important;
+}
+
+//NEW Style
+//------camera
+.camera-mainDiv{
+    margin: 0 auto;
+    display: inline-block;   
+    margin-top: 15px !important;
+    height: auto;
+
+}
+.child-card.liveviewBlock {width: 100%;}
+
+.searchmargin{margin-top:0px !important;
+    ion-searchbar{padding:0px !important;  border-radius:0px;}
+    .searchbar-input{border-radius:0px !important; box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.2);}
+}
+
+.cameraview {
+    .camName{margin-left:20px;}
+    .list-md{background-color:$white;
+        .item-md{padding-left:0px;}
+        .item-inner {border-bottom: 1px solid #e4e4e4 !important; padding-right:15px;    padding-left: 15px;}
+        .label-md{font-size: 14px; margin: 10px 0px 10px 0px;  color:#656565;}
+    }
+
+    .list-ios{
+        .item-ios{padding-left:0px !important;
+          .label-ios{font-size: 14px; padding-left: 12px;}
+        }
+      }
+
+      .searchmargin .searchbar-ios { 
+        .searchbar-md .searchbar-input{border-radius:0px !important; box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.2);}
+      }
+
+}
+
+.liveviewBlock{
+    .label-md{padding-bottom:2px !important;}
+}

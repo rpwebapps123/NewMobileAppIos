@@ -1,0 +1,41 @@
+<ion-header color="green">  
+  <ion-navbar>
+      <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
+      <ion-title>Create Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-label>Please choose a</ion-label>
+    <ion-item>
+        <ion-input type="password" [(ngModel)]="signup.password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input  type="password" [(ngModel)]="confirmPassword" placeholder="Confirm Password"></ion-input>
+    </ion-item>
+    <div>... and it would be greate if you would give your</div>
+    <ion-item>
+        <ion-input [(ngModel)]="signup.firstName" placeholder="First Name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="signup.lastName" placeholder="Last Name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="signup.street" placeholder="Street"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="signup.number" placeholder="Number"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="signup.city" placeholder="City"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="signup.zipCode" placeholder="Zip Code"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="signup.country" placeholder="Country"></ion-input>
+    </ion-item>
+    <div>By creating an account, I aggree to the</div>
+    <button ion-button (click)="showTAC()">Terms and Conditions</button>
+    <button ion-button block (click)="createAccount()">Create Account</button>
+</ion-content>

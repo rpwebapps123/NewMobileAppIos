@@ -1,0 +1,83 @@
+Procedures Need to moved to Production
+========================================
+
+1)usp_getSiteCameraInformation
+
+2)usp_InsArmDisArm  
+ 
+3)usp_get_Arm_DisArm_PSA_Info
+ 
+4) usp_GetUserInformation
+unit name as unitId 
+
+5)usp_disarmandarmhistory
+ 
+6)Add column for image url,sd video url ,hd video url - Done Jayadeb
+ 
+7)ALTER table [dbo].[tbl_user] ADD pin varchar(255);
+
+8) ALTER table [dbo].[tbl_user] ADD userrandomhash varchar(255);
+ 
+9)[usp_GetUserInformation]
+ pin info
+ 
+10) 
+CREATE TABLE [dbo].[tbl_notification](
+	[notificationId] [int] IDENTITY(1,1) PRIMARY KEY,
+	[message] [varchar](4000),
+	[title] [varchar](1000),
+	[accountId] [varchar](100) NULL,
+	[notificationRead] [int] NULL,
+	[createdDate] [datetime] default CURRENT_TIMESTAMP
+	
+) ON [PRIMARY]
+GO
+
+
+11) usp_getsite_Time
+
+ 
+12)usp_InsUpdate_Other_Monitoring_Hours
+
+ 
+13)
+Recent Escalations 
+==================
+
+Reporting DB 
+
+[usp_Get_KPI_Report_ByPage]
+
+Classes and methods
+=====================
+SiteConfigurationDAOImpl - getEventHistoryByPage
+
+SIPageAPIController - recentEscalationsAPI
+
+ 
+Recent Escalations Videos
+==========================
+usp_getVideoURLSByPage
+
+TestGroupACIReportController - getGroupEventListForUCCByPage
+
+EscalationReportDAOImpl - getEventGroupListByPage
+
+usp_getVideoURLSByPage
+
+14)
+Mobile Logs
+============
+ 
+CREATE TABLE [dbo].[tbl_mobilelogs](
+	[logId] [int] IDENTITY(1,1) PRIMARY KEY,
+	[deviceId] [varchar](1000),
+	[message] [varchar](8000),	
+	[createdDate] [datetime] default CURRENT_TIMESTAMP
+	
+) ON [PRIMARY]
+GO
+ 
+15)
+[usp_InsArmDisArm_Mobile]
+ArmDisarmCamioMobileCallPro

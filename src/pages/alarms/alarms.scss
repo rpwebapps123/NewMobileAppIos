@@ -1,0 +1,331 @@
+.alarms{
+    .scroll-content{
+      
+        padding:$padd-12;
+        ion-toolbar{
+            padding: 0;
+        }
+        .child{
+            color:$arm;
+            text-align: center;
+            margin:0 auto;
+            font-size: $font18;
+            font-family: $provigilBold;
+          }
+        ion-label.Active {
+            color: #fff!important;
+            font-weight: bold;
+        }
+        
+        
+        h2{
+            text-align: center;
+            font-family: $provigilBold;
+            color:$white;
+            text-transform: uppercase;
+        }
+        button.Active{
+            background: $white!important;
+          }
+         /* .main-alarmbuttons{
+            ion-segment-button.segment-button{
+                margin:0 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none!important;
+                font-family: $provigilBold;
+                background-color: rgba(255, 255, 255, 0.6);
+                color: $iconBackground;
+                text-transform: uppercase;
+                border-radius: $radius4;
+                padding: 0;
+                opacity:1;
+                padding: 10px!important;
+                height:auto!important;
+                line-height: initial!important;
+            }
+            ion-segment-button.segment-button.segment-activated {           
+                background: white!important;
+            }
+          }*/
+    
+        .plan-buttons {
+         /*   ion-segment-button.segment-button{
+                    border-radius: 20px!important;
+                    text-align: center;
+                    margin:0 10px 0 0;
+                    font-family: $provigilBold;
+                    border: none!important;
+                    text-transform: uppercase;
+                    opacity:1;
+                    background:rgba(255, 255, 255, 0.6);
+                    color: #000!important;
+                    padding: 9px!important;
+                    height:auto!important;
+                    line-height: initial!important;
+                }*/
+                .active-day{
+                    background: white!important;
+                }
+        }
+        // ion-segment-button.segment-button.segment-activated{
+        //     background-color: $white!important;
+        //     color: $iconBackground;
+        // }
+        .weekly-list{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            div{
+                display: flex;
+                align-items: center;
+                align-content: center;
+                ion-label{
+                    margin-left: 6px!important;
+                }
+            }
+        }
+       
+        .fullwidth{
+             width: 100%;
+        }
+        .m-b-10{margin-bottom:10px;}
+        .m-t-35{margin-top: 35px !important;}
+       
+        ion-label{
+            font-size: $font14;
+            color:$darkBlue;
+            text-transform: capitalize;
+        }
+        ion-item{
+            background: transparent;
+            border-top: none!important;
+            color:$white;
+            padding-left: 0;
+        }
+        .calender-center{
+            text-align: center;
+            color:$white!important;
+            font-size: 40px;
+        }
+        .diffenrent-font{
+            font-size:40px;
+            color:$white;
+        }
+        .align-dates{
+            text-align: left;
+        }
+        .main-text{
+       text-align: center;
+        }
+        .flex-staticdate{
+            display: flex;
+            justify-content: space-around;
+        }
+        .text-label{
+           color:$white!important
+        }
+        .align-items{
+          text-transform: uppercase;
+         
+          ion-label{
+              margin:0;
+              color:rgba(255, 255, 255, 0.5);
+            font-family: $provigilBold;
+          }
+          .toolbar .segment-md .segment-button.segment-activated, .active{
+            color:$white!important;
+            opacity:1;
+            font-size: $font18;
+          }
+        }
+       
+        .text-dimm{font-family:$provigilSemibold; font-size: 19px;       
+
+            .picker-wrapper{
+                max-width: 59% !important;
+                right: 94px !important;
+                left: auto !important;
+            
+            }
+        }
+        .subtitle.desc.viewmore{
+            font-family:$provigilrRegular;
+             color:$textblack;
+            display:block; width:100%; 
+            text-overflow: unset;
+            white-space: normal;
+        }
+        .subtitle.desc{
+            font-family:$provigilrRegular;
+            color:$textblack;
+       display: block;
+       overflow: hidden;
+       -webkit-box-flex: 1;
+       -webkit-flex: 1;
+       -ms-flex: 1;
+       flex: 1;
+       font-size: inherit;
+       text-overflow: ellipsis;
+       }
+   
+       .readmore{background-color: transparent;
+           margin-top:2px;
+           text-decoration: none;
+           text-align: right;
+           width: 100%;
+           font-family:$provigilrRegular;
+           font-size: 13px;
+           color: #3636b3;
+       }
+   
+       .subtitle.desc.viewmore{
+           font-family:$provigilrRegular;
+            color:$textblack;
+           display:block; width:100%; 
+           text-overflow: unset;
+           white-space: normal;
+       
+       }
+        ion-footer{
+            position: relative;
+            button{
+                height:60px;
+                background-color: $buttongreen;
+            }
+        }
+        .weekly-list{
+            display: flex;
+            .item .checkbox{
+ margin:0 1px 0 0!important;
+            }
+            .item-inner{
+                border-bottom: none!important;
+                padding-right: 0!important;
+                
+            }
+        }
+
+        .scheduledPsaDate{padding-top:0px;
+            ion-label{font-family:$provigilSemibold;}
+            .datetime-text{line-height: 1.3em; font-size: 14px; color: #333; text-align: left; font-family: "ProximaNova-Regular";}
+            .label-md{margin:0px; padding-left: 5px; padding-bottom: 12px;}
+            .datetime-md{padding: 0px 5px 0px 5px; font-size: 14px; color: #333; height: 20px; }
+            .col{padding-top:0px;}
+            .grid{padding-top:0px;}
+            .scheduledPsaDateStart{padding-right:12px;}
+            .scheduledPsaDateEnd{padding-left:12px;}
+            .item-md.item-block .item-inner{border-bottom: 1px solid #a09e9e; padding-bottom: 6px;}
+            .input-wrapper{height:46px;}  
+            .item-input-has-value .label-md[floating], .input-has-value .label-md[floating]  {transform: translate3d(0, 0, 0) scale(0.9);}
+            .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating]{transform: translate3d(0, 0, 0) scale(0.9);}
+        } 
+        
+    }
+    .card{display: flex; box-shadow:$cardshadow !important;   
+        .card-left{
+            width:80%;
+            padding:8px 12px;
+            position: relative;
+
+            span.disarmico{background-color: #BC494E;     color: #fff;   width:72px;   text-align: center;   padding: 3px 8px; display: inline-block;
+                border-radius: 2px;
+                svg{margin-top: 1px;      float: left;  margin-right: 4px;}
+            }
+                span.armico{background-color: #6BCB42;     color: #fff;   width:72px;   text-align: center;   padding: 3px 8px; display: inline-block;
+                    border-radius: 2px;                
+                svg{margin-top: 1px;      float: left;  margin-right: 4px;}
+                }
+
+
+        }
+        
+        button {
+            background: transparent;
+            margin: 0 auto;
+            font-size: 30px;
+        }
+        .icon-repeat {
+            position: absolute;  
+            top: 2px;
+            right:2px;
+        }
+        .card-right.align-items{
+            width:20%;
+            background: #f6323e;
+            padding-bottom:0;
+        }
+        ion-label {
+            color: black !important;
+            padding: 0!important;
+            margin:2px  0!important;
+        }
+    }
+
+    .btdate{
+        box-shadow:none !important;
+        padding:14px 0px 8px 0px !important;
+        color:$textColor !important;
+        background:$datealarmColor !important;
+        border-radius: 25px;
+        font-size:19px !important; text-align: center; font-family: $provigilBold;
+        margin-right: 10px; margin-left: 10px;
+    }
+    ion-datetime.datetime.datetime-md.ng-untouched.ng-pristine.ng-valid{font-size:19px !important; text-align: center;
+        font-family: $provigilBold;}
+
+
+ion-segment{
+    .segment-button{background-color: $tabbuttonInactive; border:none; border-radius:2px !important; color:$white; box-shadow:$cardboxshadow;
+         font-family:$provigilSemibold;
+        text-transform: capitalize; font-size: 1.5rem; line-height:41px; height:40px !important; margin: 0px 8px;}
+    .segment-button.segment-activated{background-color:$tabbuttonActive; }
+    }
+    .commentText{color:$darkBlue;  font-family:$provigilSemibold; font-size:18px; margin-left: 8px;text-align: center;}
+    .tabsList{margin-top: 12px;}
+
+    //New PSA
+    ion-list{margin-top:10px; margin-bottom:64px;
+         .item-inner{padding-right:0px !important; border-bottom: 1px solid $textblack !important;}
+         textarea.text-input{color:#333; font-size: 15px;}
+         .text-input::-moz-placeholder {color:$textblack;}
+          
+          .text-input:-ms-input-placeholder {color:$textblack;}
+          .text-input::-webkit-input-placeholder {text-indent: 0;color:$textblack;}         
+         
+    }
+
+    .calender-items{
+        .datetime-md{
+            .datetime-placeholder{text-transform: capitalize;}
+        }    
+    }
+//IOS Start
+.segment-ios{ 
+    .segment-button:first-of-type {border-radius:2px;}
+    .segment-ios .segment-button:last-of-type{border-radius:2px;}
+}
+
+.scheduledPsaDate{
+    .datetime-ios{padding: 0px 5px 0px 5px; font-size: 14px; color: #333; height: 20px; }
+    .item-input-has-value .label-ios[floating], .input-has-value .label-ios[floating] {transform: translate3d(0, 0, 0) scale(0.9);} 
+    .item-input-has-focus .label-ios[floating], .input-has-focus .label-ios[floating]{transform: translate3d(0, 0, 0) scale(0.9);}
+    .item-ios{margin-top: 5px;}
+}
+
+
+.calender-items{
+    .datetime-ios{
+        .datetime-placeholder{text-transform: capitalize;}
+    }    
+}
+
+//IOS END
+}
+
+.toolbar-ios .segment-button{margin: 0px 6px !important; max-width:100% !important;}
+
+
+
+

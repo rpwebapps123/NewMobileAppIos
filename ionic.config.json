@@ -1,0 +1,8 @@
+{
+  "name": "Pro-Vigil",
+  "integrations": {
+    "cordova": {}
+  },
+  "API_URL": "http://127.0.0.1:9876",
+  "type": "ionic-angular"
+}

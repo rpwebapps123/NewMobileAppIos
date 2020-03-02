@@ -1,0 +1,71 @@
+<!-- <ion-content class="balance-due ">
+  <ion-label>
+    <p>Name:
+      <p>
+        <span></span>
+  </ion-label>
+  <ion-label>
+    <p>Phone:
+      <p>
+        <span></span>
+  </ion-label>
+  <ion-label>
+    <p>OverDueBalance:
+      <p>
+        <span></span>
+  </ion-label>
+  <ion-label>
+    <p>Last Bill Date:
+      <p>
+        <span></span>
+  </ion-label>
+  <ion-label>
+    <p>Next Bill Date:
+      <p>
+        <span></span>
+  </ion-label>
+  <ion-label>
+    <p>Billing Address:
+      <p>
+        <span></span>
+  </ion-label>
+</ion-content> -->
+
+
+
+
+
+<ion-content class="balance-due ">
+   <div *ngIf="balanceDue">
+    <ion-label>
+      <p>Name:
+        <p>
+          <span>{{balanceDue.Name}}</span>
+    </ion-label>
+    <ion-label>
+      <p>Phone:
+        <p>
+          <span>{{balanceDue.Phone}}</span>
+    </ion-label>
+    <ion-label>
+      <p>Over Due Balance:
+        <p>
+          <span>{{balanceDue.Overdue_Balance__c}}</span>
+    </ion-label>
+    <ion-label>
+      <p>Last Bill Date:
+        <p>
+          <span>{{balanceDue.Last_Bill_Date__c}}</span>
+    </ion-label>
+    <ion-label>
+      <p>Next Bill Date:
+        <p>
+          <span>{{balanceDue.Next_Bill_Date__c}}</span>
+    </ion-label>
+    <ion-label>
+      <p>Billing Address:
+        <p>
+          <span *ngIf="displayAddress">{{displayAddress}}</span>
+    </ion-label>
+  </div> 
+</ion-content>

@@ -1,0 +1,46 @@
+
+<!-- <ion-content class="daymaskWrap innerbody-Marginbottom bggray">
+          <ion-label>{{ cameraName }}</ion-label>
+          <div class="daymaskList" *ngIf="maskingImages && maskingImages.length> 0;else noData">
+            <ion-card *ngFor="let image of maskingImages"> 
+                <ion-img [src]="image.srcimg"></ion-img>  
+            </ion-card>
+          </div> 
+          <ng-template #noData>
+            <h3 text-center>No Masking Images</h3>
+          </ng-template>
+  </ion-content> -->
+
+  <ion-content class="daymaskWrap innerbody-Marginbottom bggray">
+    <ion-label >{{ cameraName }}</ion-label>
+    <ion-toolbar no-border-top class="tabsList">
+        <ion-segment [(ngModel)]="viewType" class="align-items main-alarmbuttons">
+            <ion-segment-button value="cameraView">
+             Camera View
+            </ion-segment-button>
+
+            <ion-segment-button value="maskingView">
+               Masking View
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+
+    <div *ngIf="(viewType === 'cameraView')">         
+        <div class="daymaskList">
+          <ion-card *ngIf ="pvmUser === 'false'"> 
+              <img  [src]="cameraImgView">
+        </ion-card>
+        <h4 class="noImg"  *ngIf ="pvmUser === 'true'">{{ cameraNoImg }}</h4>
+        </div>  
+    </div>
+
+      <div *ngIf="(viewType === 'maskingView')">        
+          <div class="daymaskList">
+            <ion-card *ngIf ="pvmUser === 'false'"> 
+              <img [src]="maskingImageView">
+          </ion-card>
+
+          <h4 class="noImg"  *ngIf ="pvmUser === 'true'">{{ maskingNoImg }}</h4>
+          </div>        
+      </div>     
+</ion-content>

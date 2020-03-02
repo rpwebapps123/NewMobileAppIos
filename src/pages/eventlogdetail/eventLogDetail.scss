@@ -1,0 +1,160 @@
+.event-log-detail{
+    .scroll-content{
+        margin: 12px 0px 12px 0px;
+        padding:12px;
+        overflow: auto!important;
+       // height:87vh;
+       }
+       ion-label{
+           margin: 0!important;
+       }
+ 
+.card{padding:10px;
+    display: flex;
+    .alarmscard{
+     
+
+       .floatright{float:right;}
+       .col.width-50{width:50% !important;}
+    }
+    .card-left{
+        width:100%;
+       
+        position: relative;
+
+     .subtitle{display:block; width:100%;}
+
+     .subtitle-link{display:block; width:100%;text-decoration: underline;}
+     
+        
+    }
+
+     .subtitle.desc{
+         font-family:$provigilrRegular;
+         color:$textblack;
+         //
+    //     font-family:$provigilBold;
+    //     color: $iconBackground;
+    //     display:block; width:100%; font-size:14px;
+
+   
+    display: block;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    .readmore{background-color: transparent;
+        margin-top:2px;
+        text-decoration: none;
+        text-align: right;
+        width: 100%;
+        font-family:$provigilrRegular;
+        font-size: 13px;
+        color: #3636b3;
+    }
+
+    .subtitle.desc.viewmore{
+        font-family:$provigilrRegular;
+         color:$textblack;
+        display:block; width:100%; 
+        text-overflow: unset;
+        white-space: normal;
+    
+    }
+   
+
+    .icon-repeat {
+        position: absolute;  
+        top: 2px;
+        right:2px;
+    }
+    .card-right.align-items{
+        width:25%;
+        background: #f6323e;
+        padding-bottom:0;
+    }
+    ion-label {
+        color: black !important;
+        padding: 0!important;
+        margin:5px  0!important;
+    }
+
+    .floatright{float:right; width: 58%;}
+    .unassigned-color{color:$inactiveLight;}
+    .open-radio .radio-md .radio-icon{left: -13px !important;}
+        ion-app.md [padding] {
+            padding: 16px;
+        }
+
+  
+} 
+
+    .eventLogImg{
+        .camName{font-size:13px;}
+        .card{width: 100%; color:#4e4e4e !important; background-color: #fff; border-radius:0px; margin-bottom: 15px; position: relative;
+            cursor: pointer;  box-shadow: 0px 0px 9px -2px rgba(0,0,0,0.2); margin-bottom:15px; padding:0px; display: inline-block;
+        img{height: 100% !important;
+            width: 100% !important;}
+            img.playicon {
+                width:80px !important;
+                height:80px !important;
+                height: auto !important;
+                padding: 7px 2px 7px 10px;
+                position: absolute;
+                top: calc(50% - 62px) !important;
+                left: calc(50% - 42px) !important;
+            }
+           .label-md{ padding: 0px 12px 3px 12px !important;}
+            
+            .camName {font-size: 13px;    color: #4e4e4e !important;     display: inline-block; }
+        
+        
+    
+        }
+      
+    }
+
+    
+.no-tickets{
+    color: #F37738 !important;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: "ProximaNova-Bold";
+   }
+}
+
+
+.custum_video_alert{
+    .alert-wrapper{max-width: 96% !important;  transform: inherit !important; contain: initial; position: relative;}
+    .alert-head{padding: 4px 10px;}
+    .alert-title{font-size: 14px;     padding: 4px; color:#666;} 
+   // .alert-button-group{display:none;}  
+   
+    .alert-message{padding:0px; max-height:100% !important; }
+   
+   .icon-cross{float: right;}
+   .icon-cross:before{ color:#ff590c !important; font-size:16px;}
+
+   .alert-button{padding:0px; color: #F44336 !important; font-size: 19px;}
+    .alert-button-group{position: absolute; padding:0px; right:0px; top:7px; cursor: pointer;}
+    .alert-button.activated{background-color:transparent !important;}
+}
+
+//ios start
+.alert-ios.custum_video_alert{
+    .alert-wrapper{border-radius: 2px;     max-width: 97% !important;}
+    .alert-message{padding:0px;}
+    .alert-head{text-align:left;}
+    .alert-title{font-size: 13px; padding:4px 0px 0px 0px; margin-top:0px;}
+    .alert-button-group{right: 10px;  top:0px;}
+    .alert-button{height: auto;}
+    .alert-button.activated{background-color:transparent !important;}
+}
+//ios End

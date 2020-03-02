@@ -1,0 +1,25 @@
+.balance-due{
+    .scroll-content{
+        top: 75px;
+        padding: 20px;
+        overflow: auto!important;
+        height:87vh;
+       }
+       ion-label{
+           margin: 0!important;
+       }
+p{
+    font-size: $font16;
+    color:$white;
+    margin-bottom: 0;
+}
+span{
+text-align: center;
+color:$arm!important;
+word-break: break-word;
+width: 80%;
+font-size: $font22;
+white-space: initial;
+font-family: $provigilBold;
+}
+}

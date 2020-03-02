@@ -1,0 +1,38 @@
+.about-us {
+    position:absolute!important;
+    top:0!important;
+    left:0;
+    right: 0;
+    bottom:0; 
+}
+
+//android start
+.platform-android page-about-us .tutorial-container {
+    padding-top:43px;
+  background:$white !important;
+
+  .skipbutton{position: absolute; bottom:0px; right:15px; color:#0c5b80; font-family:$provigilBold;
+    padding:0px 0px 10px 0px; background-color: transparent!important; font-size: 18px;}
+    .swiper-container-horizontal > .swiper-pagination-bullets{top:14px !important;}
+  }
+//android start
+
+
+//IOS start
+ion-content.content-ios.page-aboutus{margin-top:36px;
+    .scroll-content{margin-top:0px;} 
+}
+
+ion-content.content-ios.about-us{margin-top:7px;
+    .scroll-content{margin-top:0px;}
+    .swiper-container-horizontal > .swiper-pagination-bullets{top:14px !important;}
+}
+.platform-ios{
+    .about-us{
+        .tutorial-container {margin-top:32px; background:$white !important;}
+
+        .skipbutton{position: absolute; bottom:0px; right:15px; color:#0c5b80; font-family:$provigilBold;
+            padding:0px 0px 10px 0px; background-color: transparent!important; font-size: 18px;}
+    }
+}
+//IOS end

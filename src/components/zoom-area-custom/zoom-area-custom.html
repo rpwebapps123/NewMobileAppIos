@@ -1,0 +1,21 @@
+<ion-content #myContent>
+    <div #zoomAreaCustomRoot class="zoom" (click)="toggleZoomControls()">
+      <div class="fit">
+        <ng-content></ng-content>
+      </div>
+    </div>
+
+    <ion-fab right top [@visibilityChanged]="zoomControlsState">
+      <button (click)="zoomIn()" >
+          <ion-icon name="add-circle"></ion-icon>
+      </button>
+
+      <button (click)="zoomOut()" >
+          <ion-icon name="remove-circle"></ion-icon>
+      </button>
+
+      <button (click)="zoomReset()"   >
+          <ion-icon name="md-contract"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-content>

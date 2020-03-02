@@ -1,0 +1,37 @@
+<ion-content class="Arm_disarm_info bggray innerbody-Marginbottom">
+    <ion-row>
+        <div *ngIf="(this.armInfo.length > 0 ); else noList" [ngClass]="topClassName">
+            <ion-card *ngFor="let item of armInfo">
+                <span [ngClass]="[item.eventType === 'DEACTIVATE' ? 'icon-bellcross' : 'icon-bell']"></span>
+                <div class="textCont">
+                   <ion-list>
+                        <ion-item>
+                            <ion-label class="arm-name">{{ item.userId}}</ion-label>
+                            <!--<ion-label class="arm-name" *ngIf="isDesktop">{{ getUserName(item)}}</ion-label>-->
+                        </ion-item>
+                    </ion-list>
+
+                    <ion-list  class="bottomText">
+                            <ion-item>
+                                <span [ngClass]="item.eventType === 'DEACTIVATE' ? 'disarmed-text' : 'arm-text'">
+                                     {{ item.eventType === 'DEACTIVATE'? 'Disarmed': 'Armed'}}
+                                </span>
+                              <div class="timedate" *ngIf="pvmUser === 'true'">
+                                    <span>{{item.eventTime.hourOfDay}}:{{item.eventTime.minute}}:{{item.eventTime.second}}</span>
+                                    <span>{{item.eventTime.dayOfMonth}}-{{  item.eventTime.month}}-{{item.eventTime.year}}</span>
+                              </div>
+                              <div class="timedate" *ngIf="pvmUser === 'false'">
+                                <span>{{ convertCtToLocalTime(item.eventTime) }}</span>
+                          </div>
+                            </ion-item>
+                   </ion-list>
+              </div>
+            </ion-card>
+        </div>
+        <ng-template #noList>
+            <div class="child">
+                No Results Found
+            </div>`
+        </ng-template>
+    </ion-row>
+</ion-content>

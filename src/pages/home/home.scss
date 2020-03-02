@@ -1,0 +1,374 @@
+.mainpage{
+    
+    background: $white!important;
+    // background-image: url('assets/images/pro-back.jpg'); 
+    // background-size: cover;
+    .scroll-content{
+     //overflow: hidden;
+     padding-top: 0px;
+     background: transparent!important;
+    }
+    .icon-menu-unequal{
+      font-size: $font28;
+    }
+    ion-toolbar{
+        color: $white!important;
+    .toolbar-background{
+        background: transparent;
+        border-top: none;
+    }
+    ion-title{
+        padding:0 0 0 10px!important;
+        font-family: $provigilSemibold;
+    .toolbar-title{
+        white-space:normal;
+        font-size: $font14;
+        color: $white;
+        text-align: left;
+        font-weight: normal;
+    }
+}
+.button-inner {
+        color:  $white;
+        font-size: $font14;
+        font-family:$provigilBold;
+    }
+}
+.information-tag{
+    .align-items{
+      flex-direction: column!important;
+    }
+}
+ion-row{
+    width: 100%;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    align-content: center;
+}
+.left-40{
+    align-items: center;
+    width:25%;
+    display: flex;
+    flex-direction: column;
+    .icon-menu_background{
+        cursor: pointer;
+        font-size: 3.5em;
+        padding: 7vw;
+        border-radius: 20px;
+        margin:70% 0;
+        position: relative;
+        left: 17px;
+        transform: rotate(-45deg);
+        background:rgba(255,255,255,0.6);
+        ion-icon{
+            transform: rotate(45deg); 
+        }
+}
+}
+app_desktop{
+    .armCameragreen{
+        cursor: pointer;
+        background-color: $white;
+        // box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3), 0 0 37px 0 rgba(0, 0, 0, 0.3), inset 0 0 25px 2px rgba(1, 41, 57, 0.8);
+        border: solid 8px $arm;
+    }
+    .armCamerared{
+        background-color: $white;
+    //   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3), 0 0 37px 0 rgba(0, 0, 0, 0.3), inset 0 0 25px 2px rgba(1, 41, 57, 0.8);
+      border: solid 8px $disarm;
+    }
+    .middle-20{
+        width: 200px;
+        border-radius: 50%;
+        text-align: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 200px;
+        justify-content: center;
+        display: inline-flex;
+        cursor: pointer;
+        ion-icon{
+            font-size: 6.5em;   
+            line-height: normal;
+        }
+       }
+}
+.armCameragreen{
+    background-color: $white;
+    box-shadow:inset 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:  inset 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow:inset 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    border: solid 8px $disarm;
+    .align-items {
+        flex-direction: column!important;
+    }
+    ion-label{
+        margin: 0!important;
+        font-display:$provigilSemibold;
+    }
+}
+.arm_disarmText{
+    font-family: $provigilBold;
+    font-size: 1.1em;
+}
+.arm_disarmsubText{
+    font-family: $provigilSemibold;
+    font-size: 12px;
+}
+.armCamerared{
+    background-color: $white;
+    box-shadow:inset 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    border: solid 8px $arm;
+    .align-items {
+        flex-direction: column!important;
+    }
+    ion-label{
+        margin: 0!important;
+    }
+}
+.middle-20{
+    width: 160px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 160px;
+    justify-content: center;
+    display: inline-flex;
+    ion-icon{
+        font-size: 4.5em;   
+        line-height: normal;
+        color: #012939!important;
+    }
+   }
+.right-40{
+    align-items: center;
+    width:25%;
+    display: flex;
+    flex-direction: column;
+    .icon-menu_background{
+        cursor: pointer;
+        font-size: 3.5em;
+        padding: 7vw;
+        border-radius: 20px;
+        margin:70% 0;
+        position: relative;
+        right: 17px;
+        transform: rotate(-45deg);
+        background:rgba(255,255,255,0.6);
+        ion-icon{
+            transform: rotate(45deg); 
+        }
+}
+}
+.parent{
+            display:table;
+            width:100%;
+            height: 80%;
+        }
+        .child{
+            display:table-cell;
+            vertical-align: middle;
+            margin: 0 auto;
+            .alert{
+                font-size: 15px;
+                color: #ffffff;
+                z-index: 57;
+                margin-left: 68%;
+                margin-top: 29% !important;
+                position: absolute;
+            }
+}  
+.information-tag{
+  text-align: center;
+  color: $white;
+  position: relative;
+  cursor: pointer;
+    top: -50px;
+  ion-icon{
+      font-size: 3.8em;
+  }
+  .info-name{
+    font-family:$provigilSemibold;
+    font-size: $font12;
+  }
+  .info-candidate_name{
+    font-family:$provigilBold;
+    font-size:$font16;
+    font-weight:700;
+  }
+}  
+
+    ion-footer{
+        .toolbar-title{
+            ion-img{
+                contain: content;
+                width: 100px;
+                opacity: 0.5;
+                background: transparent;
+            }
+        }
+        .align-icons{
+           ion-icon{
+               font-size: 35px;
+               color: $white;
+           }
+           button{
+            background: transparent;
+        }
+        }
+    }
+
+    .progress-circle.indefinite .progress {
+        stroke: #f37738;
+        stroke-width: 10;
+        stroke-dashoffset: 22;
+        stroke-dasharray: 104 188;
+        animation: progress-indef 1s linear infinite;
+      }
+      
+      .progress-circle.indefinite{
+        position:absolute; right:0; left:0; margin:auto;  width:30px; height:30px;
+        top: 19px;
+        
+             .bg {stroke: #eee;  stroke-width:10; fill:#fff !important;}
+      }
+      @keyframes progress-indef {
+        0% { stroke-dashoffset: 280; }
+        100% { stroke-dashoffset: 0; }
+      }
+}
+
+//My style
+
+.lastarmed-name{text-align:center; float:left;     margin-top: 10px; width: 127px; 
+    h4{background-color: #0C5B80; color: #fff; font-size:31px; border-radius: 50%; padding: 4px; margin:auto; width:45px;
+        height:45px; text-align: center; line-height:37px; font-weight: 400;}
+    
+    h6{font-size:12px; color:#5d5d5d; font-weight:300; padding:0px; margin:0px;}
+
+    h5{font-size:15px; color:#0C5B80; font-weight:400; padding:0px; margin:-2px 0px 0px 0px; text-transform: uppercase; white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;}
+}
+
+.armedAction{margin:0px 0px 22px 0px;  display: table; margin-left: auto; margin-right: auto; width:236px;
+    position: relative;
+.switch-block{float:left;  padding: 10px 0px 26px 0px;   width: 106px; }
+.switch {position: relative; display: inline-block; width: 84px; height:45px;}
+.switch input{opacity: 0; width: 0; height: 0;}
+.slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; -webkit-transition: .4s;
+    transition: .4s;  border: solid 6px #ccc;}
+ .slider:before {position: absolute; content: ""; background-color:#4ea9e6; -webkit-transition: .4s; transition: .4s;
+   background:url(../assets/images/disarmed.png) no-repeat center center; 
+        left:-9px; bottom: -9px; height: 13px; width: 13px; padding: 18px; font-weight: 600; background-size: 47px;}
+
+   input:checked + .slider:before { background: url(../assets/images/armed.png) no-repeat center center;
+            left:5px; bottom: -9px; height: 13px; width: 13px; padding: 18px; font-weight: 600; background-size: 47px;}
+  
+    input:checked + .slider:after{content: "Armed"; color:#f37738; font-size: 18px; position: absolute; top: 42px; left: 12px;
+                text-align:center; font-weight:700;}
+
+    .slider:after {content: "Disarmed"; color: #979797; font-size: 18px; position: absolute;top: 42px; left:0px; text-align:center;
+                    font-weight:700;}
+
+    input:checked + .slider {background-color: #ffffff;  border: solid 7px #ccc; }
+
+    input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+    input:checked + .slider:before {-webkit-transform: translateX(26px); -ms-transform: translateX(26px); transform: translateX(26px);}
+            
+                            /* Rounded sliders */
+    .slider.round {border-radius: 34px;}
+    .slider.round:before {border-radius: 50%;}
+       
+}
+
+
+
+/*position: relative; left: calc(50% - 162px) !important; */
+.selectUl{  position: relative; left:auto; right:auto; margin-left:auto; margin-right:auto; display:inline-block;
+    .label-md { margin: 7px 8px 7px 0px;}
+   .item-block .item-inner{border:none;}
+   .svgicon.equipmentHealthIcon svg{margin-top: 12px;} 
+   .svgicon.eventlogIcon svg{width:45%;}       
+    ion-label{color:#606060; text-decoration:none; font-size:20px; font-weight:600; display: inline-block; line-height: 40px;}
+        .svgicon{ background-color:#0C5B80; border-radius:50%; width:40px; height:40px; float:left; margin-right:30px; 
+            svg{width:63%; margin: auto; display: block; margin-top:8px;}
+            path, rect{fill:#fff;}
+        }    
+        .svgicon.statisticsIcon svg{width:50%;}   
+}
+
+
+.camOnline{border:solid 2px #E3E3E3; border-radius:25px; padding:4px 17px 1px 17px; margin: auto; color:#3c3c3c; margin-top:39px;
+     display: table; position: relative;
+    #idvalidstatus {font-size:17px;  color:$textColor; line-height:36px; font-weight:400; float:left; padding:0px;margin:0px 18px 0px 0px;}
+    #idinvalidstatus {font-size:17px;  color:$textColor; line-height:36px; font-weight:400; float:left; padding:0px;margin:0px 0px 0px 0px;}
+    .onlinelight{width:32px; height:32px; border-radius:50%; background-color:#83c762; display:inline-block;
+          box-shadow: 0px 0px 9px -2px rgba(0,0,0,0.2);}
+    .offlinelight{width:32px; height:32px; border-radius:50%; background-color:#c76262; display:inline-block;
+        box-shadow: 0px 0px 9px -2px rgba(0,0,0,0.2);}
+}
+
+.skipbutton{position: absolute; bottom:0px; right:15px; color:#0c5b80; font-family:$provigilBold;
+    padding:0px 0px 10px 0px; background-color: transparent!important; font-size: 18px;}
+
+
+ //android start
+.mainpage{
+    .tutorial-container{
+        padding-top:6px;
+        background:$white !important;
+        .skipbutton{position: absolute; bottom:0px; right:15px; color:#0c5b80; font-family:$provigilBold;
+            padding:0px 0px 10px 0px; background-color: transparent!important; font-size: 18px;}
+            .swiper-container-horizontal > .swiper-pagination-bullets{top:14px !important;}
+    }
+}
+
+// .scroll-content {
+//     display: table !important;   
+//     width: 100% !important;
+//     height: 100% !important;
+//   }
+
+// .mainpage .scroll-content{ display:table !important; }
+.scroll-content { display:inline-block !important; overflow:auto; }
+
+
+
+.homewrap{    display: table !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    .homemiddle{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding-bottom:0px;
+        padding-top:25px;  
+       
+    }
+}
+
+
+//android start
+
+ //ios start
+.selectUl.list-ios{position: relative;  left:auto; right:auto; margin-left: auto; margin-right:auto; display: inline-block;
+    .label-ios { margin: 7px 0px 7px 0px !important;}
+    .item-ios{padding:0px;}
+}
+
+
+  //ios start

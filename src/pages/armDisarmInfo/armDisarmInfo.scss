@@ -1,0 +1,79 @@
+.Arm_disarm_info{
+    .scroll-content{padding-top:24px; padding-left:12px; padding-right:12px; margin-bottom: 35px; overflow: auto;
+        .textCont{width: 82%;
+            padding-right: 10px;
+            .item-block{min-height:auto !important;}
+           
+            .label-md{margin:0px !important;}
+            .list-md{margin:0px;}
+            .item-md{padding-left: 11px; padding-right:0px;}
+            .item-ios{padding-left: 11px; padding-right:0px;}
+            .bottomText{margin-top:8px;}
+            .arm-name{font-size:$font14;  color:$textblack; font-family:$provigilSemibold;}
+            .timedate{font-size:$font14;  color:$textblack; 
+                span{margin-left:10px;}
+            }
+
+              .arm-text{width:99px; float: left;          
+                color:#f3793a;
+                font-size:13px;
+                font-family: $provigilrRegular;
+                text-transform: initial;
+                }
+    
+                .disarmed-text{width:99px; float: left;                 
+                    color:#989898;
+                    font-size:13px;
+                    font-family: $provigilrRegular;
+                    text-transform: initial;
+                    }
+
+
+        }
+        .child{
+            color:$arm;
+            text-align: center;
+            margin:0 auto;
+            font-size: $font18;
+            font-family: $provigilBold;
+            margin-top: 15px;
+          }
+       
+        ion-card{
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            font-size: $font14;
+            color: #80949c;
+            font-family:$provigilBold;
+            justify-content: space-between;
+
+            span.icon-bell {
+                font-size: 30px;
+                color: $white;
+                background-color:#f3793a;
+                height:60px;
+                min-width:60px; 
+                align-items: center;
+                display: flex;
+             justify-content: center;
+            }
+            
+           
+           
+     
+            span.icon-bellcross{
+                font-size: 30px;
+                color: $white;
+                background-color:#b6b9bd;
+                height:60px;
+                min-width:60px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                position: relative;
+            }
+        }
+
+    }
+}

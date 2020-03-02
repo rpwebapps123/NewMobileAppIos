@@ -1,0 +1,32 @@
+.setting {  
+    background: #ffffff !important;
+    .scroll-content {margin-top:17px; padding-top:12px;}
+
+    .selectUl{ 
+        .svgicon{ background-color:#0C5B80; border-radius:50%; width:44px; height:44px; float:left; margin-right:30px; 
+            svg{width:63%; margin: auto; display: block; margin-top:9px;}
+            path, rect{fill:#fff;}
+        } 
+        .resetIcon svg{margin-top: 16px;} 
+        .billingIcon svg{margin-top: 7px; width: 46%;} 
+        .aboutIcon svg{margin-top: 6px;} 
+        .tutorialsIcon svg{margin-top: 9px;  width: 58%;} 
+        }
+
+        .selectUl.list-ios {
+            .item-ios{margin-bottom: 12px;}
+        }
+
+          
+               
+           
+}
+
+ion-footer{
+    .footerBt.button-md{background-color:$liveButton !important; padding-top:10px; padding-bottom:10px;
+      height: 55px;  font-family: $provigilBold; color: $white; font-size: 20px;width: 100%;
+      text-transform: capitalize;}
+    }
+
+   
+ 

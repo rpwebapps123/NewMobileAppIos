@@ -1,0 +1,65 @@
+page-pin {
+    $color1: #f4f4f4;
+    $color2: #4CAF50;
+    .content {
+      color:  $white;
+      background-color:  $white;
+      text-align: center;
+      ion-toolbar {
+        color:  $white !important;
+        min-height: 20px !important;
+        background: #444d55;
+        .toolbar-background {
+            background: transparent;
+            border-top: none;
+        }
+        ion-title {
+            padding-left: $paddL-10;
+            .toolbar-title {
+                white-space: normal;
+                font-size: $font14;
+                color:  $white;
+                text-align: left;
+                font-weight: normal;
+            }
+        }
+        .button-inner {
+            color:  $white;
+        }
+    }
+  }
+}
+ion-pincode .pincode-wrapper {
+  background-color: transparent;
+  border: 0px;
+  overflow: visible;
+  height: 100% !important;
+}
+ion-pincode .pincode-input {
+  margin: 0px;
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  z-index: 9999;
+}
+ion-pincode .pincode-input .pincode-input-grid {
+  border: 0px;
+}
+ion-pincode .pincode-input .pincode-input-row ion-col span.on {
+  background-color: #0cb10c;
+}
+ion-pincode .pincode-input .pincode-input-row ion-col {
+  border-left: 0px;
+}
+
+ion-pincode .pincode-button-wrapper ion-col button {
+  margin: 4px;
+  width: 92%;
+  border-radius: 5px !important;
+  button-inner {
+      background:  $white;
+  }
+}
+ion-pincode .pincode-button-wrapper {
+  background-color: #c8c7cc !important;
+}

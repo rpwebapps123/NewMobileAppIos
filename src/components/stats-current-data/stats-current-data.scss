@@ -1,0 +1,53 @@
+.custom-card{
+    padding-top: 15px;
+    position: relative;
+    .more-click{
+      padding: 20px 4px 20px 0 !important;
+      cursor: pointer!important;
+    }
+    .align-items{
+      justify-content: flex-start;
+    }
+    ion-card{
+      height: 80px;
+        padding: 20px;
+      border-radius: 4px;
+      background-color: #66c5e0;
+      p{
+        font-size: $font22;
+        color: $white;
+      }
+      h2{
+        font-size: 42px;
+        color: $white;
+        width: 100px;
+        text-align: center;
+        .more_alignment{
+          position: relative;
+          left: 20px;
+        }
+      }
+    }
+  }
+  ion-datetime.datetime.datetime-md.ng-untouched.ng-pristine.ng-valid{
+    font-size: 22px!important;
+    color: $white;
+  };
+  .end-text{
+   text-align: right!important;
+  }
+  .text-dimm{
+    font-size: $font16;
+    color:rgba(255,255,255,0.5);
+    text-align: center;
+    margin: 0!important;
+    font-family: $provigilBold;
+    }
+    .icon-calender{
+      font-size: 60px;  
+      cursor:none!important;
+    }
+    .align-items-icon{
+      display: inline-flex;
+      align-items: center;
+    } 

@@ -1,0 +1,32 @@
+.daymaskWrap{
+    .scroll-content {padding: 12px 12px 12px 12px;}
+     ion-label{margin: 10px 12px 10px 12px !important; font-family:$provigilSemibold; color:$darkBlue; text-align:center; }
+         .daymaskList{margin-top:25px; margin:0px 5px; margin-bottom: 53px;
+             img{height:auto !important;} 
+             ion-img{min-width:100%; min-height:100%; contain: inherit;}    
+         }
+     ion-card{display: flex; border-radius:1px !important; margin-bottom:15px;}
+ 
+     ion-segment{
+         .segment-button{background-color: $tabbuttonInactive; border:none; border-radius:2px !important; color:$white; box-shadow:$cardboxshadow;
+              font-family:$provigilSemibold;
+             text-transform: capitalize; font-size: 1.5rem; line-height:40px; height:40px !important; margin: 0px 8px;}
+         .segment-button.segment-activated{background-color:$tabbuttonActive; }
+     }
+         .commentText{color:$darkBlue;  font-family:$provigilSemibold; font-size:18px; margin-left: 8px;text-align: center;}
+         .tabsList{margin-bottom:8px;}
+
+         .noImg{font-size: 16px;  text-align: center;  color: #888888;  margin-top: 4rem; font-family: "ProximaNova-Semibold";}
+ }
+ 
+ 
+ //IOS Start
+ .daymaskWrap{    
+     .segment-ios{ 
+         .segment-button:first-of-type {border-radius:2px;}
+         .segment-ios .segment-button:last-of-type{border-radius:2px;}
+     }
+     .toolbar-ios .segment-button{margin: 0px 6px !important; max-width:100% !important;}
+ }
+
+ .noImg{font-size: 16px;  text-align: center;  color: #888888;  margin-top: 4rem; font-family: "ProximaNova-Semibold";}

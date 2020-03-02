@@ -1,0 +1,1162 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+  font-family: 'PRO-VIGIL';
+  src:  url('../assets/fonts/PRO-VIGIL.eot?xl1bkf');
+  src:  url('../assets/fonts/PRO-VIGIL.eot?xl1bkf#iefix') format('embedded-opentype'),
+    url('../assets/fonts/PRO-VIGIL.ttf?xl1bkf') format('truetype'),
+    url('../assets/fonts/PRO-VIGIL.woff?xl1bkf') format('woff'),
+    url('../assets/fonts/PRO-VIGIL.svg?xl1bkf#PRO-VIGIL') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'PRO-VIGIL' !important;
+  //speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card{border-radius:2px !important;
+  .alarmscard{font-family:$provigilrRegular;  color:$labelheading;  display: block; font-size: 13px;}
+  .subtitle{font-family:$provigilSemibold;  color:$darkBlue; font-size: $font14;}
+}
+.icon-delete:before {
+  content: "\e927";
+  color: #fff;
+}
+.icon-repeat:before {
+  content: "\e928";
+}
+
+.icon-download:before {
+  content: "\e926";
+}
+.icon-screenshot:before {
+  content: "\e924";
+}
+.icon-help:before {
+  content: "\e925";
+  color: #fff;
+}
+.icon-close:before {
+  content: "\f2c0";
+  color: #fff;
+}
+.ion-ios-add-circle:before ,
+.ion-android-add-circle:before {
+  content: "\e906"!important;
+}
+.ion-ios-remove-circle:before,
+.ion-android-remove-circle:before {
+content: "\e923"!important;
+}
+.ion-ios-contract:before,
+.ion-android-contract:before {
+content: "\e922"!important;
+}
+.icon-add-circle:before {
+  content: "\e906";
+}
+.icon-contract:before {
+  content: "\e922";
+}
+.icon-remove-circle:before {
+  content: "\e923";
+}
+.icon-left:before {
+  content: "\e92d";
+  color: #fff;
+} 
+.icon-bell:before {
+  content: "\e900";
+
+}
+.icon-bellcross:before {
+  content: "\e901";
+}
+.icon-binoculars .path1:before {
+  content: "\e902";
+  color: rgb(76, 175, 80);
+}
+.icon-binoculars .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(246, 50, 62);
+}
+.icon-calender:before {
+  content: "\e907";
+}
+.icon-camera:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-cross:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-down:before {
+  content: "\e90b";
+}
+.icon-home:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-information:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-lock:before {
+  content: "\e90e";
+}
+.icon-lockopen:before {
+  content: "\e90f";
+}
+.icon-menu-unequal:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-menu:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-menubox:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-menudots:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-message:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-monitor:before {
+  content: "\e915";
+}
+.icon-play .path1:before {
+  content: "\e916";
+  color: rgb(76, 175, 80);
+}
+.icon-play .path2:before {
+  content: "\e917";
+  margin-left: -1.5em;
+  color: rgb(255, 255, 255);
+}
+.icon-pro-logo:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-right:before {
+  content: "\e919";
+  color: #fff;
+}
+.icon-rightdots .path1:before {
+  content: "\e91a";
+  color: rgb(246, 50, 62);
+}
+.icon-rightdots .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(246, 50, 62);
+  opacity: 0.5;
+}
+.icon-rightdots .path3:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(246, 50, 62);
+  opacity: 0.1;
+}
+.icon-settings:before {
+  content: "\e91d";
+  color: #fff;
+}
+.icon-telephone:before {
+  content: "\e91e";
+}
+.icon-tick:before {
+  content: "\e91f";
+  color: #fff;
+}
+.icon-tickcircle:before {
+  content: "\e920";
+  color: #4caf50;
+}
+.icon-up:before {
+  content: "\e921";
+}
+.icon-wall-clock .path1:before {
+  content: "\e904";
+  color: rgb(76, 175, 80);
+}
+.icon-wall-clock .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(246, 50, 62);
+}
+
+//text fonts
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../assets/fonts/ProximaNova-Bold.woff2') format('woff2'), url('../assets/fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../assets/fonts/ProximaNova-Black.woff2') format('woff2'), url('../assets/fonts/ProximaNova-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Regular';
+    src: url('../assets/fonts/ProximaNovaCond-Regular.woff2') format('woff2'), url('../assets/fonts/ProximaNovaCond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('../assets/fonts/ProximaNova-Regular.woff2') format('woff2'), url('../assets/fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight:400;
+  font-style:normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Semibold';
+    src: url('../assets/fonts/ProximaNova-Semibold.woff2') format('woff2'), url('../assets/fonts/ProximaNova-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Light';
+    src: url('../assets/fonts/ProximaNova-Light.woff2') format('woff2'), url('../assets/fonts/ProximaNova-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+} 
+
+ //comon css start
+ body{
+    font-family: $provigilrRegular;
+    overflow: auto;
+ }
+ .loading-wrapper{
+  background:transparent!important; 
+box-shadow: none!important; 
+}
+.spinner-crescent circle{
+  stroke: $white!important;
+}
+.picker-md .picker-wrapper,.picker-wrapper{
+  max-width: 59%!important;
+  right:0!important;
+  left:auto!important;
+}
+.picker-opt.picker-opt-disabled{ pointer-events: none !important;}
+.black_text{
+color: #012939;
+font-family: $provigilBold;
+font-size: 16px;
+}
+.icon-menu_background{
+  &:hover{
+   background:$white!important;
+   box-shadow:0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+   -moz-box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+   -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+ }
+}
+ //-----IOS BUILD CSS OPEN -----
+ .platform-ios{
+  body{
+    height:auto!important;
+    position:inherit!important;
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+  }
+  .app-root{
+  position:inherit!important;
+  display:inherit!important;
+  }
+
+ }
+
+ //-----IOS BUILD CSS OPEN -----
+
+ .offline-backimage{
+  background-image: url('../assets/images/offline.png')!important; 
+  height: 250px!important;
+  width:95%!important;
+  margin:0 auto;
+ }
+ ion-content{
+  overflow: hidden!important;
+  //background-image: url('../assets/images/pro-back.jpg'); 
+  background-size: cover;
+ }
+ 
+ .tutorial-container {padding-top:41px;
+  position: relative;
+  z-index: 12;
+  background-color:$white;
+  //height:100vh;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.toast-wrapper{
+  background: #4caf50!important;
+  color:$white!important;
+  font-family: $provigilSemibold!important;
+  font-size: $font16;
+  width:100%!important;
+}
+.picker-wrapper, .picker-wrapper{
+  max-width: 100% !important;
+}
+
+.cameraview .camera-mainDiv {
+  overflow-x: auto!important;
+ // height: 37vh;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.swiper-pagination-bullet-active{
+  background:$arm!important;
+  font-size: $font14;
+}
+.swiper-pagination-bullet{
+  background:$darkBlue;
+  opacity:1;
+  font-size: $font14;
+}
+.icon-tickcircle{
+font-size:80px;
+display: block;
+}
+.alert-title{
+  color:$arm;
+  padding-bottom:10px;
+}
+.tutorial-btns {
+  height: 100vh;
+padding-top:300px;
+button{
+  padding:15px;
+    border-radius: 4px;
+    margin: 0 8px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ProximaNova-Bold';
+    background-color:$arm;
+    color:$white;
+    font-size: $font14;
+}
+}
+.toolbar-background-md,
+.toolbar-background-ios,
+.toolbar-background-android{
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.toolbar-background-ios{
+  border-width: 0!important;
+}
+ .header-md::after {
+  background-image: none;
+}
+
+.p-b-15{
+padding-bottom: 15px;
+}
+.icon-play{
+  font-size: 40px;
+  cursor: pointer;
+}
+.footer-md::before{
+  height:0!important;
+}
+.active{
+  color: $iconBackground!important;
+  font-size:$font14;
+  font-family: $provigilBold;
+}
+.full-width{
+  width:100%; 
+}
+.full-width-ios-arminfo{
+  width:100%;
+  margin-top: 20px;
+}
+.align-items{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+  margin:0;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets{
+  top:12px!important;
+}
+//total project we are hiding fab icons
+ion-fab{
+  display:none!important;
+}
+
+.icon-bell{
+  position: relative;
+}
+.badge {
+  padding: 8px 10px;
+  font-size: 12.025px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: $arm;
+  position: absolute;
+  right: -7px;
+  top: -11px;
+  border-radius: 50%;
+}
+.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.version-text{
+  color: #606060;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500; 
+  text-align: center;
+  padding:0px;
+}
+.parent{
+  display:table;
+  width:100%;
+  height: 100%;
+}
+ion-title{
+  .toolbar-title{
+  color:$white;
+  font-size: 16px; 
+  text-align: left;   
+  }
+}
+.child{
+  display:table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+.datetime-ios{
+  padding: 0!important;
+}
+ion-toolbar ion-title,
+.toolbar-ios ion-title{
+  padding: 0 0 0 0px!important;
+  text-align: left;
+}
+
+ion-app.ios{
+  font-family:$provigilrRegular;
+  position:inherit!important;
+  display:inherit!important;
+  .header-leftButtons {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+}
+video{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.home{
+  position: absolute;
+  top:0;
+  .toolbar-background{
+    background-color: transparent;
+  } 
+  ion-icon{
+    font-size: 25px;
+  }
+  ion-title{
+    font-family:$provigilSemibold;
+    font-size:$font14;
+    padding: 0 55px 0 10px!important;
+  }
+}
+.not-home{
+  min-height:30px;
+  padding: 0;
+  position: absolute;
+  top:40px;
+  .toolbar-background{
+    background-color:  $subHeader!important;
+  } 
+  ion-title{
+    font-family:$provigilSemibold;
+    font-size: $font14;
+    padding: 0 55px 0 15px!important;  .scroll-content {
+      padding-top: 80px;
+  }
+  } 
+}
+ion-header{
+  button,.button-ios{
+    background: transparent!important;
+    height:auto;
+    //font-size: 25px!important;
+    padding: $paddLR-10;
+  }
+  .icon-right{
+    font-size: $font20!important;
+  }
+  .button-md.activated{box-shadow:none !important;}
+}
+// header css end
+// search css start 
+.searchbar-background{
+  ion-list{
+    
+   
+   // height: 100Vh;
+    position: relative;
+    z-index: 2;
+    .item-block{
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    ion-item{
+      padding: 0;
+     
+      &:first-child,&:last-child{
+        border-top: none!important;
+      }
+     
+    }
+  }
+
+}
+// search css end
+// calender css start in app.scss
+.calender-items{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:$white;
+  text-transform: uppercase;
+  ion-item{
+      background-color: transparent;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    .item-inner{
+        border-bottom: none;
+        padding: 0;
+    }
+    ion-datetime{
+      padding: 0;
+      width: 100%;
+      color: $white;
+      text-transform: capitalize;
+      font-size: $font18;
+    }
+    ion-icon{
+          font-size:50px;
+          color:$white;
+          margin:0!important;
+    }
+    ion-label{
+      font-size: $font18;
+      background-color: transparent;
+      text-transform: uppercase;
+      color:rgba(255, 255, 255, 0.5);
+      width: 100%;
+      //text-align: left;
+      margin: 0px 20px;
+      span.button-inner{
+          font-family: $provigilBold;
+      } 
+    }
+    button{
+        background: transparent;
+    }
+  
+  }
+}
+
+// calender css end in app.scss
+
+.alert-md .alert-button-group {
+  flex-wrap: wrap !important;
+}
+
+// search input css start
+ion-searchbar{
+  padding: 20px 10px!important;
+  background:   $header!important;
+  border:none;
+  .searchbar-input{
+      padding-left: 15px!important;
+      padding-right: 15px!important;
+      height: 48px!important;
+      font-size: $font16!important;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+  }
+  .searchbar-search-icon{
+      display: none;
+      color:$textColor; 
+  }
+}
+.icon-telephone{
+  font-size: 50px;
+  border: 2px solid $arm;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+// search input css  end 
+.custum_alert.two-btn-alert{
+    .alert-wrapper{
+          .alert-button {
+            color:$white;
+            background-color: #F37738;
+            margin: 0px;
+            border-radius: 0!important;
+            border:none!important;
+            border-top:none!important;
+            border-right:none!important;
+            .button-inner {
+                justify-content: center;
+            }
+        }
+        .cancel-button{
+          background-color:#3a4048!important;
+          color:rgba(255,255,255,0.5);
+        }
+    }
+
+}
+.alert-md .alert-message {
+  overflow: hidden!important;
+  max-height: 300px;
+  }
+  
+
+.custum_alert {
+  .alert-wrapper {
+      border-radius: 10px !important;
+      text-align: center;
+      .alert-head {
+          text-align: center;
+          padding: 24px 24px 6px !important;
+      }
+      .alert-button-group {
+          width: 100%;
+          padding: 0px;
+      }
+      .alert-button {
+          color:$white;
+          background-color: #F37738;
+          margin: 0px;
+          width: 100%;
+          border-radius: 0!important;
+          border:none!important;
+          border-top:none!important;
+          border-right:none!important;
+          .button-inner {
+              justify-content: center;
+          }
+      }
+  }
+}
+//media quiries start
+$start-width: 320px;
+$small-width:374px;
+$break-small: 767px;
+$break-large: 1024px;
+$aboveipad:1440px;
+@media screen and (min-width:$start-width) and (max-width:$small-width) {
+  .mainpage .middle-20 ion-icon {
+    font-size: 3.5em!important;
+}
+.mainpage .middle-20 {
+  width: 135px!important;
+  height:135px!important;
+}
+
+}
+@media screen and (min-width:414px) and (max-width: 736px) {
+  .mainpage .middle-20 {
+    width: 180px!important;
+    height:180px!important;
+  }
+}
+
+@media screen and (min-width:$break-small + 1px) and (max-width: $break-large) {
+
+stats-video-data .card {
+  margin: 0px 0px 20px;
+  border-radius: 4px;
+  width: 339px!important;
+}
+  .alarms{
+  ion-list{
+    width: 100%!important;
+    display: table;
+}
+  }
+  .mainpage .middle-20 {
+    width: 300px!important;
+    height: 300px!important;
+  }
+  .cameraview .child-card {
+    height: 175px!important;
+  }
+  /*.cameraview .scrolling-wrapper .card img{
+    width:232px!important;
+    height:165px!important;
+  }*/
+  .cameraview ion-row .camera-display img{
+    height:535px!important;
+  }
+  .icon-menu_background {
+    font-size: 4em!important;
+    padding: 4vw!important;
+  }
+  .cameraview ion-row .camera-display{
+    height:535px!important;
+  }
+  .cameraview ion-row .camera-display .vedio-hover ion-label{
+    height:auto!important;
+  }
+  .middle-20{
+    padding:10vw!important;
+    ion-icon{
+      font-size: 8.5em!important; 
+      }
+    }
+    .mainpage .left-40 .icon-menu_background ion-icon,
+    .mainpage .right-40 .icon-menu_background ion-icon{
+      font-size: 2.2em!important;
+    }
+    .monitoring-page .align-items .icon-calender{
+      font-size: 100px!important;
+    }
+    .monitoring-page .calender-view .monitoring-hrs {
+      font-size: 26px!important;
+    }
+    .monitoring-page .calender-view .weeks{
+      font-size:20px!important;
+    }
+  }
+
+@media screen and (min-width:$break-large + 1px) and (max-width: $aboveipad) {
+      .middle-20{
+        padding:13vw!important;
+        }
+    }
+
+  .stats .content-row.row > div{
+    margin: 0 auto !important;
+  }
+  //media quiries end
+
+  //---android css start ---
+  .platform-android{
+    .setting-border{
+        border-right:2px solid $white!important;    
+    }
+ 
+    .home ion-title {
+      padding: 0 55px 0 0px !important;
+  }
+  page-about-us{
+    .tutorial-container {
+      background:$white !important;
+     // height: 100vh;
+    }
+  }
+    .mainpage ion-toolbar ion-title {
+      padding: 0 0 0 0px !important;
+  }
+    .calender-items{
+      .col{
+        padding:5px 2px!important;
+
+      }
+    }
+    .login-page{
+      .scroll-content{
+          padding-bottom: 50px!important;
+      }
+    }
+    .stats .calender-items{
+      padding: 0!important;
+      .datetime-text{
+        font-size: 16px!important;
+      }
+    }
+   
+  }
+  
+
+ //---android css end ---
+  //---ios10 css start ---
+  .platform-ios{
+      page-about-us{
+      background:$header!important;
+          .swiper-slide{
+            margin-top: 5px;
+        // height:100vh!important;
+          }
+      }
+    }
+
+    //errors resolving 
+    .scroll-content{
+      z-index: 0!important;
+    }
+//header css 
+page-header ion-header {
+  height: auto !important;
+  position: absolute!important;
+  top: 0;
+  ion-title {width:60% !important; 
+    .toolbar-title{
+
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width:100%; 
+    }
+   
+ }
+
+}
+ion-searchbar{
+  background: transparent!important;
+}
+
+.service_buttons{
+  .button{
+    width: 45%!important;
+  }
+}
+.mobile_double{
+  width:100%;
+  margin-bottom: 5px;
+  .button{
+    width: 46%!important;
+  }
+}
+
+
+
+//My Style
+.bggray{background-color:$bggray !important;}
+.innerbody-Marginbottom{top:$innerbody-Marginbottom !important;}
+.green-dot {background-color:$cameraGreen;  box-shadow:none !important;}
+.red-dot{background-color:$inactiveLight;  box-shadow:none !important;}
+
+.cameraview{ 
+        .searchbar-md{padding:0px;
+          .searchbar-input{border-radius:0px;  height: 46px !important;}
+        }
+}
+
+.liveviewBlock{
+  .camName{font-size:13px;}
+  .card{width: 100%; color:#4e4e4e !important; background-color: #fff; border-radius:0px; margin-bottom: 15px;
+    box-shadow: 0px 0px 9px -2px rgba(0,0,0,0.2); margin-bottom:15px;}
+  .green-dot {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    display: block;
+    margin:2px 8px 2px 0px !important;   
+    position:relative;
+    float:left;
+  }
+
+  .red-dot {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    display: block;
+    margin:2px 8px 2px 0px !important;
+    position:relative;
+    float:left;
+  }
+
+
+  .sdlive-title{float: right; font-size: 12px; color: #a09999; font-family:$provigilBold; margin-top:3px;}
+  .live-mask { float: right; padding-left: 10px; margin-top: 0px;}
+  .live-mask svg { width: 20px; }
+  .label-md{padding:7px 12px 7px 12px; margin:0px; display:inline-block; width:100%;} 
+}
+
+
+.incontentBlock{padding:45px 15px 0px 15px;}
+.mainpage ion-footer .align-icons ion-icon{color:$darkBlue !important;}
+.icon-settings:before, .icon-help:before{color:$darkBlue !important;}
+
+.footerIcons {
+  svg{width: 35px; margin: auto; display: block; margin-top:9px;}
+  path, .footerIcons rect{fill:$darkBlue;}
+  svg.bellicon{width: 25px; margin: auto; display: block; margin-top:9px;}  
+}
+
+ion-footer{
+.footerBt.button-md{background-color:$liveButton !important; padding-top:10px; padding-bottom:10px;
+  height: 55px;  font-family: $provigilBold; color: $white; font-size: 20px;width: 100%;
+  text-transform: capitalize; margin:0px;}
+}
+
+.searchbarPage{ 
+  .searchbar-md .searchbar-input{border-radius:6px !important; }
+}
+
+.potentialListpage{
+  .searchbar-md .searchbar-input{border-radius:6px !important;}
+}
+
+
+
+.footerBlock{
+  .footerIcons{
+    button{background:transparent;  margin:auto; display:block;}
+  }
+} 
+
+//IOS Start
+.platform-ios{
+  .bggray{background-color:$bggray !important; background:$bggray !important;}
+  .cameraview.bggray{background-color:$bggray !important; background:$bggray !important;}
+} 
+
+.searchbar-ios{border:none;}
+ion-app.md{font-family:$provigilrRegular;}
+.header-ios ion-toolbar ion-title, .toolbar-ios ion-title{padding-left:0px !important;}
+.header-ios .toolbar-ios ion-title{padding-left:0px !important;}
+.label-ios{margin:0px !important;}
+
+.searchbarPage .searchbar-ios { 
+  .searchbar-md .searchbar-input{border-radius:6px !important; box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.2);}
+}
+
+.potentialListpage .searchbar-ios {
+  .searchbar-md .searchbar-input{border-radius:6px !important; box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.2);}
+}
+
+.camerahdView{
+.label-ios{padding:7px 12px 7px 12px; margin: 0px;}
+}
+.toolbar-title-ios{font-weight:400 !important; font-family:$provigilrRegular !important;}
+.list-ios > .item-block:first-child{border-top:0px !important;}
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{border-bottom:none !important;}
+ion-header {
+button, ion-header .button-ios{padding:0px !important;}
+.toolbar-md{padding-left:12px; padding-right:12px;}
+.toolbar.toolbar-ios{padding-left: 9px; padding-right: 9px;}
+.bar-button-md{margin: 0px;}
+
+.toolbar-title-ios{padding-left:5px;}
+}
+
+ion-app.ios .header-leftButtons{position: relative !important; top: 0px !important;}
+ion-app.ios [padding]{padding:12px !important;}
+
+ion-footer.footer-ios{
+  .footerBt.button-ios{background-color:$liveButton !important; padding-top:10px; padding-bottom:10px;
+    height: 55px;  font-family: $provigilBold; color: $white; font-size: 20px;width: 100%;
+    text-transform: capitalize; margin:0px;     border-radius: 0px;}
+  }
+//IOS End
+
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.ios, .md {
+
+  page-splash {
+
+    .scroll-content {
+       
+        padding-top: 0px;
+        //display: flex;
+       // justify-content: center;
+       // align-items: center;
+    }
+
+ 
+.click-block-enabled{transform: none !important; position: relative !important;}
+.animlogoWrapp{padding:0px 30px 0px 30px; background-color:#fff;}
+.animlogo{width:100px; margin:auto;  padding-bottom:280px;}  
+
+.tblock{animation:tblockanim 1s 0.4s ease; pointer-events:auto;   animation-fill-mode: forwards;}
+@keyframes tblockanim {
+0% {
+opacity:0;
+-webkit-transform:translate3d(0, 100%, 0);
+transform:translate3d(0, 100%, 0)
+}
+
+100% {
+opacity:1;
+-webkit-transform:none;
+transform:none;  
+}
+}
+
+
+.tlock{animation:tlockanim 1s 0.8s ease; pointer-events:auto; transform:translate3d(0, 0%, 0);  animation-fill-mode: forwards;}
+@keyframes tlockanim {
+  0% {
+  -webkit-transform:translate3d(0, 0%, 0);
+  transform:translate3d(0, 0%, 0)
+  }
+
+  90% {
+  -webkit-transform:translate3d(0, 0%, 0);
+  transform:translate3d(0, 0%, 0)
+  }
+
+  
+  100% {
+  -webkit-transform:translate3d(0, 11.4%, 0);
+  transform:translate3d(0, 11.4%, 0)
+  }
+}
+
+
+
+ /*--#bars {
+        height: 80%;
+
+        .cls-1 {
+            opacity: 0;
+            transform: rotate3d(1, 1, 0, 50deg);
+            animation: 1s 0.2s ease fadeInAndSpin;
+            animation-fill-mode: forwards;
+        }
+
+        .cls-2 {
+            opacity: 0;
+            transform: rotate3d(1, 1, 0, 50deg);
+            animation: 1s 0.4s ease fadeInAndSpin;
+            animation-fill-mode: forwards;
+        }
+
+        .cls-3 {
+            opacity: 0;
+            transform: rotate3d(1, 1, 0, 50deg);
+            animation: 1s 0.6s ease fadeInAndSpin;
+            animation-fill-mode: forwards;
+        }
+
+        .cls-4 {
+            opacity: 0;
+            transform: rotate3d(1, 1, 0, 50deg);
+            animation: 1s 0.8s ease fadeInAndSpin;
+            animation-fill-mode: forwards;
+        }
+
+        .cls-5, .cls-6 {
+            opacity: 0;
+            animation: 2s 1.5s linear fadeIn;
+            animation-fill-mode: forwards;
+        }
+
+    }--*/
+
+}
+
+}
+
+// .splash {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 999;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: #ff7400;
+// }
+
+// .spinner {
+//   width: 40px;
+//   height: 40px;
+//   background-color: #333;
+
+//   margin: 100px auto;
+//   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+//   animation: sk-rotateplane 1.2s infinite ease-in-out;
+// }
+
+// @-webkit-keyframes sk-rotateplane {
+//   0% { -webkit-transform: perspective(120px) }
+//   50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+//   100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+// }
+
+// @keyframes sk-rotateplane {
+//   0% { 
+//     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+//     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+//   } 50% { 
+//     transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+//     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+//   } 100% { 
+//     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+//     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+//   }
+// }

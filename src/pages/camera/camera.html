@@ -1,0 +1,98 @@
+<ion-content class="cameraview bggray">
+   
+        <div *ngIf="this.isCameraList" class="searchbarPage">
+            <ion-searchbar (ionInput)="getListItems($event)"></ion-searchbar>
+            <ion-list>
+                <div *ngIf="this.listItems.length > 0 ; else noSerachResult">
+                    <ion-item *ngFor="let item of listItems" (click)="navigateToCameraHdViewPage(item)">
+                        {{ (pvmUser=='true')? item.Name : item.name  }}
+                    </ion-item>
+                </div>
+            </ion-list>
+            <ng-template #noSerachResult>
+                <div class="parent">
+                    <div class="child no-tickets">
+                        <span>
+                            No matching cameras found.
+                        </span>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+
+   
+    <div *ngIf="!this.isOnline; else isOfflineText">
+        <div *ngIf="!this.isCameraList">
+            <div class="searchmargin">
+            <ion-searchbar   *ngIf="activeCamera" (click)="navigateToCameraListPage()"></ion-searchbar>
+           </div>
+            <div class="camera-mainDiv">
+                <div class="scrolling-wrapper liveviewBlock camerahdView">
+                    <div *ngFor="let camera of cameraList" class="child-card">
+                           
+                        <div class="card cardFotterCust">
+                                 <!-- <img  [src]="(camera.imgurl) ? camera.imgurl  : 'assets/images/15copy@3x.png'" (click)="navigateToCameraHdViewPage(camera)"/>  -->
+                                 <!--<img  src="data:image/png;base64,{{camera.imageData}}" (click)="playStream(camera)"/>
+                                  <img class="playicon" src="assets/images/playiconoverlay.png" (click)="playStream(camera)"/>
+                                -->
+                                 <img  [src]="(pvmUser === 'true')?((camera.imgurl) ? camera.imgurl  : 'assets/images/15copy@3x.png'):((camera.dayImg) ? camera.dayImg  : 'assets/images/15copy@3x.png')" (click)="navigateToCameraHdViewPage(camera)"/>
+                                 <img class="playicon" src="assets/images/playiconoverlay.png" (click)="navigateToCameraHdViewPage(camera)"/>
+                             <ion-label class="label">
+                                    <span class="green-dot" *ngIf="camera.connected === 'true'"></span> 
+                                    <span class="red-dot" *ngIf="camera.connected !== 'true'"></span>
+                                    <span class="camName">{{ (pvmUser=='true')? camera.Name : camera.name }}</span>
+                                <span class="live-mask" (click)="navigateToMaskPage(camera)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="23.965" height="20.5" viewBox="0 0 23.965 20.5">
+                                        <g id="noun_Image_2160593" transform="translate(-13.439 -2.675)">
+                                          <path id="Path_124" data-name="Path 124" d="M25.018,2.675H2.5a.722.722,0,0,0-.722.722V22.453a.722.722,0,0,0,.722.722H25.018a.722.722,0,0,0,.722-.722V3.4A.722.722,0,0,0,25.018,2.675ZM24.3,21.731H3.219V4.119H24.3Z" transform="translate(11.664 0)" fill="#f37738"/>
+                                          <path id="Path_125" data-name="Path 125" d="M3.892,16.409H21.043a.722.722,0,0,0,.537-1.2l-4.21-4.677a.724.724,0,0,0-1.074,0l-1.022,1.136L11.445,7.409a.746.746,0,0,0-1.074,0L3.355,15.2a.722.722,0,0,0,.537,1.2Zm12.941-4.321,2.589,2.878H18.246l-2-2.223ZM10.908,8.97l3.829,4.254L16.3,14.966H5.513Z" transform="translate(12.954 4.167)" fill="#f37738"/>
+                                          <path id="Path_126" data-name="Path 126" d="M11.879,10.283A2.454,2.454,0,1,0,9.425,7.829,2.457,2.457,0,0,0,11.879,10.283Zm0-3.465a1.011,1.011,0,1,1-1.011,1.011A1.01,1.01,0,0,1,11.879,6.819Z" transform="translate(18.74 2.497)" fill="#f37738"/>
+                                        </g>
+                                      </svg></span>
+                                    <span class="sdlive-title">{{liveType}}</span>
+                          
+                                 </ion-label>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- <ion-label (click) = "takeScreenshot()">
+                <span class="green-dot"></span>screenShot</ion-label> -->
+        </div>
+<!--  TODO SUREVIEW CAMERA LIST HIDED -->
+        <!-- <div *ngIf="this.isCameraList">
+            <ion-list class="sureview-camera_list">
+                <ion-card *ngFor="let item of cameraList" (click)="surviewCameraSelected(item.Name)" class="align-items">
+                    {{ item.Name }}
+                </ion-card>
+            </ion-list>
+        </div> -->
+ <!--  TODO SUREVIEW CAMERA LIST HIDED -->
+    </div>
+    <!-- <div>
+        <canvas id="videoCanvas"></canvas>
+        <a id="downloadLink" download="screenShotImageData.jpg"></a>
+    </div> -->
+    <!-- <ion-fab>
+            <button (click)="takeScreenShot()" >
+                    <span class="icon-screenshot"></span>
+                 </button>
+    </ion-fab>
+    -->
+   
+    <!-- <button (click)="takeScreenShot()" [ngClass]="isDesktopEnabled ? 'hideDiv' : 'screenshot-btn'">
+        <img src="assets/images/screenshot.png"/>
+    </button> -->
+  
+    <ng-template #isOfflineText>
+        <p class="offline-msg">device offline
+        </p>
+        <div class="offline-backimage">
+            
+        </div>
+
+    
+    </ng-template>
+
+</ion-content>

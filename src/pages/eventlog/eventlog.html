@@ -1,0 +1,47 @@
+<ion-content class="eventlog bggray innerbody-Marginbottom">
+  
+  <div>
+    
+    <ion-list>
+
+      <div *ngIf="recentEscalations && recentEscalations.length > 0 ; else noSerachResult">
+        <ion-card *ngFor="let escalation of recentEscalations">
+          <div class="card-left" (click)="navigateToEventLogDetail(escalation)">
+              <ion-row>
+              <ion-label>
+                <span class="actionsubtext">Action : </span>
+                <span class="subtitle">{{(pvmUser === 'true')?escalation.tagname ? escalation.tagname : '-': escalation.finalActionType ? escalation.finalActionType : '-'}}</span>
+              </ion-label>
+            </ion-row>  
+            <ion-row>
+              <span class="subtext">{{ (pvmUser=='true')? escalation.starttime : escalation.eventTimeStr }}</span>
+               <ion-label class="subcamtext">{{ (pvmUser=='true')? escalation.cameraname : escalation.cameraName }}</ion-label>
+            </ion-row>
+          </div>
+          <span class="icon-left" end  (click)="navigateToEventLogDetail(escalation)"></span>
+        </ion-card>
+      </div>
+    </ion-list>
+
+   <ion-infinite-scroll (ionInfinite)="loadData($event)">
+                    <ion-infinite-scroll-content
+                    *ngIf="isAllItemsLoaded == false && pageNo < 5"
+                    loadingSpinner="bubbles"
+                    loadingText="Loading more data..."
+                    ></ion-infinite-scroll-content>
+                </ion-infinite-scroll> 
+
+    <ng-template #noSerachResult>
+      <div class="parent">
+        <div class="child no-tickets">
+          <span>
+            {{errorMessage }}
+          </span>
+        </div>
+      </div>
+    </ng-template>
+
+
+
+  </div>
+</ion-content>

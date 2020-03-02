@@ -1,0 +1,92 @@
+<!-- 
+  Generated template for the HeaderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div *ngIf="showHeader">
+
+    <ion-header *ngIf="showBack" class="align-items">
+        <ion-navbar>
+            <div *ngIf="showImage" class="header-logo">
+                <img src="assets/images/logo.png" />
+            </div>
+
+            <button *ngIf="showBackButton" ion-button (click)="goToBack($event)">
+               <!-- <ion-icon class="icon-right"></ion-icon>-->
+                <div class="gobackarrow-icon">
+                    <svg viewBox="0 0 65.555 117.999">
+                      <g id="Group_2" data-name="Group 2" transform="translate(-2880 -864)">
+                        <g id="Group_1" data-name="Group 1" transform="translate(2880 864)">
+                          <path id="Path_1" data-name="Path 1" d="M2895.621,923l48.039-47.97a6.466,6.466,0,0,0-9.15-9.137L2881.9,918.431a6.455,6.455,0,0,0,0,9.137l52.615,52.539a6.466,6.466,0,0,0,9.15-9.137Z" transform="translate(-2880 -864)"/>
+                        </g>
+                      </g>
+                    </svg>
+                    </div>
+            </button>
+            <ion-title (click)="goToBack($event)">{{this.title}}</ion-title>
+
+            <div *ngIf="showToolbarDesktop">
+                <ion-toolbar [ngClass]='[showBack ? "not-home" : "home"]' class="align-items">
+                    <ion-title>{{this.siteName}}</ion-title>
+                    <ion-buttons end>
+                        <button *ngIf="!potentialListActive; else crossButton" ion-button (click)="goToPotential($event)">
+                            <ion-icon class="icon-menu-unequal"></ion-icon>
+                        </button>
+                        <ng-template #crossButton>
+                            <div class="toolbar-overlay-header" (click)="goToBack($event)"></div>
+                            <button ion-button (click)="goToBack($event)">
+                                <ion-icon class="icon-cross"></ion-icon>
+                            </button>
+                        </ng-template>
+                    </ion-buttons>
+                    <ion-buttons end>
+                        <button *ngIf="showList && cameraListActive" ion-button (click)="showListMenu($event)">
+                            <ion-icon class="icon-menubox"></ion-icon>
+                        </button>
+                        <button *ngIf="showList && !cameraListActive" ion-button (click)="showListMenu($event)">
+                            <ion-icon class="icon-menudots"></ion-icon>
+                        </button>
+                        <button ion-button (click)="navigateToNotifications()">
+                            <ion-icon class="icon-bell">
+                                <!-- <span *ngIf="data !== 0" class="badge badge-success">{{data}}</span> -->
+                            </ion-icon>
+                        </button>
+                        <button ion-button (click)="navigateToTicketing()">
+                            <ion-icon class="icon-help"></ion-icon>
+                        </button>
+                        <button ion-button (click)="navigateToSettingsPage()">
+                            <ion-icon class="icon-settings"></ion-icon>
+                        </button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </div>
+
+            <div *ngIf="showToolbarMobile" class="header-leftButtons">
+                <ion-buttons end>
+                 
+                    <!-- !potentialListActive -->
+                    <button *ngIf="!potentialListActive; else crossButton" ion-button (click)="goToPotential($event)">
+                        <div class="menusvg-icon">
+                                <svg viewBox="0 0 30.39 22.46">
+                                    <g id="Group_1" data-name="Group 1" transform="translate(-162.233 -163.052)">
+                                      <path id="Path_1" data-name="Path 1" d="M164.4,163.052a1.99,1.99,0,1,0,0,3.964h26.048a1.99,1.99,0,1,0,0-3.964Zm0,9.248a1.99,1.99,0,1,0,0,3.963h26.048a1.99,1.99,0,1,0,0-3.963Zm0,9.248a1.99,1.99,0,1,0,0,3.964h26.048a1.99,1.99,0,1,0,0-3.964Z" transform="translate(0)" fill="#fff"/>
+                                    </g>
+                                  </svg>
+                                  
+                         </div>
+                    </button>
+                    <ng-template #crossButton>
+                        <div (click)="goToBack($event)" class="overlay-header-search"></div>
+                        <button ion-button (click)="goToBack($event)">
+                            <ion-icon class="icon-cross"></ion-icon>
+                        </button>
+                    </ng-template>
+                </ion-buttons>
+
+
+            </div>
+        </ion-navbar>
+    </ion-header>
+
+</div>

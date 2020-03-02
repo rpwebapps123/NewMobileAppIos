@@ -1,0 +1,89 @@
+.vediopage {
+    .button {
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.08);
+        padding: 0 52px;
+        width: 45%;
+        height: 46px;
+        margin: 2px 6px;
+    }
+    .active {
+        background-color:  $white;
+        color: #525a64;
+        font-weight: bold;
+    }
+    ion-toolbar {
+        color:  $white !important;
+        min-height: 20px !important;
+        background: #444d55;
+    }
+    .toolbar-background {
+        background: transparent;
+        border-top: none;
+    }
+    ion-title {
+        padding-left: $paddL-10;
+    }
+    .toolbar-title {
+        white-space: normal;
+        font-size: $font14;
+        color:  $white;
+        text-align: left;
+        font-weight: normal;
+    }
+}
+
+.card {
+    margin: 0px 0px 20px;
+    border-radius: 4px;
+    width: 100%;
+    img {
+        height: 100px;
+    }
+    .button {
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.08);
+        padding: 0 52px;
+        width: 158px;
+        height: 46px;
+        margin: 0px 6px;
+    }
+    .active {
+        background:  $white;
+        color: #515963;
+        font-weight: bold;
+    }
+    .card-content {
+        padding: 0px;
+        background: #535b65;
+        height: 55px;
+        .title,
+        .date {
+            color:  $white;
+            font-weight: bold;
+            font-size:  $font12;
+            margin: 0px;
+        }
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            ion-icon {
+                background:  $white;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: green;
+                font-size: 13px;
+            }
+        }
+    }
+}

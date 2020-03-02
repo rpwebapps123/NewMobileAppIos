@@ -1,0 +1,27 @@
+
+<ion-content class="vediopage">
+  <ion-row padding>
+    <button ion-button (click)="navigateToStatsPage()" >current</button>
+    <button ion-button (click)="getvideos()" class="active">vedios</button>
+  </ion-row>
+  <div padding>
+  <div *ngFor="let event of videoDetails; let i = index">
+    <ion-card (click)="startVideo(event.clipUrl)">
+      <img src={{event.thumbnailUrl}}>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-10>
+              <p class="title">{{event.title}} </p>
+              <p class="date">{{event.eventTime}} </p>
+            </ion-col>
+            <ion-col col-2>
+                <span class="icon-play"><span class="path1"></span><span class="path2"></span></span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</div>
+</ion-content>

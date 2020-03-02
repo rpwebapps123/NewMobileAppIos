@@ -1,0 +1,30 @@
+stages:
+  - test
+  - build
+  
+test:
+    stage: test
+    tags:
+        - iOS-2
+    script:
+        - npm install 
+
+build_project:
+  stage: build
+  script:
+    - npm install
+    - mkdir -p www
+    - ionic platform add android
+    - ionic build android
+    - cp platforms/android/app/build/outputs/apk/debug/app-debug.apk .
+    - ionic platform add ios
+    - ionic build ios
+    - chmod 777 iosBuild.sh
+    - ./iosBuild.sh
+
+  
+  tags:
+  - iOS-2
+  artifacts:
+      paths:
+      - app-debug.apk

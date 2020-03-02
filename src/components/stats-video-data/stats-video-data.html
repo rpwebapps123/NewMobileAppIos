@@ -1,0 +1,45 @@
+<ion-row class="stats-video-align-center">
+  <!-- <div *ngIf="numberOfVideos >= 1" class="custom-loader-toast">
+    <img src="assets/images/squares.eeb1c4fc.gif" />
+  </div> -->
+  <div *ngIf="(videoDetails && videoDetails.length > 0); else other_content">
+    <ion-card *ngFor="let event of videoDetails; let i = index">
+      <div id="stats-video-wrapper-{{i}}" (click)="playPauseClickedVideo(i)">
+        <video id="stats-video-{{i}}" poster="{{event.thumbnailUrl}}">
+          <source src="{{event.clipUrl}}" type="video/mp4"> Platform does not support playing videos.
+        </video>
+      </div>
+      <ion-card-content class="align-items">
+        <div class="align-items">
+          <div>
+            <p class="title">{{event.title}} </p>
+            <p class="date">{{event.eventTime}} </p>
+          </div>
+          <div>
+            <button (click)="takeScreenShot(i)"  [ngClass]="'download_button'">
+              <span class="icon-download"></span>
+            </button>
+          </div>
+          <div>
+            <ion-label class="has-header" padding="true">
+              <span class="icon-play" (click)="playPauseClickedVideo(i)" id="playBtn-{{i}}">
+                <span class="path1"></span>
+                <span class="path2"></span>
+              </span>
+            </ion-label>
+          </div>
+
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <!--TODO:Fix when no video-->
+  </div>
+  <ng-template #other_content>
+
+    <div class="child">
+      There are no videos available.
+    </div>
+
+  </ng-template>
+
+</ion-row>

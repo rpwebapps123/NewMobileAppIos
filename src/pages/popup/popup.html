@@ -1,0 +1,22 @@
+<ion-grid>
+      <ion-row>
+        <ion-col>
+<div class="cuspopup">
+      <ion-toolbar>
+            <ion-title class="titleNotes">Notes</ion-title>
+            <h6 *ngIf="status==3">Site is currently non monitoring hours</h6>
+      </ion-toolbar>
+      <ion-item>
+            <ion-textarea   [(ngModel)] ="notes" type="text" placeholder="Please Enter Notes" rows="4"></ion-textarea>
+      </ion-item>
+      <div class="cusButton-group">
+            <button ion-button [disabled]="!notes" class="cusButton cus-yes-button" (click)="takeNotes()">{{armdisarm}}</button>      
+            <button ion-button class="cusButton cus-no-button" (click)="dismiss()">Cancel</button>
+      </div>
+</div>
+</ion-col>
+</ion-row>
+</ion-grid>
+
+
+

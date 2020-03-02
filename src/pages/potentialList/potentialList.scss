@@ -1,0 +1,41 @@
+.potentialListpage{
+   
+    .searchbar-md{padding:$padd-0;
+        .searchbar-input{height: 46px !important;     padding: 6px 15px; border-radius: 2px;}
+    }
+
+    ion-list{background-color:$white; padding:0px;}
+        .item-md{padding-left:0px;}
+       
+        .list-md{padding: 0px 0px; font-size: 14px; 
+            .potentialListBg{background-color:$white;  margin-top: 4px;}
+            .label-md{color:#656565; font-size: 14px;}
+            .item-inner {border-bottom: 1px solid #e4e4e4 !important; padding-right:15px !important;    padding-left: 15px;}
+        }
+  
+    //.scroll-content{
+        //height:90vh;
+   // }
+   // .parent{
+        //height: 70%;
+      //  text-align: center;
+       // color:  $cameraGreen;
+      //  font-size: $font20;
+     //   }
+    .searchbar-background{
+         ion-infinite-scroll ion-infinite-scroll-content{min-height: 100% !important;}
+         .list-ios{
+            .item-ios{padding-left:0px !important;
+              .label-ios{font-size: 14px; padding-left: 12px;}
+            }
+          }
+    }
+    .no-tickets{
+        color: #F37738 !important;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        font-family: "ProximaNova-Bold";
+        background-color: #EEEEEE !important;
+       }
+}

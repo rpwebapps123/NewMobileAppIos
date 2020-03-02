@@ -1,0 +1,329 @@
+
+    .eventlog{
+        
+        .scroll-content{           
+            padding:12px;
+            overflow: auto!important;
+           // height:87vh;
+           margin: 12px 0px 12px 0px;
+           }
+           .ion-list{margin-top: 12px;  margin-bottom: 90px !important;}
+           
+        ion-row.service_buttons{margin-top:12px;}
+         .button-md.button,.button-ios{
+                background-color: $tabbuttonInactive; border:none; border-radius:2px; color:$white !important; box-shadow:$cardboxshadow;
+                font-family:$provigilSemibold;
+               text-transform: capitalize; font-size: 1.5rem; line-height:40px; height:40px !important; margin: 0px 8px;
+         }
+         .button-md.button.active {background-color:$tabbuttonActive; }
+      
+    .fullwidth{
+            width: 100%;
+       }
+       .m-b-10{margin-bottom:10px;}
+       .m-t-35{margin-top: 35px !important;}
+   
+    .phone-page{
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: #ffffff;
+        text-align: center;
+    }
+    .phone-background1{
+        background-color: rgba(76,175,80,0.1);
+        padding: 8px;
+        border-radius: 50%;
+        }
+        .phone-background2{
+        background-color: rgba(76,175,80,0.1);
+        padding: 16px;
+        border-radius: 50%;
+        }
+
+    .item {
+        padding-left: 0px;
+        color: $white;
+        background-color: transparent;
+        border-bottom: 1px solid ffffff63;
+        .item-input .label {
+            color: $white;
+        }
+    }
+    .phone-page{
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    ion-label  {
+    font-size: 15px!important;
+    color: #ffffff!important;
+    }
+
+    
+    .button.btn {
+        width: 100% !important;
+        background-color:  $buttongreen;
+        border-radius: 4px;
+        text-transform: uppercase;
+        margin-top:30px;
+    }
+    .icon-telephone,.icon-message {
+        font-size: 50px;
+    }
+    .custum_alert.two-btn-alert{
+        .alert-wrapper{
+            .alert-head{
+                .icon-telephone{
+                    .alert-title{
+                        font-size: 50px;
+                    }
+                  }
+            }
+          
+        }
+    
+    }
+    .circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font20;
+        margin: 50px auto;
+    }
+    .parent{
+        display:table;
+        width:100%;
+        height: 100%;
+      }
+      .child{
+        display:table-cell;
+        vertical-align: middle;
+        margin: 0 auto;
+      }
+      .phone-background1{
+     background-color: rgba(76,175,80,0.1);
+     padding: 8px;
+     border-radius: 50%;
+      }
+      .phone-background2{
+        background-color: rgba(76,175,80,0.1);
+        padding: 16px;
+        border-radius: 50%;
+    }
+    .phone {
+        background:  $buttongreen;
+        padding: 45px;
+    }
+
+    .cmnt {
+        background: rgb(12, 12, 87);
+        padding: 45px;
+        cursor: pointer;
+    }
+
+.service-textarea textarea{
+    margin-left: 0;
+    width: calc(100% - 8px);
+    line-height: 0.8;
+    margin: 0px !important;
+    margin-top: 13px !important;
+    font-size: 15px;
+}
+.service-label{ 
+    font-size: 16px !important;
+    color: #fff !important;
+    .content-center {
+        justify-content: center;
+    }
+    ion-icon.icon-telephone.icon.icon-md.ion-md-call{
+        font-size: 50px;
+    }
+
+      
+}
+
+.card{padding:10px; margin-bottom:15px;
+    display: flex;
+    .alarmscard{
+       .floatright{float:right;}
+       .col.width-50{width:50% !important;}
+    }
+    .card-left{
+        width:97%;       
+        position: relative;
+    }
+    .icon-left{font-size: 16px;  padding:13px 0px 0px 0px;  margin: 0px 0px 0px -7px;}
+    .icon-left:before{color: #9F9F9F !important;}
+
+     .subtitle.desc{
+         font-family:$provigilrRegular;
+         color:$textblack;
+         //
+    //     font-family:$provigilBold;
+    //     color: $iconBackground;
+    //     display:block; width:100%; font-size:14px;
+
+   
+    display: block;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    .readmore{background-color: transparent;
+        margin-top:2px;
+        text-decoration: none;
+        text-align: right;
+        width: 100%;
+        font-family:$provigilrRegular;
+        font-size: 13px;
+        color: #3636b3;
+    }
+
+    .subtitle.desc.viewmore{
+        font-family:$provigilrRegular;
+         color:$textblack;
+        display:block; width:100%; 
+        text-overflow: unset;
+        white-space: normal;
+    
+    }
+   
+
+    .icon-repeat {
+        position: absolute;  
+        top: 2px;
+        right:2px;
+    }
+    .card-right.align-items{
+        width:25%;
+        background: #f6323e;
+        padding-bottom:0;
+    }
+    ion-label{
+        color: black !important;
+        padding: 0!important;
+        margin:0px 15px 4px  0px !important;
+
+       
+    }
+
+    .subtext{
+        padding-right: 10px; margin-right: 10px;
+        font-size: 13px;
+        color: $textColor;
+        border-right: solid 1px #d0d0d0;
+    }
+    .actionsubtext{
+        padding-right: 4px; margin-right: 1px;
+        font-size: 13px;
+        color: $textColor;        
+    }
+    .subcamtext{
+        padding-left: 10px;
+        font-size: 13px !important;
+        color: $textColor !important; 
+
+    }
+
+    .floatright{float:right; width: 58%;}
+    .unassigned-color{color:$inactiveLight;}
+    .open-radio .radio-md .radio-icon{left: -13px !important;}
+        ion-app.md [padding] {
+            padding: 16px;
+        }
+
+  
+} 
+
+
+
+.radiogr-wrapp{ margin:auto; color:#fff;
+    .radiogr{float:left; margin-right:20px;
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label
+        {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #a9a8a8;
+            border-radius: 100%;
+            background: #fff;
+        }
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background:#54a4f9;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }	
+
+    } 
+	 
+}
+
+.text-color-white{
+ color: #ffffff !important;
+}
+
+.no-tickets{
+    color: #F37738 !important;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: "ProximaNova-Bold";
+   }
+.item-inner{padding-right:0px !important; border-bottom: 1px solid $textblack !important;}
+.text-input-md{margin:20px 0px 0px 0px !important; }
+textarea.text-input{color:#333; font-size: 15px;}
+.text-input::-moz-placeholder {color:$textblack;}
+ 
+ .text-input:-ms-input-placeholder {color:$textblack;}
+ .text-input::-webkit-input-placeholder {text-indent: 0;color:$textblack;}
+ ion-infinite-scroll {display:inline-block !important; width: 100%; margin-bottom:60px;  }
+}
