@@ -31,22 +31,31 @@
             <!-- <div id="viewport">
         <div class="wrapper"> -->  
         <div class="child-card">
-             <div class="card">       
+             <div class="card">      
+                <div class="ptz-control" *ngIf="ptzControls === true">   
                 <img [src]="(currentUrl) ? currentUrl  : 'assets/images/15copy@3x.png'">
+                <div class="camControls">
+                    <div class="singleBt"><button class='TILTUP' (click)="ptzClick($event)"><img src="assets/images/ptzcontrols/tilt_up.png"> </button></div>
+                    <div class="multiBt"><button  class='PANLEFT' (click)="ptzClick($event)"><img src="assets/images/ptzcontrols/pan_left.png"> </button> <button class='GOTOPRESET' (click)="ptzClick($event)"><img src="assets/images/ptzcontrols/preset.png"> </button> <button class='PANRIGHT' (click)="ptzClick($event)"><img src="assets/images/ptzcontrols/pan_right.png"> </button></div>
+                    <div class="singleBt"><button class='TILTDOWN' (click)="ptzClick($event)"><img src="assets/images/ptzcontrols/tilt_down.png"> </button></div>
+                    <div class="singleBt"><button class='ZOOMIN' (click)="ptzClick($event)"><img src="assets/images/ptzcontrols/zoom_in.png"> </button></div>
+                    <div class="singleBt"><button class='ZOOMOUT' (click)="ptzClick($event)"><img src="assets/images/ptzcontrols/zoom_out.png"> </button></div>
+                    <!-- <div class="multiBt"><button><img src="assets/images/lowspeed.png"> </button> <button><img src="assets/images/mid_R.png"></button> <button><img src="assets/images/highspeed.png"></button></div> -->
+                    <div class="multiBt bottomControl"><button class='SPEED_LOW' (click)="ptzSpeedClick($event)">L</button> <button class='SPEED_MEDIUM active' (click)="ptzSpeedClick($event)">M</button> <button class='SPEED_HIGH' (click)="ptzSpeedClick($event)">H</button></div>                
+                </div>
+                </div>
+                <div class="ptz-control" *ngIf="ptzControls === false">   
+                    <img [src]="(currentUrl) ? currentUrl  : 'assets/images/15copy@3x.png'">                 
+                    </div>
                 <!--  <pinch-zoom> 
                     <img [src]="(currentUrl) ? currentUrl  : 'assets/images/15copy@3x.png'">
                  </pinch-zoom>  -->
                 <ion-label class="label">
                         <span class="green-dot" *ngIf="connected === 'true'"></span> 
                         <span class="red-dot" *ngIf="connected === 'false'"></span>
-                    <span class="camName">{{ cameraName}}</span>
-                    
-                </ion-label> 
+                    <span class="camName">{{ cameraName}}</span></ion-label> 
              </div>       
       </div>
-      <!-- <button  (click)='LiveStream()' ion-button full>
-        LiveStream
-    </button> -->
             <!-- </div>
 </div> -->
         </div>

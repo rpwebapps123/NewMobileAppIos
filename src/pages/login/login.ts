@@ -173,6 +173,7 @@ export class Login {
         //     return;
         // }
       
+      
         if (this.email.trim() === '' &&  this.password.trim() === '') {
            this.showAlert('Please enter username and password', 'Error');
         } else if(this.email.trim() === '') {

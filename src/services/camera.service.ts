@@ -52,10 +52,13 @@ export class CameraService extends MainService {
 
     fetchCameras(cameraDetails): Observable<any> {
         let url = "";
+        let dateTime = new Date();
         if (window.localStorage.isPvmUser === 'true') {
-            url = this.buildUrl(this.activePotentialUrl + this.config.get('pvmServiceRequests').CamioCameralist, cameraDetails.payload);
+            url = this.buildUrl(this.activePotentialUrl + this.config.get('pvmServiceRequests').CamioCameralist, cameraDetails.payload);           
+            url=url+'&v='+dateTime;
         } else {
             url = this.buildUrl(this.activePotentialUrl + this.config.get('ivigilServiceRequests').CamioCameralist, cameraDetails.payload);
+            url=url+'&v='+dateTime;
         }
         return this.directGet(url, true);
     }
@@ -79,5 +82,30 @@ export class CameraService extends MainService {
         let url = this.buildUrl(this.activePotentialUrl,
             payload);
         return this.get(url, this.config.get('pvmServiceRequests').getLiveUrl, true,this.API_NAMES_HASH.LIVE_URL )
+    }
+    getLiveUrlRtmp(payload): Observable<any> {
+        
+        let url = "https://video.pro-vigil.info/api/cameras/sessions?user="+encodeURIComponent(payload["user"]);//this.buildUrl("https://video.pro-vigil.info/api/cameras/sessions", payload.);       
+      //  alert(url);
+        return this.directPut(url, payload["body"],payload["Authorization"],true);
+        // let url = this.buildUrl(this.config.get('pvmServiceRequests').RTMPUrl, payload);
+        // alert(url);
+        // return this.directGet(url,true);
+    }
+
+    deleteLiveRtmpStream(payload): Observable<any> {        
+        let url = "https://video.pro-vigil.info/api/cameras/sessions?local_camera_id="+payload["local_camera_id"]+"&user="+encodeURIComponent(payload["user"]);//this.buildUrl(this.config.get('pvmServiceRequests').RTMPUrl, payload);
+     //   window.localStorage.liveurl=url;
+        //alert(url);
+        //alert(payload["Authorization"]);
+        return this.directDeleteRTMP(url,payload["Authorization"],true);
+    }
+
+    ptzActions(payload): Observable<any> {
+        
+        let url = payload.ptzUrl;//this.buildUrl(this.config.get('pvmServiceRequests').RTMPUrl, payload);
+        window.localStorage.liveurl=url;
+        return this.directGet(url,true);
+
     }
 }   

@@ -628,6 +628,23 @@ export class HomePage {
               handler: () => {
                 if (navigator.onLine) {
                   try {
+                    (<any>window).cookies.clear(function() {
+                        //  alert('Cookies cleared!');
+                      });
+                      var success = function(status) {
+                        //alert('Message: ' + status);
+                    };
+                    var error = function(status) {
+                       // alert('Error: ' + status);
+                    };
+                    (<any>window).CacheClear(success, error);
+                    const date = new Date();
+                
+                    // Set it expire in -1 days
+                    date.setTime(date.getTime() + (-1 * 24 * 60 * 60 * 1000));
+                
+                    // Set it
+                    document.cookie = "JSESSIONID=; expires="+date.toUTCString()+"; path=/";
                     localStorage.clear();
                     localStorage.seenTutorial = true;
                     this.store.dispatch(this.userActions.logout());

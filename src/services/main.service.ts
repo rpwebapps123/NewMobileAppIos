@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, RequestOptions, Response } from '@angular/http';
+import { Http, RequestOptionsArgs, Response, RequestOptions, ConnectionBackend, Headers } from '@angular/http';
 import { Device } from '@ionic-native/device';
 import { Network } from '@ionic-native/network';
 import { Store } from '@ngrx/store';
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { IAppState } from '../reducers';
 import { isDesktop } from './../config/appConfig';
 import { LoadingService } from './loader.service';
-
+import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class MainService {
@@ -421,7 +421,102 @@ export class MainService {
             return Observable.of('Network Error');
         }
     }
+    directPut<T, R>(url: string, body:any,token : any,showLoader: boolean): Observable<any> {
+        let currentDateTime = new Date().getTime();
+        console.log('============================');
+        this.getTokenData();
+        if (this.isOnline) {
+             
+            if (showLoader) {
+                console.log('======================================================== cameras directGet show Loader'+new Date().toISOString());
+                this.loaderObj.showLoader();
+            }          
+          
+           // const directHeaders = {
+               // 'Content-Type': 'application/json',
+                //'Authorization':  token
+           // }
+            //let headers = new Headers(directHeaders);
+            let headers = new Headers();
+            headers.append("Authorization", token); 
+            headers.append("Content-Type", 'application/json');            
+            let options = new RequestOptions({ headers: headers });
+            options.withCredentials=true;
+            //alert(url + '---Test');
+            //var random = Math.floor(Math.random() * 10000);
+            //alert(url+'----'+body+'------'+JSON.stringify(options));
+        
+            return this.httpObj.put(url,body,options)
+                .mergeMap(res => {
+                    this.hideLoader();
+                  //  alert(JSON.stringify(res.//_body.streaming_server_url));
+                    let differenceTime = new Date().getTime() - currentDateTime;
+                    console.log('======================================================== cameras directGet dismiss Loader and response '+ this.msToTime(differenceTime));
+                    
+                    console.log('******************** GET API url ******************** '+ url);
+                    console.log('******************** GET API RESPONSE TIME ******************** '+ this.msToTime(differenceTime));
+                    //this.cookieData.deleteAll();
+                    //alert(JSON.stringify(res.headers));
+                    res.headers.delete('Set-Cookie');
+                    return this.handleResponse(res, showLoader, null)
+                })
+                .catch(this.handleError);
+        } else {
+            if (!this.hasShownAlert) {
+                this.showOfflineAlert();
+                this.hasShownAlert = true;
+            }
+            this.hideLoader();
+           
+            return Observable.of('Network Error');
+        }
+    }
 
+    directDeleteRTMP<T, R>(url: string, token : any,showLoader: boolean): Observable<any> {
+        let currentDateTime = new Date().getTime();
+        console.log('============================');
+        this.getTokenData();
+        if (this.isOnline) {
+             
+            if (showLoader) {
+                console.log('======================================================== cameras directGet show Loader'+new Date().toISOString());
+                this.loaderObj.showLoader();
+            }          
+          
+            // const directHeaders = {
+            //     'Content-Type': 'application/json',
+            //     'Authorization':  token
+            // }
+            // let headers = new Headers(directHeaders);
+            let headers = new Headers();
+            headers.append("Authorization", token); 
+            headers.append("Content-Type", 'application/json');  
+            let options = new RequestOptions({ headers: headers });
+            options.withCredentials=true;
+            //alert(url + '---Test');
+           // var random = Math.floor(Math.random() * 10000);
+            return this.httpObj.delete(url,options)
+                .mergeMap(res => {
+                    this.hideLoader();
+               //alert(JSON.stringify(res));
+                    let differenceTime = new Date().getTime() - currentDateTime;
+                    console.log('======================================================== cameras directGet dismiss Loader and response '+ this.msToTime(differenceTime));
+                    
+                    console.log('******************** GET API url ******************** '+ url);
+                    console.log('******************** GET API RESPONSE TIME ******************** '+ this.msToTime(differenceTime));
+                    return this.handleResponse(res, showLoader, null)
+                })
+                .catch(this.handleError);
+        } else {
+            if (!this.hasShownAlert) {
+                this.showOfflineAlert();
+                this.hasShownAlert = true;
+            }
+            this.hideLoader();
+           
+            return Observable.of('Network Error');
+        }
+    }
     msToTime(duration: number) {
           let milliseconds: number =  (duration % 1000) / 100;
            let seconds = Math.floor((duration / 1000) % 60);
@@ -625,4 +720,5 @@ export class MainService {
 
         // }
     }
+  
 }

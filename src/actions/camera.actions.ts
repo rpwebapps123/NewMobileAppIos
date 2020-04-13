@@ -90,4 +90,41 @@ export class CameraActions {
             payload: title
         };
     }
+   
+    static LIVE_URL_RTMP = 'LIVE_URL_RTMP';
+    liveUrlRtmp(camera: any): Action {
+        return {
+            type: CameraActions.LIVE_URL_RTMP,
+            payload: camera
+        };
+    }
+    static LIVE_URL_SUCCESS_RTMP = 'LIVE_URL_SUCCESS_RTMP';
+    liveUrlSuccessRtmp(url: any): Action {
+        return {
+            type: CameraActions.LIVE_URL_SUCCESS_RTMP,
+            payload: url
+        };
+    }
+    static PLAY_LIVE_RTMP = 'PLAY_LIVE_RTMP';
+    playLiveRtmp(payload: any): Action {
+        return {
+            type: CameraActions.PLAY_LIVE_RTMP,
+            payload: payload
+        };
+    }
+    static DELETE_LIVE_RTMP_STREAM = ' DELETE_LIVE_RTMP_STREAM'; 
+    deleteLiveRtmpStream(payload): Action{
+        return{
+            type: CameraActions.DELETE_LIVE_RTMP_STREAM,
+            payload:payload
+        }
+    }
+    static PTZ_ACTIONS = ' PTZ_ACTIONS'; 
+    ptzActions(payload): Action{
+        return{
+            type: CameraActions.PTZ_ACTIONS,
+            payload
+        }
+    }
+
 }

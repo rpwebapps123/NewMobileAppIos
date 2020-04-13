@@ -40,8 +40,9 @@ export class SettingsPage {
       platform.ready().then(() => {
         this.isDesktopEnabled = isDesktop;
         if (isDesktop) {
-          this.versionNumber = '1.4.0';
+          this.versionNumber = '1.4.6';
         } else {
+         
           this.appVersion.getVersionNumber().then((res) => {
             this.versionNumber = res;
           });

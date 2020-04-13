@@ -52,15 +52,40 @@ export class ArmDisarmInfo {
         console.log('date-time', customDateTime);
     //  const ctOffsetName = this.getTimeZoneName('CT').name;
      //  this.momentjs.tz.setDefault(ctOffsetName);
+     //window.localStorage.timezone=this.siteTimeZone;
      customDateTime= customDateTime.replace(/-/g, "/"); 
      let convertedTime ="";
      if(this.siteTimeZone === 'CT') {
         convertedTime = this.momentjs(this.momentjs.utc(customDateTime)).format('HH:mm:ss  DD-MM-YYYY');
      } else {
-        convertedTime = this.momentjs(this.momentjs.utc(customDateTime)).add('6', 'hours').tz(timezoneName).format('HH:mm:ss  DD-MM-YYYY');
+       // convertedTime = this.momentjs(this.momentjs.utc(customDateTime)).add('6', 'hours').tz(timezoneName).format('HH:mm:ss  DD-MM-YYYY');
+      let date1:Date=new Date(this.momentjs.utc(customDateTime));
+       let hours:any =-Math.floor(date1.getTimezoneOffset()/60);
+       window.localStorage.hours=hours;
+       convertedTime = this.momentjs(this.momentjs.utc(customDateTime)).add(hours-1, 'hours').tz(timezoneName).format('HH:mm:ss  DD-MM-YYYY');
+    //  convertedTime = this.utcToLocal(customDateTime, timezoneName);//this.momentjs(this.momentjs.utc(customDateTime)).add('6', 'hours').tz(timezoneName).format('HH:mm:ss  DD-MM-YYYY');
      }
        return convertedTime;
    }
+private utcToLocal(utcdateTime, tz) {
+    var zone = moment.tz(tz).format("Z") // Actual zone value e:g +5:30
+    alert(zone);
+    var zoneValue = zone.replace(/[^0-9: ]/g, "") // Zone value without + - chars
+    var operator = zone && zone.split("") && zone.split("")[0] === "-" ? "-" : "+" // operator for addition subtraction
+    var localDateTime
+    var hours = zoneValue.split(":")[0]
+    var minutes = zoneValue.split(":")[1]
+ //   alert(hours);
+    if (operator === "-") {
+        localDateTime = moment(utcdateTime).subtract(hours, "hours").subtract(minutes, "minutes").format('HH:mm:ss  DD-MM-YYYY')
+    } else if (operator) {
+        localDateTime = moment(utcdateTime).add(hours, "hours").add(minutes, "minutes").format('HH:mm:ss  DD-MM-YYYY')
+    } else {
+        localDateTime = "Invalid Timezone Operator"
+    }
+    return localDateTime
+}
+
    private getTimeZoneName(timeZone: string) {
     /*
        Provigil Time Zones

@@ -100,7 +100,6 @@ export class SitesListPage {
   }
   itemSelected(item): void {
     if (navigator.onLine) {
-       
         this.store.dispatch(this.navActs.navigateToPage(Pages.HOME));
         this.store.dispatch(this.potentialActions.activePotentail(this.list[item]));
         //this.store.dispatch(this.userActions.potentialListActive());

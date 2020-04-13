@@ -644,6 +644,7 @@ export class UserEffects {
         .ofType(UserActions.POST_EVENT_LOG)
         .mergeMap(action => this.service.getEventLog(action.payload))
         .do(result => {
+            //alert(JSON.stringify(result));
             if (result && result === 'LOG OUT') {
                 window.location.pathname = '/';
                 this.store.dispatch(this.userActions.logout());
@@ -1192,6 +1193,7 @@ export class UserEffects {
                 if (activePotential) {
                     this.store.dispatch(this.potentialActions.activePotentail(activePotential));
                 }
+               
                 storeData.unsubscribe();
             }
         })
@@ -1212,34 +1214,6 @@ export class UserEffects {
             }
             if (result && result.status === 200) {
                 this.store.dispatch(this.userActions.notfificationCountSuccess(result));
-            } else if (result === 'Network Error') {
-
-            }
-            else {
-                this.showAlert('We are unable to load your information at this time.', 'Error');
-                return Observable.of('Network Error');
-            }
-        })
-        .catch((error) => {
-            this.showAlert('We are unable to load your information at this time.', 'Error');
-            return Observable.of('Network Error');
-        });
-
-        @Effect() liveRtmpStream$ = this.actions$
-        .ofType(UserActions.LIVE_RTMP_STREM)
-        .mergeMap(action => this.service.liveRtmpStream(action.payload))
-        .do(result => {
-            if (result && result === 'LOG OUT') {
-                this.store.dispatch(this.userActions.logout());
-                window.location.pathname = '/';
-
-                return Observable.of('Network Error');
-            }
-            if (result && result.status === 200) {
-             //this.store.dispatch(this.userActions.liveRtmpStreamSuccess(result['live_streaming'].liveurl));
-             this.store.dispatch(this.userActions.liveRtmpStreamSuccess(result.liveurl));
-             //window.localStorage.setItem('liveStreamURL',result['live_streaming'].liveurl);
-             window.localStorage.liveStreamURL=result.liveurl;//JSON.stringify(result['live_streaming'].liveurl).replace(/^"(.*)"$/, '$1');
             } else if (result === 'Network Error') {
 
             }

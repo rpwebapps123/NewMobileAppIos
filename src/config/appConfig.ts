@@ -14,7 +14,6 @@ export const isDev = false;//false for Prod
     var mobilePvmServerUrl = isDev ? "http://development-vigil-x.pro-vigil.com:8080" : "https://monitoring.pro-vigil.com:8443";
    //   var mobilePvmServerUrl =  "http://192.168.1.174:8080";//comment for Prod ******************
     var PvmProvigil = basePvmUrl + "/api/gateway";
-    var RTMPUrlIvigil='http://uat-1.pro-vigil.info:8080/pro-vigil';
    /**
     * For pvm user  base urls ends here
     */
@@ -31,13 +30,18 @@ export const isDev = false;//false for Prod
      * For i vigil user  base url  ends here
      */
     var salesForceBaseUrl = isDev?"http://test-monitoring.pro-vigil.com:8090/vigilx-salesforce":"http://ivigil-cg.pro-vigil.com:8080/vigilx-salesforce"; 
-    var netAnalyticsUrl =  isDev ? "https://stagingpro-vigil.my-netalytics.com/datahandler/api/netalytics_direct/dummy" : "https://monitoring.pro-vigil.com:8443/vigilx-mobileapi";//"https://monitoring.pro-vigil.com:8443/vigilx-mobileapi"//"https://pro-vigil.my-netalytics.com/datahandler/api/netalytics_direct/dummy";
+    var netAnalyticsUrl =  isDev ? "https://stagingpro-vigil.my-netalytics.com/datahandler/api/netalytics_direct/dummy" : "https://monitoring.pro-vigil.com:8443/vigilx-mobileapi";
     var mobileTicketUrl = isDev?"https://ticketing-test.pro-vigil.com/development":"https://ticketing.pro-vigil.com";
+    var mobileAppVersion=isDev?"https://testworkspace.pro-vigil.com:8443/ivigil-workspace/mobile":"https://testworkspace.pro-vigil.com:8443/ivigil-workspace/mobile"
+   // var googlePlaystore="https://play.google.com/store/apps/details?id=";
+   var RTMPUrlIvigil='http://uat-1.pro-vigil.info:8080/pro-vigil';
+    var appStore="";
 //export const isDesktop = true;//false for mobile Prod
 export const isDesktop = false;//false for mobile Prod
 const AppConfig = {
     isScreenLock : true,//true for Prod
     preloadModules: true,
+   // googlePlaystore:googlePlaystore,
     pvmServiceRequests: {
         // validateUserByMobileNumber: (isDesktop ? '' : API_BASE_URL) + '/user/verifymobile/',
         ImageUrl: 'cameraUrl' + 'SnapShot?' + 'channel=CameraId&station=recordingStation',
@@ -94,7 +98,7 @@ const AppConfig = {
 //        verifyPin: basePvmUrl + '/api/auth/pin/verify',
         createTicket : mobileTicketUrl + '/webservices/ws/createTicket',
         ticketsList :  mobileTicketUrl + '/webservices/ws/getTicketList',
-        eventLog :  mobilePvmServerUrl + '/vigilx-mobileapi/recentEscalationsByPageAPI.do',//Uncomment for Prod ******************
+        eventLog :  mobilePvmServerUrl + '/vigilx-mobileapi/recentEscalationsByPageAPICP',//'/vigilx-mobileapi/recentEscalationsByPageAPI.do',//Uncomment for Prod ******************
         eventLogVideo :  mobilePvmServerUrl + '/vigilx-mobileapi/recentReportsByPageAPI.do',//Uncomment for Prod ******************
     //     eventLog :  mobilePvmServerUrl + '/vgs-monitoring/recentEscalationsByPageAPI.do',//comment for Prod ******************
     //     eventLogVideo :  mobilePvmServerUrl + '/vgs-monitoring/getuccreportlistByPage.do',//comment for Prod ******************
@@ -122,6 +126,7 @@ const AppConfig = {
         serverTime: newbasePvmUrl + '/api/SiteTime',
         siteStatus: newbasePvmUrl + '/monitoringstatus',
         stats: statsbasePvmUrl + '/getsitestatistics',
+        AppVersion:mobileAppVersion,
         RTMPUrl:RTMPUrlIvigil+'/getlivestreamingurl',
         //ArmDisarmHistory?fdate=5/27/2019&tdate=5/29/2019&sitename=Aloha%20Alarm%20of%20Aiea%20-%20Kalakaua%20Plaza%20F1016&event=MonitoringStatus&potentialid=a1Y1J000004QTwDUAW
     },
@@ -191,6 +196,7 @@ const AppConfig = {
         serverTime: newbaseIvigilUrl + '/api/SiteTime',
         siteStatus:  'CameraService',
         stats : statsbaseIvigilUrl,
+        AppVersion:mobileAppVersion,
         RTMPUrl:RTMPUrlIvigil+'/getlivestreamingurl',
     },
     salesForceMiddleWare: {

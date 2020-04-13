@@ -12,9 +12,9 @@
             <div *ngIf="cameraList && cameraList.length > 0 ; else noSerachResult">
               <ion-item *ngFor="let camera of cameraList">
                     <div>
-                     <span >{{ camera.name }}</span>
-                    <span class="green-dot" *ngIf="camera.status === true"></span> 
-                    <span class="red-dot" *ngIf="camera.status === false"></span>
+                     <span>{{ camera.name || camera.Name}}</span>
+                     <span class="green-dot" *ngIf="camera.status === true || camera.connected === 'true' ||camera.connected === true"></span> 
+                    <span class="red-dot" *ngIf="camera.status === false  || camera.connected === 'false' || camera.connected === false"></span>
                     </div>
             </ion-item>
             

@@ -84,22 +84,22 @@ export class EventlogDetailPage {
    }
  }
   prepareRequestData(pageNo){
+    // let requestData = {
+    //   "groupid": "GRP20190731120216PM216834615833056",
+    //   "installDate": "2019-07-31",
+    //   "installationID": "a1Yo0000002o54XEAQ",
+    //   "tagType": 0,
+    //   "pageNo": 1,
+    //   "pageSize": 10,
+    // }; 
     let requestData = {
-      "groupid": "GRP20190731120216PM216834615833056",
-      "installDate": "2019-07-31",
-      "installationID": "a1Yo0000002o54XEAQ",
-      "tagType": 0,
-      "pageNo": 1,
-      "pageSize": 10,
-    }; 
-    /* {
       "groupid": this.eventlogDetail.groupID,
       "installDate": this.getCurrentDate(),
       "installationID": this.installationId,
       "tagType": this.eventlogDetail.name,
-      "pageNo": pageNo,
+      "pageNo": this.pageNo,
       "pageSize": this.pageSize,
-    }; */
+    }; 
     return requestData;
   }
   
@@ -140,14 +140,14 @@ export class EventlogDetailPage {
     mmonth = '0' + mm;
    } 
    let todayDate = yyyy + '-' + mmonth + '-' + dday; 
-if(this.pvmUser === 'true'){
-  return this.eventlogDetail.starttime.substring(0,10);
-}else{
-  return this.eventlogDetail.eventTimeStr.substring(0,10);
-}
+// if(this.pvmUser === 'true'){
+//   return this.eventlogDetail.starttime.substring(0,10);
+// }else{
+//   return this.eventlogDetail.eventTimeStr.substring(0,10);
+// }
    
 
-   //return todayDate;
+   return todayDate;
   }
 
   playVideo(recentEscVideo){

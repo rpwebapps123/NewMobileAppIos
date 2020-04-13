@@ -752,6 +752,22 @@ svg{width: 19px;}
     .card{display: inline-block;  margin-bottom:15px!important;
         img{width:100%; min-height: 120px;height:auto;}
         .camName{margin-left:0px;}
+        .ptz-control{position: relative;
+        
+            .video-popup-model .video-frame{width:100%;}
+            .liveswitchVideo video{position:relative;}
+
+            .camControls{position:absolute; bottom:14px; left:10px;
+                img{width:16px; height:16px;      min-height:16px ; }
+                button{background-color:transparent; border:none; padding:0px; margin:0px;}
+                .singleBt{margin-left:20px;}
+                .multiBt.bottomControl button{background-color:#fff; color:#000; border:solid 1px #000; width:16px; height:16px;      min-height:16px; text-align:center; line-height:16px;
+                    font-size:13px; font-family:"ProximaNova-Semibold";}
+                .multiBt.bottomControl button.active{background-color:#7f7f7f; font-family: 'ProximaNova-Bold';}
+            }
+        
+        }
+
     }
 
     

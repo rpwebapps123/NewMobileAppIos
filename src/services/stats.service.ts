@@ -64,6 +64,7 @@ export class StatsService extends MainService {
         } else {
           url = this.buildUrl(this.config.get('ivigilServiceRequests').stats, statsInfo);
         }
+        
         return this.directGet(url, true);
     }
 }

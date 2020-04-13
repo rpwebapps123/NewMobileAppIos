@@ -36,7 +36,6 @@ export interface IUserState {
     currentStatsList: any;
     historyStatsList: any;
     clipsStatsList: any;
-    liveRtmpStreamSuccess:any;
 }
 const initialState: IUserState = {
     userData: {
@@ -49,7 +48,7 @@ const initialState: IUserState = {
         siteTime: '',
         timeZone :'',
         disableNotification: false,
-        provigilUserData: {},
+        provigilUserData: {}
     },
     current: {
         _id: '',
@@ -90,8 +89,7 @@ const initialState: IUserState = {
     siteTime: '',
     currentStatsList: {},
     historyStatsList: {},
-    clipsStatsList: [],    
-    liveRtmpStreamSuccess:'',
+    clipsStatsList: []
 }
 export const UsersReducer: ActionReducer<IUserState> =
     (state: IUserState = initialState, action: Action) => {
@@ -282,11 +280,6 @@ export const UsersReducer: ActionReducer<IUserState> =
         case StatsActions.CLIPS_STATS_LIST_SUCCESS: {
             var newState = JSON.parse(JSON.stringify(state));
             newState.clipsStatsList = action.payload.clips;
-            return newState;
-        }
-        case UserActions.LIVE_RTMP_STREM_SUCCESS: {
-            var newState = JSON.parse(JSON.stringify(state));
-            newState.liveRtmpStreamSuccess = action.payload.live_streaming;
             return newState;
         }
             default:

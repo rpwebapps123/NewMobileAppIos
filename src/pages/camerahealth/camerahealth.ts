@@ -48,7 +48,7 @@ export class CameraHealthListMenu {
                     this.cameraList = state.camera ? state.camera.List ? state.camera.List[this.potentialId] : [] : [];
                     this.unitId = (state.potential.activePotential && state.potential.activePotential.unitId) ? state.potential.activePotential.unitId : '';
                     this.siteName = state.potential.activePotential ? state.potential.activePotential.siteName : '';
-                  //window.localStorage.unitid=state.potential.activePotential+"   "+ state.potential.activePotential.unitId
+                  
                 //{ event: 'potential', potentialid: this.potentialId,unitId: this.unitId, isFetchImage: 'false', siteName: this.siteName }
             });
             this.store.dispatch(this.cameraHealthActions.fetchCamerasList({ potentialid: this.potentialId, siteName: this.siteName, unitId: this.unitId}));
@@ -84,15 +84,15 @@ export class CameraHealthListMenu {
         this.userSubscription.unsubscribe();
     }
     private getItems(): void {
-     //  if (this.searchString) {
+        if (this.searchString) {
             setTimeout(() => {
                 this.list = this.allSites.filter((site) => {
                     return (site.siteName.toLowerCase().includes(this.searchString.toLowerCase()));
                 });
             }, 100)
-        // } else {
-        //     this.list = this.allSites.slice(0, 20);
-        // }
+        } else {
+            this.list = this.allSites.slice(0, 20);
+        }
 
     }
 }

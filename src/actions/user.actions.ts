@@ -476,21 +476,8 @@ export class UserActions {
         }
     }
 
-    static LIVE_RTMP_STREM = ' LIVE_RTMP_STREM'; 
-    liveRtmpStream(payload): Action{
-        return{
-            type: UserActions.LIVE_RTMP_STREM,
-            payload
-        }
-    }
 
-    static LIVE_RTMP_STREM_SUCCESS = 'LIVE_RTMP_STREM _SUCCESS'; 
-    liveRtmpStreamSuccess(response: LoginData): Action{
-        return{
-            type: UserActions. LIVE_RTMP_STREM_SUCCESS,
-            payload: response
-        }
-    }
+
 
 
 
